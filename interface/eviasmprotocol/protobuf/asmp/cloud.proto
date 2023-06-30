@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package asmp.cloud;
+
+// cloud report message wrapper
+message Message {
+    double time_s = 1;
+    repeated RoadSegmentState road_segments = 2;
+    repeated TrafficLightState traffic_lights = 3;
+}
+
+// cloud report of a single edge (= road segement)
+message RoadSegmentState {
+    uint32 id = 1;
+    uint32 num_vehicles = 2;
+    float mean_speed_mps = 3;
+}
+
+// cloud report of a single traffic light
+message TrafficLightState {
+    enum SignalState {
+        RED = 0;
+        RED_YELLOW = 1; // Changing from red to green
+        GREEN = 2;
+        YELLOW = 3; // Changing from green to red
+    }
+
+    uint32 id = 1;
+    SignalState current_signal = 2;
+    float min_time_to_switch_s = 3;
+    float max_time_to_switch_s = 4;
+}

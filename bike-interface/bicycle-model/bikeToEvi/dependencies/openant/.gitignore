@@ -1,0 +1,10 @@
+*.pyc
+*.orig
+*.iml
+*~
+MANIFEST
+build/
+dist/
+*.egg-info/
+.tox/
+.eggs/

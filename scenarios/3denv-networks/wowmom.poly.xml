@@ -1,0 +1,8 @@
+<additional>
+    <poly id="poly_0" type="building" color="green" fill="1" layer="0.00" shape="0.00,93.75 0.00,0.00 93.75,0.00 93.75,93.75 0.00,93.75"/>
+    <poly id="poly_1" type="building" color="green" fill="1" layer="0.00" shape="106.25,93.75 106.25,0.00 200.00,0.00 200.00,93.75 106.25,93.75"/>
+    <poi id="streetSign_yield_0" type="streetSign_yield" color="1,1,1" x="104" y="92.5" layer="5" imgFile="yield.png" height="3" width="3" angle="180"/>
+    <poi id="streetSign_yield_1" type="streetSign_yield" color="1,1,1" x="96" y="107.5" layer="5" imgFile="yield.png" height="3" width="3" angle="0"/>
+    <poi id="streetSign_priority_0" type="streetSign_priority" color="1,1,1" x="92.5" y="96" layer="5" imgFile="priority.png" height="3" width="3" angle="270"/>
+    <poi id="streetSign_priority_1" type="streetSign_priority" color="1,1,1" x="107.5" y="104" layer="5" imgFile="priority.png" height="3" width="3" angle="90"/>
+</additional>

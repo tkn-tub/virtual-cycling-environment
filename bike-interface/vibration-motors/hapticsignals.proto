@@ -1,0 +1,15 @@
+syntax = "proto2";
+
+package asmp.hapticsignals;
+
+message HapticMessage {
+    optional uint32 entity_id = 1;
+    optional uint32 dangers = 2;
+    optional string vibrations = 3;
+    optional string pattern = 4;
+}
+
+message Message {
+    optional double time_s = 1;
+    optional HapticMessage signals = 2;
+}

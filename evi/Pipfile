@@ -1,0 +1,44 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[[source]]
+url = "https://static.dbuse.org/pypi"
+verify_ssl = true
+name = "evi"
+
+[packages]
+# only packages with tighter restrictions than in setup.py or special index requirements need to be put here
+# pyproj = "<2"
+pyzmq = ">=17.0.0"
+# evi-asm-protocol = {version = ">=0.12.0",index = "evi"}
+evi-asm-protocol = {version = ">=0.12.0",path = "../protobuf-evi/",editable = true}
+sumolib = {version = "==1.6.0",index = "evi"}
+traci = {version = "==1.6.0",index = "evi"}
+evi = {editable = true,path = "."}
+numpy = "*"
+
+[dev-packages]
+pytest = "*"
+pytest-asyncio = "*"
+pytest-cov = "*"
+pytest-mock = "*"
+isort = "*"
+pylint = "*"
+"flake8" = "*"
+docutils = "*"
+check-manifest = "*"
+readme-renderer = "*"
+pygments = "*"
+codecov = "*"
+ipython = "*"
+pdbpp = "*"
+pytest-benchmark = "*"
+mypy = "*"
+typing-extensions = "*"
+pytest-mypy = "*"
+pytest-watch = "*"
+
+[requires]
+python_version = "3.8"

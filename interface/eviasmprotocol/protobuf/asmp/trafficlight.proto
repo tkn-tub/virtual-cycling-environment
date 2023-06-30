@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package asmp.trafficlight;
+
+message Signal {
+    enum SignalState {
+        OFF = 0;
+        RED = 1;
+        RED_YELLOW = 2; // Changing from red to green
+        GREEN = 3;
+        YELLOW = 4; // Changing from green to red
+    }
+  uint32 index = 1;
+  SignalState state = 2;
+}
+
+message Junction {
+  uint32 id = 1;
+  repeated Signal signals = 2;
+  uint32 phase_nr = 3;
+  string program_id = 4;
+  double time_to_switch_s = 5;
+}
+
+message Message {
+    double time_s = 1;
+    repeated Junction junctions = 2;
+}

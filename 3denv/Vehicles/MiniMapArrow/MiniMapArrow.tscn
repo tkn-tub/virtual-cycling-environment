@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Vehicles/MiniMapArrow/miniMapArrow.glb" type="PackedScene" id=1]
+[ext_resource path="res://Vehicles/MiniMapArrow/MiniMapArrow.cs" type="Script" id=2]
+
+[sub_resource type="SpatialMaterial" id=1]
+flags_transparent = true
+albedo_color = Color( 0.709804, 0.0666667, 0, 1 )
+
+[node name="miniMapArrow" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="minimap_arrow" parent="." index="0"]
+transform = Transform( -8.74228e-10, -0.04, 8.74228e-10, 0, -1.74846e-09, -0.02, 0.02, -1.74846e-09, 3.82137e-17, 0, 0.472182, 0 )
+layers = 4
+material/0 = SubResource( 1 )

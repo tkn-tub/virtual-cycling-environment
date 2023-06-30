@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on Wed 28 Aug 2019 02:56:27 PM CEST by Eclipse SUMO netedit Version v1_1_0+0000-2147d155b1
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <sumo-net-file value="parkingAreaOnRoadSharedCyclelane.net.xml"/>
+    </input>
+
+    <output>
+        <output-file value="parkingAreaOnRoadSharedCyclelane.net.xml"/>
+    </output>
+
+    <processing>
+        <geometry.max-grade.fix value="false"/>
+        <offset.disable-normalization value="true"/>
+        <lefthand value="false"/>
+    </processing>
+
+    <junctions>
+        <no-turnarounds value="true"/>
+        <junctions.corner-detail value="5"/>
+        <junctions.limit-turn-speed value="-1"/>
+        <rectangular-lane-cut value="false"/>
+    </junctions>
+
+    <pedestrian>
+        <walkingareas value="false"/>
+    </pedestrian>
+
+</configuration>
+-->
+
+<net version="1.1" junctionCornerDetail="5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/net_file.xsd">
+
+    <location netOffset="-474821.76,-5723127.50" convBoundary="111.64,53.78,261.64,103.78" origBoundary="8.350565,51.639068,8.932897,51.833637" projParameter="+proj=utm +zone=32 +ellps=WGS84 +datum=WGS84 +units=m +no_defs"/>
+
+    <edge id=":flowIntersection_0" function="internal">
+        <lane id=":flowIntersection_0_0" index="0" speed="13.89" length="9.52" width="2.40" shape="210.04,61.18 209.69,58.47 208.64,56.53 206.89,55.37 204.44,54.98"/>
+    </edge>
+    <edge id=":flowIntersection_1" function="internal">
+        <lane id=":flowIntersection_1_0" index="0" speed="13.89" length="14.35" shape="210.04,61.18 210.59,57.24 212.24,54.43 214.99,52.74 218.84,52.18"/>
+    </edge>
+    <edge id=":flowIntersection_2" function="internal">
+        <lane id=":flowIntersection_2_0" index="0" speed="13.89" length="9.19" shape="218.84,55.38 216.39,55.74 214.64,56.83 213.59,58.64 213.24,61.18"/>
+    </edge>
+    <edge id=":flowIntersection_3" function="internal">
+        <lane id=":flowIntersection_3_0" index="0" speed="13.89" length="14.41" width="2.40" shape="218.84,55.38 204.44,54.98"/>
+    </edge>
+    <edge id=":flowIntersection_4" function="internal">
+        <lane id=":flowIntersection_4_0" index="0" speed="13.89" length="14.40" shape="204.44,52.18 218.84,52.18"/>
+    </edge>
+    <edge id=":flowIntersection_5" function="internal">
+        <lane id=":flowIntersection_5_0" index="0" speed="13.89" length="6.18" shape="204.44,52.18 208.29,52.74 210.24,53.94"/>
+    </edge>
+    <edge id=":flowIntersection_6" function="internal">
+        <lane id=":flowIntersection_6_0" index="0" speed="13.89" length="8.17" shape="210.24,53.94 211.04,54.43 212.69,57.24 213.24,61.18"/>
+    </edge>
+    <edge id=":parkingAreaStart_0" function="internal">
+        <lane id=":parkingAreaStart_0_0" index="0" disallow="tram rail_urban rail rail_electric pedestrian ship" speed="13.89" length="8.00" width="1.00" shape="190.64,56.68 182.64,56.68"/>
+        <lane id=":parkingAreaStart_0_1" index="1" speed="13.89" length="8.00" width="2.40" shape="190.64,54.98 182.64,54.98"/>
+    </edge>
+    <edge id=":parkingAreaStart_2" function="internal">
+        <lane id=":parkingAreaStart_2_0" index="0" speed="13.89" length="8.00" shape="182.64,52.18 190.64,52.18"/>
+    </edge>
+    <edge id=":parkingAreaStop_0" function="internal">
+        <lane id=":parkingAreaStop_0_0" index="0" speed="13.89" length="8.00" width="1.00" shape="140.64,56.68 132.64,56.68"/>
+        <lane id=":parkingAreaStop_0_1" index="1" speed="13.89" length="8.00" width="2.40" shape="140.64,54.98 132.64,54.98"/>
+    </edge>
+    <edge id=":parkingAreaStop_2" function="internal">
+        <lane id=":parkingAreaStop_2_0" index="0" speed="13.89" length="8.00" shape="132.64,52.18 140.64,52.18"/>
+    </edge>
+
+    <edge id="-gneE2" from="gneJ3" to="flowIntersection" priority="-1">
+        <lane id="-gneE2_0" index="0" speed="13.89" length="42.80" shape="261.64,55.38 218.84,55.38"/>
+    </edge>
+    <edge id="-gneE7" from="parkingAreaStop" to="parkingAreaStart" priority="-1">
+        <lane id="-gneE7_0" index="0" speed="13.89" length="42.00" shape="140.64,52.18 182.64,52.18"/>
+    </edge>
+    <edge id="flowBeginToFlowIntersection" from="flowBegin" to="flowIntersection" priority="-1">
+        <lane id="flowBeginToFlowIntersection_0" index="0" speed="13.89" length="42.60" shape="210.04,103.78 210.04,61.18"/>
+    </edge>
+    <edge id="flowIntersectionToParkingAreaStart" from="flowIntersection" to="parkingAreaStart" priority="-1">
+        <lane id="flowIntersectionToParkingAreaStart_0" index="0" speed="13.89" length="13.80" width="1.00" shape="204.44,56.68 190.64,56.68"/>
+        <lane id="flowIntersectionToParkingAreaStart_1" index="1" speed="13.89" length="13.80" width="2.40" shape="204.44,54.98 190.64,54.98"/>
+    </edge>
+    <edge id="gneE2" from="flowIntersection" to="gneJ3" priority="-1">
+        <lane id="gneE2_0" index="0" speed="13.89" length="42.80" shape="218.84,52.18 261.64,52.18"/>
+    </edge>
+    <edge id="gneE3" from="flowIntersection" to="flowBegin" priority="-1">
+        <lane id="gneE3_0" index="0" speed="13.89" length="42.60" shape="213.24,61.18 213.24,103.78"/>
+    </edge>
+    <edge id="gneE6" from="flowEnd" to="parkingAreaStop" priority="-1">
+        <lane id="gneE6_0" index="0" speed="13.89" length="21.00" shape="111.64,52.18 132.64,52.18"/>
+    </edge>
+    <edge id="gneE8" from="parkingAreaStart" to="flowIntersection" priority="-1">
+        <lane id="gneE8_0" index="0" speed="13.89" length="13.80" shape="190.64,52.18 204.44,52.18"/>
+    </edge>
+    <edge id="parkingAreaOnRoad" from="parkingAreaStart" to="parkingAreaStop" priority="-1">
+        <lane id="parkingAreaOnRoad_0" index="0" speed="1.39" length="42.00" shape="182.64,58.78 140.64,58.78"/>
+        <lane id="parkingAreaOnRoad_1" index="1" disallow="tram rail_urban rail rail_electric pedestrian ship" speed="13.89" length="42.00" width="1.00" shape="182.64,56.68 140.64,56.68"/>
+        <lane id="parkingAreaOnRoad_2" index="2" speed="13.89" length="42.00" width="2.40" shape="182.64,54.98 140.64,54.98"/>
+    </edge>
+    <edge id="parkingAreaStopToFlowEnd" from="parkingAreaStop" to="flowEnd" priority="-1">
+        <lane id="parkingAreaStopToFlowEnd_0" index="0" speed="13.89" length="21.00" width="1.00" shape="132.64,56.68 111.64,56.68"/>
+        <lane id="parkingAreaStopToFlowEnd_1" index="1" speed="13.89" length="21.00" width="2.40" shape="132.64,54.98 111.64,54.98"/>
+    </edge>
+
+    <junction id="flowBegin" type="dead_end" x="211.64" y="103.78" incLanes="gneE3_0" intLanes="" shape="211.64,103.78 214.84,103.78 211.64,103.78"/>
+    <junction id="flowEnd" type="dead_end" x="111.64" y="53.78" incLanes="parkingAreaStopToFlowEnd_0 parkingAreaStopToFlowEnd_1" intLanes="" shape="111.64,53.78 111.64,57.18 111.64,53.78"/>
+    <junction id="flowIntersection" type="priority" x="211.64" y="53.78" incLanes="flowBeginToFlowIntersection_0 -gneE2_0 gneE8_0" intLanes=":flowIntersection_0_0 :flowIntersection_1_0 :flowIntersection_2_0 :flowIntersection_3_0 :flowIntersection_4_0 :flowIntersection_6_0" shape="208.44,61.18 214.84,61.18 215.28,58.85 215.84,58.03 216.62,57.45 217.62,57.10 218.84,56.98 218.84,50.58 204.44,50.58 204.44,57.18 206.66,57.62 207.44,58.18 208.00,58.96 208.33,59.96">
+        <request index="0" response="001000" foes="001000" cont="0"/>
+        <request index="1" response="111000" foes="111000" cont="0"/>
+        <request index="2" response="000000" foes="100000" cont="0"/>
+        <request index="3" response="000000" foes="100011" cont="0"/>
+        <request index="4" response="000000" foes="000010" cont="0"/>
+        <request index="5" response="001100" foes="001110" cont="1"/>
+    </junction>
+    <junction id="gneJ3" type="dead_end" x="261.64" y="53.78" incLanes="gneE2_0" intLanes="" shape="261.64,53.78 261.64,50.58 261.64,53.78"/>
+    <junction id="parkingAreaStart" type="priority" x="186.64" y="53.78" incLanes="flowIntersectionToParkingAreaStart_0 flowIntersectionToParkingAreaStart_1 -gneE7_0" intLanes=":parkingAreaStart_0_0 :parkingAreaStart_0_1 :parkingAreaStart_2_0" shape="190.64,57.18 190.64,50.58 182.64,50.58 182.64,60.38 185.67,59.55 187.61,58.01 188.85,57.42">
+        <request index="0" response="000" foes="000" cont="0"/>
+        <request index="1" response="000" foes="000" cont="0"/>
+        <request index="2" response="000" foes="000" cont="0"/>
+    </junction>
+    <junction id="parkingAreaStop" type="priority" x="136.64" y="53.78" incLanes="parkingAreaOnRoad_0 parkingAreaOnRoad_1 parkingAreaOnRoad_2 gneE6_0" intLanes=":parkingAreaStop_0_0 :parkingAreaStop_0_1 :parkingAreaStop_2_0" shape="140.64,60.38 140.64,50.58 132.64,50.58 132.64,57.18 135.67,58.01 137.61,59.55 138.85,60.14">
+        <request index="0" response="000" foes="000" cont="0"/>
+        <request index="1" response="000" foes="000" cont="0"/>
+        <request index="2" response="000" foes="000" cont="0"/>
+    </junction>
+
+    <junction id=":flowIntersection_6_0" type="internal" x="210.24" y="53.94" incLanes=":flowIntersection_5_0 -gneE2_0" intLanes=":flowIntersection_1_0 :flowIntersection_2_0 :flowIntersection_3_0"/>
+
+    <connection from="-gneE2" to="gneE3" fromLane="0" toLane="0" via=":flowIntersection_2_0" dir="r" state="M"/>
+    <connection from="-gneE2" to="flowIntersectionToParkingAreaStart" fromLane="0" toLane="1" via=":flowIntersection_3_0" dir="s" state="M"/>
+    <connection from="-gneE7" to="gneE8" fromLane="0" toLane="0" via=":parkingAreaStart_2_0" dir="s" state="M"/>
+    <connection from="flowBeginToFlowIntersection" to="flowIntersectionToParkingAreaStart" fromLane="0" toLane="1" via=":flowIntersection_0_0" dir="r" state="m"/>
+    <connection from="flowBeginToFlowIntersection" to="gneE2" fromLane="0" toLane="0" via=":flowIntersection_1_0" dir="l" state="m"/>
+    <connection from="flowIntersectionToParkingAreaStart" to="parkingAreaOnRoad" fromLane="0" toLane="1" pass="1" via=":parkingAreaStart_0_0" dir="s" state="M"/>
+    <connection from="flowIntersectionToParkingAreaStart" to="parkingAreaOnRoad" fromLane="1" toLane="2" via=":parkingAreaStart_0_1" dir="s" state="M"/>
+    <connection from="gneE6" to="-gneE7" fromLane="0" toLane="0" via=":parkingAreaStop_2_0" dir="s" state="M"/>
+    <connection from="gneE8" to="gneE2" fromLane="0" toLane="0" via=":flowIntersection_4_0" dir="s" state="M"/>
+    <connection from="gneE8" to="gneE3" fromLane="0" toLane="0" via=":flowIntersection_5_0" dir="l" state="m"/>
+    <connection from="parkingAreaOnRoad" to="parkingAreaStopToFlowEnd" fromLane="1" toLane="0" pass="1" via=":parkingAreaStop_0_0" dir="s" state="M"/>
+    <connection from="parkingAreaOnRoad" to="parkingAreaStopToFlowEnd" fromLane="2" toLane="1" pass="1" via=":parkingAreaStop_0_1" dir="s" state="M"/>
+
+    <connection from=":flowIntersection_0" to="flowIntersectionToParkingAreaStart" fromLane="0" toLane="1" dir="r" state="M"/>
+    <connection from=":flowIntersection_1" to="gneE2" fromLane="0" toLane="0" dir="l" state="M"/>
+    <connection from=":flowIntersection_2" to="gneE3" fromLane="0" toLane="0" dir="r" state="M"/>
+    <connection from=":flowIntersection_3" to="flowIntersectionToParkingAreaStart" fromLane="0" toLane="1" dir="s" state="M"/>
+    <connection from=":flowIntersection_4" to="gneE2" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":flowIntersection_5" to="gneE3" fromLane="0" toLane="0" via=":flowIntersection_6_0" dir="l" state="m"/>
+    <connection from=":flowIntersection_6" to="gneE3" fromLane="0" toLane="0" dir="l" state="M"/>
+    <connection from=":parkingAreaStart_0" to="parkingAreaOnRoad" fromLane="0" toLane="1" dir="s" state="M"/>
+    <connection from=":parkingAreaStart_0" to="parkingAreaOnRoad" fromLane="1" toLane="2" dir="s" state="M"/>
+    <connection from=":parkingAreaStart_2" to="gneE8" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":parkingAreaStop_0" to="parkingAreaStopToFlowEnd" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":parkingAreaStop_0" to="parkingAreaStopToFlowEnd" fromLane="1" toLane="1" dir="s" state="M"/>
+    <connection from=":parkingAreaStop_2" to="-gneE7" fromLane="0" toLane="0" dir="s" state="M"/>
+
+</net>

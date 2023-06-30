@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Environment/TrafficLight/Mesh/TrafficLight_Panel.mesh" type="ArrayMesh" id=1]
+[ext_resource path="res://Environment/TrafficLight/TrafficLightPanel.cs" type="Script" id=2]
+
+[node name="TrafficLightPanel" type="Spatial"]
+script = ExtResource( 2 )
+
+[node name="Panel" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.25, 0, 0 )
+mesh = ExtResource( 1 )
+
+[node name="Light_Green" type="OmniLight" parent="Panel"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00150394, 4.02053, -0.186805 )
+light_color = Color( 0.0313726, 1, 0, 1 )
+light_energy = 100.0
+light_specular = 1.0
+omni_range = 0.17
+
+[node name="Light_Yellow" type="OmniLight" parent="Panel"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00150394, 4.34837, -0.226951 )
+light_color = Color( 1, 0.984314, 0, 1 )
+light_energy = 100.0
+light_specular = 1.0
+omni_range = 0.17
+
+[node name="Light_Red" type="OmniLight" parent="Panel"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00150394, 4.70964, -0.205272 )
+light_color = Color( 1, 0, 0, 1 )
+light_energy = 100.0
+light_specular = 1.0
+omni_range = 0.17

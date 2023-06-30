@@ -1,0 +1,99 @@
+menu "ADC2UDP Configuration"
+
+    config WIFI_SSID
+        string "WiFi SSID"
+        default "myssid"
+        help
+            SSID (network name) for the example to connect to.
+
+    config WIFI_PASSWORD
+        string "WiFi Password"
+        default "mypassword"
+        help
+            WiFi password (WPA or WPA2) for the example to use.
+            Can be left blank if the network has no security set.
+
+    choice IP_MODE
+        prompt "IP Version"
+        help
+            Example can use either IPV4 or IPV6.
+
+        config IPV4
+            bool "IPV4"
+
+        config IPV6
+            bool "IPV6"
+
+    endchoice
+
+    config GPIO_IR_SENSOR
+        int "GPIO input pin for the IR sensor"
+        range 0 39
+        default 32
+        help
+            GPIO pin number for the infrared sensor.
+            This sensor is intended to be placed near the spokes
+            of the rear bicycle wheel to act as a speed sensor.
+            Refer to the documentation to make sure that the pin
+            can be used for GPIO while WiFi is enabled (many cannot!).
+            https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/gpio.html
+
+    config GPIO_IR_SENSOR_EN
+        int "GPIO output pin for the IR sensor enable (EN) functionality"
+        range 0 39
+        default 33
+        help
+            GPIO pin number for the enable (EN) functionality of some IR sensors.
+            Some sensors have automatic gain control and should be disabled in
+            regular intervals s.t. they won't filter out their own signal.
+
+    config IR_SENSOR_HAS_EN_PIN
+        int "IR sensor has an enable pin"
+        range 0 1
+        default 0
+        help
+            If 1 (true), GPIO_IR_SENSOR_EN will be set to 1
+            immediately after a GPIO interrupt on GPIO_IR_SENSOR
+            for a few milliseconds.
+
+    config SPEED_SENSOR_WINDOW_SIZE
+        int "Window size"
+        range 1 256
+        default 3
+        help
+            How many intervals between IR sensor ticks to use for averaging
+            the speed and for figuring out when the wheel has probably stopped turning.
+            If the window size is N and we haven't
+
+    config BICYCLE_MODEL_PORT
+        int "Remote port"
+        range 0 65535
+        default 4022
+        help
+            Remote port the host running the bicycle model will
+            listen on.
+
+    config BICYCLE_MODEL_HOST
+        string "Bicycle mode host IPV4 address"
+        default "192.168.1.83"
+        depends on IPV4
+        help
+            IP address of the computer running the bicycle model.
+
+    config UDP_PACKET_FREQUENCY
+        int "Frequency in Hz"
+        range 1 100
+        default 20
+        help
+            Frequency of the microcontroller sending a UDP packet
+            to the bicycle model.
+
+    config NUMBER_OF_SAMPLES_PER_VALUE
+        int "Number of samples for each ADC value."
+        range 1 128
+        default 64
+        help
+            Each value sent is the average of NUMBER_OF_SAMPLES_PER_VALUE
+            samples.
+
+endmenu

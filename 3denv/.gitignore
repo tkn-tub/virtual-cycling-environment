@@ -1,0 +1,12 @@
+.vs
+
+.mono/
+.import/**
+mono_crash.*
+
+/GodotPerformanceLog*
+mono_crash.*
+
+/logs/**
+!/logs/.gdignore
+/GodotPerformanceLog*

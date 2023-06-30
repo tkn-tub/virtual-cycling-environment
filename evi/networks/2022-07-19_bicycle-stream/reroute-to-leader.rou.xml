@@ -1,0 +1,44 @@
+<routes>
+    <!-- vehicle id "groupcycler" -> controlled by EVI fellow controller class -->
+    <vType
+        id="groupcycler"
+        vClass="bicycle"
+        guiShape="bicycle"
+        latAlignment="right"
+        maxSpeedLat="1.0"
+        personCapacity="1"
+        laneChangeModel="SL2015"
+        length="1.5"
+        width="1.5"
+        height="1.5"
+        maxSpeed="8.33"
+        minGap="0.75"
+        emergencyDecel="9.0"
+        decel="4.5"
+        accel="2.6"
+        speedDev="0.1"
+        lcSublane="1"
+    />
+    <flow
+        id="groupcycler_flow"
+        type="groupcycler"
+        begin="0"
+        end="20"
+        period="1"
+        from="55641086#3"
+        to="188589930#1"
+    />
+
+    <vType
+        id="ego-type"
+        sigma="0.5"
+        length="3.5"
+        minGap="2.5"
+        color="1,0,0"
+    />
+    <route
+        id="ego-route"
+        edges="369470720 8010676#0"
+    />
+
+</routes>

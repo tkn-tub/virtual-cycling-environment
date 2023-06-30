@@ -1,0 +1,24 @@
+# build dir
+/asmp
+
+# generic
+/build
+/dist
+/MANIFEST
+*.egg-info
+
+bike-interface/hall-brake-sensor/adc2udp/out
+.vs
+
+# Apptainer images
+*.sif
+
+.mono/
+.import/
+
+# IntelliJ
+.idea/
+
+
+3denv/3denv/Logs/
+

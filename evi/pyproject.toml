@@ -1,0 +1,56 @@
+[tool.poetry]
+name = "evi"
+version = "0.15.5"
+description = "An Ego Vehicle Interface for real-time communication between Sumo, Veins and a real-time simulator."
+authors = ["Dominik S. Buse <buse@ccs-labs.org>"]
+
+[tool.poetry.dependencies]
+python = ">=3.8,<3.12"  # scipy demands <3.12 and >3.8
+pyzmq = ">=17.0.0"
+evi-asm-protocol = {path = "../evi-asm-protocol", develop = false}  # with `develop=false`, the package will be built and protoc will be run
+sumolib = "==1.6.0"
+traci = "==1.6.0"
+protobuf = ">=3.19.0"
+psutil = "*"
+pyproj = "*"
+shapely = "*"
+rtree = "*"
+typing_extensions = "*"
+numpy = "^1.22.3"
+PyYAML = "^6.0"
+# scipy = "^1.10.1"
+scipy = "^1.10.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "*"
+pytest-asyncio = "*"
+pytest-cov = "*"
+pytest-mock = "*"
+isort = "*"
+pylint = "*"
+flake8 = "*"
+docutils = "*"
+check-manifest = "*"
+readme-renderer = "*"
+pygments = "*"
+codecov = "*"
+ipython = "*"
+pdbpp = "*"
+pytest-benchmark = "*"
+mypy = "*"
+typing-extensions = "*"
+pytest-mypy = "*"
+pytest-watch = "*"
+sphinx = ">=1.3"
+sphinx-rtd-theme = "*"
+recommonmark = "*"
+scapy = "*"
+
+[[tool.poetry.source]]
+name = "evi"
+url = "https://static.dbuse.org/pypi"
+secondary = true
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,20 @@
+config:
+  default_vehicle_type: default
+  triggers_max_radius: 3
+triggers:
+  - ego_xy: [180, 55, 0]
+    signals:
+    - vehicle_id: parkingVehicleFlow.0
+      set_signals: [DOOR_OPEN_LEFT]
+  - ego_xy: [180, 61, 0]
+    signals:
+    - vehicle_id: parkingVehicleFlow.0
+      set_signals: [DOOR_OPEN_RIGHT]
+  - ego_xy: [157, 55, 0]
+    signals:
+    - vehicle_id: parkingVehicleFlow.3
+      set_signals: [DOOR_OPEN_LEFT]
+  - ego_xy: [157, 61, 0]
+    signals:
+    - vehicle_id: parkingVehicleFlow.3
+      set_signals: [DOOR_OPEN_RIGHT]

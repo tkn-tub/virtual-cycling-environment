@@ -1,0 +1,1040 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<additional>
+  <poly id="0" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="108,108 108,127 127,127 127,108"/>
+  <poly id="1" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="143,108 143,127 162,127 162,108"/>
+  <poly id="2" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="178,108 178,127 197,127 197,108"/>
+  <poly id="3" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="213,108 213,127 232,127 232,108"/>
+  <poly id="4" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="248,108 248,127 267,127 267,108"/>
+  <poly id="5" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="283,108 283,127 302,127 302,108"/>
+  <poly id="6" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="318,108 318,127 337,127 337,108"/>
+  <poly id="7" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="353,108 353,127 372,127 372,108"/>
+  <poly id="8" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="388,108 388,127 407,127 407,108"/>
+  <poly id="9" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="423,108 423,127 442,127 442,108"/>
+  <poly id="10" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="458,108 458,127 477,127 477,108"/>
+  <poly id="11" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="493,108 493,127 512,127 512,108"/>
+  <poly id="12" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="528,108 528,127 547,127 547,108"/>
+  <poly id="13" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="563,108 563,127 582,127 582,108"/>
+  <poly id="14" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="108,143 108,162 127,162 127,143"/>
+  <poly id="15" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="143,143 143,162 162,162 162,143"/>
+  <poly id="16" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="178,143 178,162 197,162 197,143"/>
+  <poly id="17" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="213,143 213,162 232,162 232,143"/>
+  <poly id="18" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="248,143 248,162 267,162 267,143"/>
+  <poly id="19" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="283,143 283,162 302,162 302,143"/>
+  <poly id="20" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="318,143 318,162 337,162 337,143"/>
+  <poly id="21" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="353,143 353,162 372,162 372,143"/>
+  <poly id="22" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="388,143 388,162 407,162 407,143"/>
+  <poly id="23" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="423,143 423,162 442,162 442,143"/>
+  <poly id="24" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="458,143 458,162 477,162 477,143"/>
+  <poly id="25" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="493,143 493,162 512,162 512,143"/>
+  <poly id="26" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="528,143 528,162 547,162 547,143"/>
+  <poly id="27" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="563,143 563,162 582,162 582,143"/>
+  <poly id="28" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="108,178 108,197 127,197 127,178"/>
+  <poly id="29" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="143,178 143,197 162,197 162,178"/>
+  <poly id="30" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="178,178 178,197 197,197 197,178"/>
+  <poly id="31" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="213,178 213,197 232,197 232,178"/>
+  <poly id="32" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="248,178 248,197 267,197 267,178"/>
+  <poly id="33" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="283,178 283,197 302,197 302,178"/>
+  <poly id="34" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="318,178 318,197 337,197 337,178"/>
+  <poly id="35" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="353,178 353,197 372,197 372,178"/>
+  <poly id="36" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="388,178 388,197 407,197 407,178"/>
+  <poly id="37" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="423,178 423,197 442,197 442,178"/>
+  <poly id="38" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="458,178 458,197 477,197 477,178"/>
+  <poly id="39" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="493,178 493,197 512,197 512,178"/>
+  <poly id="40" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="528,178 528,197 547,197 547,178"/>
+  <poly id="41" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="563,178 563,197 582,197 582,178"/>
+  <poly id="42" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="108,213 108,232 127,232 127,213"/>
+  <poly id="43" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="143,213 143,232 162,232 162,213"/>
+  <poly id="44" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="178,213 178,232 197,232 197,213"/>
+  <poly id="45" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="213,213 213,232 232,232 232,213"/>
+  <poly id="46" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="248,213 248,232 267,232 267,213"/>
+  <poly id="47" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="283,213 283,232 302,232 302,213"/>
+  <poly id="48" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="318,213 318,232 337,232 337,213"/>
+  <poly id="49" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="353,213 353,232 372,232 372,213"/>
+  <poly id="50" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="388,213 388,232 407,232 407,213"/>
+  <poly id="51" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="423,213 423,232 442,232 442,213"/>
+  <poly id="52" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="458,213 458,232 477,232 477,213"/>
+  <poly id="53" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="493,213 493,232 512,232 512,213"/>
+  <poly id="54" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="528,213 528,232 547,232 547,213"/>
+  <poly id="55" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="563,213 563,232 582,232 582,213"/>
+  <poly id="56" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="108,248 108,267 127,267 127,248"/>
+  <poly id="57" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="143,248 143,267 162,267 162,248"/>
+  <poly id="58" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="178,248 178,267 197,267 197,248"/>
+  <poly id="59" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="213,248 213,267 232,267 232,248"/>
+  <poly id="60" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="248,248 248,267 267,267 267,248"/>
+  <poly id="61" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="283,248 283,267 302,267 302,248"/>
+  <poly id="62" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="318,248 318,267 337,267 337,248"/>
+  <poly id="63" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="353,248 353,267 372,267 372,248"/>
+  <poly id="64" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="388,248 388,267 407,267 407,248"/>
+  <poly id="65" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="423,248 423,267 442,267 442,248"/>
+  <poly id="66" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="458,248 458,267 477,267 477,248"/>
+  <poly id="67" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="493,248 493,267 512,267 512,248"/>
+  <poly id="68" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="528,248 528,267 547,267 547,248"/>
+  <poly id="69" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="563,248 563,267 582,267 582,248"/>
+  <poly id="70" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="108,283 108,302 127,302 127,283"/>
+  <poly id="71" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="143,283 143,302 162,302 162,283"/>
+  <poly id="72" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="178,283 178,302 197,302 197,283"/>
+  <poly id="73" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="213,283 213,302 232,302 232,283"/>
+  <poly id="74" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="248,283 248,302 267,302 267,283"/>
+  <poly id="75" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="283,283 283,302 302,302 302,283"/>
+  <poly id="76" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="318,283 318,302 337,302 337,283"/>
+  <poly id="77" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="353,283 353,302 372,302 372,283"/>
+  <poly id="78" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="388,283 388,302 407,302 407,283"/>
+  <poly id="79" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="423,283 423,302 442,302 442,283"/>
+  <poly id="80" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="458,283 458,302 477,302 477,283"/>
+  <poly id="81" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="493,283 493,302 512,302 512,283"/>
+  <poly id="82" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="528,283 528,302 547,302 547,283"/>
+  <poly id="83" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="563,283 563,302 582,302 582,283"/>
+  <poly id="84" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="108,318 108,337 127,337 127,318"/>
+  <poly id="85" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="143,318 143,337 162,337 162,318"/>
+  <poly id="86" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="178,318 178,337 197,337 197,318"/>
+  <poly id="87" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="213,318 213,337 232,337 232,318"/>
+  <poly id="88" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="248,318 248,337 267,337 267,318"/>
+  <poly id="89" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="283,318 283,337 302,337 302,318"/>
+  <poly id="90" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="318,318 318,337 337,337 337,318"/>
+  <poly id="91" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="353,318 353,337 372,337 372,318"/>
+  <poly id="92" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="388,318 388,337 407,337 407,318"/>
+  <poly id="93" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="423,318 423,337 442,337 442,318"/>
+  <poly id="94" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="458,318 458,337 477,337 477,318"/>
+  <poly id="95" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="493,318 493,337 512,337 512,318"/>
+  <poly id="96" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="528,318 528,337 547,337 547,318"/>
+  <poly id="97" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="563,318 563,337 582,337 582,318"/>
+  <poly id="98" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="108,353 108,372 127,372 127,353"/>
+  <poly id="99" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="143,353 143,372 162,372 162,353"/>
+  <poly id="100" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="178,353 178,372 197,372 197,353"/>
+  <poly id="101" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="213,353 213,372 232,372 232,353"/>
+  <poly id="102" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="248,353 248,372 267,372 267,353"/>
+  <poly id="103" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="283,353 283,372 302,372 302,353"/>
+  <poly id="104" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="318,353 318,372 337,372 337,353"/>
+  <poly id="105" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="353,353 353,372 372,372 372,353"/>
+  <poly id="106" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="388,353 388,372 407,372 407,353"/>
+  <poly id="107" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="423,353 423,372 442,372 442,353"/>
+  <poly id="108" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="458,353 458,372 477,372 477,353"/>
+  <poly id="109" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="493,353 493,372 512,372 512,353"/>
+  <poly id="110" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="528,353 528,372 547,372 547,353"/>
+  <poly id="111" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="563,353 563,372 582,372 582,353"/>
+  <poly id="112" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="108,388 108,407 127,407 127,388"/>
+  <poly id="113" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="143,388 143,407 162,407 162,388"/>
+  <poly id="114" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="178,388 178,407 197,407 197,388"/>
+  <poly id="115" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="213,388 213,407 232,407 232,388"/>
+  <poly id="116" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="248,388 248,407 267,407 267,388"/>
+  <poly id="117" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="283,388 283,407 302,407 302,388"/>
+  <poly id="118" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="318,388 318,407 337,407 337,388"/>
+  <poly id="119" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="353,388 353,407 372,407 372,388"/>
+  <poly id="120" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="388,388 388,407 407,407 407,388"/>
+  <poly id="121" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="423,388 423,407 442,407 442,388"/>
+  <poly id="122" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="458,388 458,407 477,407 477,388"/>
+  <poly id="123" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="493,388 493,407 512,407 512,388"/>
+  <poly id="124" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="528,388 528,407 547,407 547,388"/>
+  <poly id="125" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="563,388 563,407 582,407 582,388"/>
+  <poly id="126" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="108,423 108,442 127,442 127,423"/>
+  <poly id="127" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="143,423 143,442 162,442 162,423"/>
+  <poly id="128" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="178,423 178,442 197,442 197,423"/>
+  <poly id="129" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="213,423 213,442 232,442 232,423"/>
+  <poly id="130" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="248,423 248,442 267,442 267,423"/>
+  <poly id="131" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="283,423 283,442 302,442 302,423"/>
+  <poly id="132" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="318,423 318,442 337,442 337,423"/>
+  <poly id="133" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="353,423 353,442 372,442 372,423"/>
+  <poly id="134" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="388,423 388,442 407,442 407,423"/>
+  <poly id="135" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="423,423 423,442 442,442 442,423"/>
+  <poly id="136" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="458,423 458,442 477,442 477,423"/>
+  <poly id="137" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="493,423 493,442 512,442 512,423"/>
+  <poly id="138" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="528,423 528,442 547,442 547,423"/>
+  <poly id="139" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="563,423 563,442 582,442 582,423"/>
+  <poly id="140" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="108,458 108,477 127,477 127,458"/>
+  <poly id="141" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="143,458 143,477 162,477 162,458"/>
+  <poly id="142" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="178,458 178,477 197,477 197,458"/>
+  <poly id="143" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="213,458 213,477 232,477 232,458"/>
+  <poly id="144" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="248,458 248,477 267,477 267,458"/>
+  <poly id="145" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="283,458 283,477 302,477 302,458"/>
+  <poly id="146" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="318,458 318,477 337,477 337,458"/>
+  <poly id="147" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="353,458 353,477 372,477 372,458"/>
+  <poly id="148" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="388,458 388,477 407,477 407,458"/>
+  <poly id="149" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="423,458 423,477 442,477 442,458"/>
+  <poly id="150" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="458,458 458,477 477,477 477,458"/>
+  <poly id="151" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="493,458 493,477 512,477 512,458"/>
+  <poly id="152" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="528,458 528,477 547,477 547,458"/>
+  <poly id="153" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="563,458 563,477 582,477 582,458"/>
+  <poly id="154" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="108,493 108,512 127,512 127,493"/>
+  <poly id="155" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="143,493 143,512 162,512 162,493"/>
+  <poly id="156" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="178,493 178,512 197,512 197,493"/>
+  <poly id="157" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="213,493 213,512 232,512 232,493"/>
+  <poly id="158" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="248,493 248,512 267,512 267,493"/>
+  <poly id="159" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="283,493 283,512 302,512 302,493"/>
+  <poly id="160" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="318,493 318,512 337,512 337,493"/>
+  <poly id="161" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="353,493 353,512 372,512 372,493"/>
+  <poly id="162" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="388,493 388,512 407,512 407,493"/>
+  <poly id="163" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="423,493 423,512 442,512 442,493"/>
+  <poly id="164" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="458,493 458,512 477,512 477,493"/>
+  <poly id="165" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="493,493 493,512 512,512 512,493"/>
+  <poly id="166" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="528,493 528,512 547,512 547,493"/>
+  <poly id="167" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="563,493 563,512 582,512 582,493"/>
+  <poly id="168" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="108,528 108,547 127,547 127,528"/>
+  <poly id="169" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="143,528 143,547 162,547 162,528"/>
+  <poly id="170" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="178,528 178,547 197,547 197,528"/>
+  <poly id="171" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="213,528 213,547 232,547 232,528"/>
+  <poly id="172" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="248,528 248,547 267,547 267,528"/>
+  <poly id="173" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="283,528 283,547 302,547 302,528"/>
+  <poly id="174" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="318,528 318,547 337,547 337,528"/>
+  <poly id="175" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="353,528 353,547 372,547 372,528"/>
+  <poly id="176" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="388,528 388,547 407,547 407,528"/>
+  <poly id="177" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="423,528 423,547 442,547 442,528"/>
+  <poly id="178" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="458,528 458,547 477,547 477,528"/>
+  <poly id="179" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="493,528 493,547 512,547 512,528"/>
+  <poly id="180" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="528,528 528,547 547,547 547,528"/>
+  <poly id="181" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="563,528 563,547 582,547 582,528"/>
+  <poly id="182" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="108,563 108,582 127,582 127,563"/>
+  <poly id="183" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="143,563 143,582 162,582 162,563"/>
+  <poly id="184" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="178,563 178,582 197,582 197,563"/>
+  <poly id="185" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="213,563 213,582 232,582 232,563"/>
+  <poly id="186" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="248,563 248,582 267,582 267,563"/>
+  <poly id="187" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="283,563 283,582 302,582 302,563"/>
+  <poly id="188" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="318,563 318,582 337,582 337,563"/>
+  <poly id="189" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="353,563 353,582 372,582 372,563"/>
+  <poly id="190" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="388,563 388,582 407,582 407,563"/>
+  <poly id="191" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="423,563 423,582 442,582 442,563"/>
+  <poly id="192" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="458,563 458,582 477,582 477,563"/>
+  <poly id="193" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="493,563 493,582 512,582 512,563"/>
+  <poly id="194" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="528,563 528,582 547,582 547,563"/>
+  <poly id="195" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="563,563 563,582 582,582 582,563"/>
+  <poi width="7" height="7" layer="5" type="EgoVehicleStart" posLat="0" color="1,1,0" id="EgoVehicleStart0" x="521.9" y="168.8" angle="-90.0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_left" posLat="0" color="0,0.4,.8" x="524.1" y="196.10000000000002" angle="-180.0" id="next_turn_from_M2M3_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="493.9" y="209.1" angle="-270.0" id="next_turn_from_M3L3_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_right" posLat="0" color="0,0.4,.8" x="458.9" y="209.1" angle="-270.0" id="next_turn_from_L3K3_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="454.09999999999997" y="231.10000000000002" angle="-180.0" id="next_turn_from_K3K4_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="454.09999999999997" y="266.1" angle="-180.0" id="next_turn_from_K4K5_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="454.09999999999997" y="301.1" angle="-180.0" id="next_turn_from_K5K6_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="454.09999999999997" y="336.1" angle="-180.0" id="next_turn_from_K6K7_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="454.09999999999997" y="371.1" angle="-180.0" id="next_turn_from_K7K8_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="454.09999999999997" y="406.1" angle="-180.0" id="next_turn_from_K8K9_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="454.09999999999997" y="441.1" angle="-180.0" id="next_turn_from_K9K10_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_right" posLat="0" color="0,0.4,.8" x="454.09999999999997" y="476.1" angle="-180.0" id="next_turn_from_K10K11_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="476.1" y="480.90000000000003" angle="-90.0" id="next_turn_from_K11L11_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_left" posLat="0" color="0,0.4,.8" x="511.1" y="480.90000000000003" angle="-90.0" id="next_turn_from_L11M11_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_left" posLat="0" color="0,0.4,.8" x="524.1" y="511.1" angle="-180.0" id="next_turn_from_M11M12_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="493.9" y="524.1" angle="-270.0" id="next_turn_from_M12L12_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="458.9" y="524.1" angle="-270.0" id="next_turn_from_L12K12_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="423.9" y="524.1" angle="-270.0" id="next_turn_from_K12J12_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="388.9" y="524.1" angle="-270.0" id="next_turn_from_J12I12_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="353.9" y="524.1" angle="-270.0" id="next_turn_from_I12H12_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_right" posLat="0" color="0,0.4,.8" x="318.9" y="524.1" angle="-270.0" id="next_turn_from_H12G12_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_right" posLat="0" color="0,0.4,.8" x="314.09999999999997" y="546.0999999999999" angle="-180.0" id="next_turn_from_G12G13_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="336.1" y="550.9" angle="-90.0" id="next_turn_from_G13H13_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="371.1" y="550.9" angle="-90.0" id="next_turn_from_H13I13_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="406.1" y="550.9" angle="-90.0" id="next_turn_from_I13J13_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="441.1" y="550.9" angle="-90.0" id="next_turn_from_J13K13_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="476.1" y="550.9" angle="-90.0" id="next_turn_from_K13L13_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="511.1" y="550.9" angle="-90.0" id="next_turn_from_L13M13_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_right" posLat="0" color="0,0.4,.8" x="546.0999999999999" y="550.9" angle="-90.0" id="next_turn_from_M13N13_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="550.9" y="528.9000000000001" angle="0.0" id="next_turn_from_N13N12_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="550.9" y="493.9" angle="0.0" id="next_turn_from_N12N11_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="550.9" y="458.9" angle="0.0" id="next_turn_from_N11N10_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_right" posLat="0" color="0,0.4,.8" x="550.9" y="423.9" angle="0.0" id="next_turn_from_N10N9_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_right" posLat="0" color="0,0.4,.8" x="528.9000000000001" y="419.09999999999997" angle="-270.0" id="next_turn_from_N9M9_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_left" posLat="0" color="0,0.4,.8" x="524.1" y="441.1" angle="-180.0" id="next_turn_from_M9M10_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_left" posLat="0" color="0,0.4,.8" x="493.9" y="454.09999999999997" angle="-270.0" id="next_turn_from_M10L10_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="480.90000000000003" y="423.9" angle="0.0" id="next_turn_from_L10L9_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="480.90000000000003" y="388.9" angle="0.0" id="next_turn_from_L9L8_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="480.90000000000003" y="353.9" angle="0.0" id="next_turn_from_L8L7_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="480.90000000000003" y="318.9" angle="0.0" id="next_turn_from_L7L6_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="480.90000000000003" y="283.9" angle="0.0" id="next_turn_from_L6L5_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_left" posLat="0" color="0,0.4,.8" x="480.90000000000003" y="248.89999999999998" angle="0.0" id="next_turn_from_L5L4_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_left" posLat="0" color="0,0.4,.8" x="511.1" y="235.9" angle="-90.0" id="next_turn_from_L4M4_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="524.1" y="266.1" angle="-180.0" id="next_turn_from_M4M5_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="524.1" y="301.1" angle="-180.0" id="next_turn_from_M5M6_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="524.1" y="336.1" angle="-180.0" id="next_turn_from_M6M7_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_right" posLat="0" color="0,0.4,.8" x="524.1" y="371.1" angle="-180.0" id="next_turn_from_M7M8_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_right" posLat="0" color="0,0.4,.8" x="546.0999999999999" y="375.90000000000003" angle="-90.0" id="next_turn_from_M8N8_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="550.9" y="353.9" angle="0.0" id="next_turn_from_N8N7_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="550.9" y="318.9" angle="0.0" id="next_turn_from_N7N6_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="550.9" y="283.9" angle="0.0" id="next_turn_from_N6N5_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="550.9" y="248.89999999999998" angle="0.0" id="next_turn_from_N5N4_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="550.9" y="213.89999999999998" angle="0.0" id="next_turn_from_N4N3_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="550.9" y="178.89999999999998" angle="0.0" id="next_turn_from_N3N2_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_right" posLat="0" color="0,0.4,.8" x="550.9" y="143.89999999999998" angle="0.0" id="next_turn_from_N2N1_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="528.9000000000001" y="139.1" angle="-270.0" id="next_turn_from_N1M1_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_right" posLat="0" color="0,0.4,.8" x="493.9" y="139.1" angle="-270.0" id="next_turn_from_M1L1_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_left" posLat="0" color="0,0.4,.8" x="489.09999999999997" y="161.10000000000002" angle="-180.0" id="next_turn_from_L1L2_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_left" posLat="0" color="0,0.4,.8" x="458.9" y="174.1" angle="-270.0" id="next_turn_from_L2K2_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_right" posLat="0" color="0,0.4,.8" x="445.90000000000003" y="143.89999999999998" angle="0.0" id="next_turn_from_K2K1_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="423.9" y="139.1" angle="-270.0" id="next_turn_from_K1J1_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="388.9" y="139.1" angle="-270.0" id="next_turn_from_J1I1_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_right" posLat="0" color="0,0.4,.8" x="353.9" y="139.1" angle="-270.0" id="next_turn_from_I1H1_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="349.09999999999997" y="161.10000000000002" angle="-180.0" id="next_turn_from_H1H2_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_left" posLat="0" color="0,0.4,.8" x="349.09999999999997" y="196.10000000000002" angle="-180.0" id="next_turn_from_H2H3_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_left" posLat="0" color="0,0.4,.8" x="318.9" y="209.1" angle="-270.0" id="next_turn_from_H3G3_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="305.90000000000003" y="178.89999999999998" angle="0.0" id="next_turn_from_G3G2_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_right" posLat="0" color="0,0.4,.8" x="305.90000000000003" y="143.89999999999998" angle="0.0" id="next_turn_from_G2G1_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_right" posLat="0" color="0,0.4,.8" x="283.9" y="139.1" angle="-270.0" id="next_turn_from_G1F1_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="279.09999999999997" y="161.10000000000002" angle="-180.0" id="next_turn_from_F1F2_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_left" posLat="0" color="0,0.4,.8" x="279.09999999999997" y="196.10000000000002" angle="-180.0" id="next_turn_from_F2F3_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_right" posLat="0" color="0,0.4,.8" x="248.89999999999998" y="209.1" angle="-270.0" id="next_turn_from_F3E3_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_right" posLat="0" color="0,0.4,.8" x="244.1" y="231.10000000000002" angle="-180.0" id="next_turn_from_E3E4_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_left" posLat="0" color="0,0.4,.8" x="266.1" y="235.9" angle="-90.0" id="next_turn_from_E4F4_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_left" posLat="0" color="0,0.4,.8" x="279.09999999999997" y="266.1" angle="-180.0" id="next_turn_from_F4F5_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_right" posLat="0" color="0,0.4,.8" x="248.89999999999998" y="279.09999999999997" angle="-270.0" id="next_turn_from_F5E5_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_right" posLat="0" color="0,0.4,.8" x="244.1" y="301.1" angle="-180.0" id="next_turn_from_E5E6_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="266.1" y="305.90000000000003" angle="-90.0" id="next_turn_from_E6F6_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="301.1" y="305.90000000000003" angle="-90.0" id="next_turn_from_F6G6_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="336.1" y="305.90000000000003" angle="-90.0" id="next_turn_from_G6H6_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_right" posLat="0" color="0,0.4,.8" x="371.1" y="305.90000000000003" angle="-90.0" id="next_turn_from_H6I6_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_right" posLat="0" color="0,0.4,.8" x="375.90000000000003" y="283.9" angle="0.0" id="next_turn_from_I6I5_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="353.9" y="279.09999999999997" angle="-270.0" id="next_turn_from_I5H5_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_left" posLat="0" color="0,0.4,.8" x="318.9" y="279.09999999999997" angle="-270.0" id="next_turn_from_H5G5_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_left" posLat="0" color="0,0.4,.8" x="305.90000000000003" y="248.89999999999998" angle="0.0" id="next_turn_from_G5G4_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="336.1" y="235.9" angle="-90.0" id="next_turn_from_G4H4_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_right" posLat="0" color="0,0.4,.8" x="371.1" y="235.9" angle="-90.0" id="next_turn_from_H4I4_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="375.90000000000003" y="213.89999999999998" angle="0.0" id="next_turn_from_I4I3_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_left" posLat="0" color="0,0.4,.8" x="375.90000000000003" y="178.89999999999998" angle="0.0" id="next_turn_from_I3I2_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_left" posLat="0" color="0,0.4,.8" x="406.1" y="165.9" angle="-90.0" id="next_turn_from_I2J2_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="419.09999999999997" y="196.10000000000002" angle="-180.0" id="next_turn_from_J2J3_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="419.09999999999997" y="231.10000000000002" angle="-180.0" id="next_turn_from_J3J4_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="419.09999999999997" y="266.1" angle="-180.0" id="next_turn_from_J4J5_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="419.09999999999997" y="301.1" angle="-180.0" id="next_turn_from_J5J6_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="419.09999999999997" y="336.1" angle="-180.0" id="next_turn_from_J6J7_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="419.09999999999997" y="371.1" angle="-180.0" id="next_turn_from_J7J8_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="419.09999999999997" y="406.1" angle="-180.0" id="next_turn_from_J8J9_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="419.09999999999997" y="441.1" angle="-180.0" id="next_turn_from_J9J10_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_left" posLat="0" color="0,0.4,.8" x="419.09999999999997" y="476.1" angle="-180.0" id="next_turn_from_J10J11_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="388.9" y="489.09999999999997" angle="-270.0" id="next_turn_from_J11I11_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="353.9" y="489.09999999999997" angle="-270.0" id="next_turn_from_I11H11_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_left" posLat="0" color="0,0.4,.8" x="318.9" y="489.09999999999997" angle="-270.0" id="next_turn_from_H11G11_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_left" posLat="0" color="0,0.4,.8" x="305.90000000000003" y="458.9" angle="0.0" id="next_turn_from_G11G10_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="336.1" y="445.90000000000003" angle="-90.0" id="next_turn_from_G10H10_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_right" posLat="0" color="0,0.4,.8" x="371.1" y="445.90000000000003" angle="-90.0" id="next_turn_from_H10I10_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_right" posLat="0" color="0,0.4,.8" x="375.90000000000003" y="423.9" angle="0.0" id="next_turn_from_I10I9_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_left" posLat="0" color="0,0.4,.8" x="353.9" y="419.09999999999997" angle="-270.0" id="next_turn_from_I9H9_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_left" posLat="0" color="0,0.4,.8" x="340.90000000000003" y="388.9" angle="0.0" id="next_turn_from_H9H8_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_right" posLat="0" color="0,0.4,.8" x="371.1" y="375.90000000000003" angle="-90.0" id="next_turn_from_H8I8_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_right" posLat="0" color="0,0.4,.8" x="375.90000000000003" y="353.9" angle="0.0" id="next_turn_from_I8I7_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="353.9" y="349.09999999999997" angle="-270.0" id="next_turn_from_I7H7_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="318.9" y="349.09999999999997" angle="-270.0" id="next_turn_from_H7G7_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_right" posLat="0" color="0,0.4,.8" x="283.9" y="349.09999999999997" angle="-270.0" id="next_turn_from_G7F7_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_right" posLat="0" color="0,0.4,.8" x="279.09999999999997" y="371.1" angle="-180.0" id="next_turn_from_F7F8_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_left" posLat="0" color="0,0.4,.8" x="301.1" y="375.90000000000003" angle="-90.0" id="next_turn_from_F8G8_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_left" posLat="0" color="0,0.4,.8" x="314.09999999999997" y="406.1" angle="-180.0" id="next_turn_from_G8G9_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_right" posLat="0" color="0,0.4,.8" x="283.9" y="419.09999999999997" angle="-270.0" id="next_turn_from_G9F9_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="279.09999999999997" y="441.1" angle="-180.0" id="next_turn_from_F9F10_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="279.09999999999997" y="476.1" angle="-180.0" id="next_turn_from_F10F11_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="279.09999999999997" y="511.1" angle="-180.0" id="next_turn_from_F11F12_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_left" posLat="0" color="0,0.4,.8" x="279.09999999999997" y="546.0999999999999" angle="-180.0" id="next_turn_from_F12F13_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="248.89999999999998" y="559.1" angle="-270.0" id="next_turn_from_F13E13_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="213.89999999999998" y="559.1" angle="-270.0" id="next_turn_from_E13D13_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="178.89999999999998" y="559.1" angle="-270.0" id="next_turn_from_D13C13_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_left" posLat="0" color="0,0.4,.8" x="143.89999999999998" y="559.1" angle="-270.0" id="next_turn_from_C13B13_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="130.9" y="528.9000000000001" angle="0.0" id="next_turn_from_B13B12_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="130.9" y="493.9" angle="0.0" id="next_turn_from_B12B11_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_left" posLat="0" color="0,0.4,.8" x="130.9" y="458.9" angle="0.0" id="next_turn_from_B11B10_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_left" posLat="0" color="0,0.4,.8" x="161.10000000000002" y="445.90000000000003" angle="-90.0" id="next_turn_from_B10C10_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="174.1" y="476.1" angle="-180.0" id="next_turn_from_C10C11_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_right" posLat="0" color="0,0.4,.8" x="174.1" y="511.1" angle="-180.0" id="next_turn_from_C11C12_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="196.10000000000002" y="515.9" angle="-90.0" id="next_turn_from_C12D12_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_right" posLat="0" color="0,0.4,.8" x="231.10000000000002" y="515.9" angle="-90.0" id="next_turn_from_D12E12_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_right" posLat="0" color="0,0.4,.8" x="235.9" y="493.9" angle="0.0" id="next_turn_from_E12E11_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_left" posLat="0" color="0,0.4,.8" x="213.89999999999998" y="489.09999999999997" angle="-270.0" id="next_turn_from_E11D11_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_left" posLat="0" color="0,0.4,.8" x="200.9" y="458.9" angle="0.0" id="next_turn_from_D11D10_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_right" posLat="0" color="0,0.4,.8" x="231.10000000000002" y="445.90000000000003" angle="-90.0" id="next_turn_from_D10E10_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_right" posLat="0" color="0,0.4,.8" x="235.9" y="423.9" angle="0.0" id="next_turn_from_E10E9_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="213.89999999999998" y="419.09999999999997" angle="-270.0" id="next_turn_from_E9D9_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="178.89999999999998" y="419.09999999999997" angle="-270.0" id="next_turn_from_D9C9_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_left" posLat="0" color="0,0.4,.8" x="143.89999999999998" y="419.09999999999997" angle="-270.0" id="next_turn_from_C9B9_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_left" posLat="0" color="0,0.4,.8" x="130.9" y="388.9" angle="0.0" id="next_turn_from_B9B8_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="161.10000000000002" y="375.90000000000003" angle="-90.0" id="next_turn_from_B8C8_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="196.10000000000002" y="375.90000000000003" angle="-90.0" id="next_turn_from_C8D8_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_right" posLat="0" color="0,0.4,.8" x="231.10000000000002" y="375.90000000000003" angle="-90.0" id="next_turn_from_D8E8_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_right" posLat="0" color="0,0.4,.8" x="235.9" y="353.9" angle="0.0" id="next_turn_from_E8E7_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_left" posLat="0" color="0,0.4,.8" x="213.89999999999998" y="349.09999999999997" angle="-270.0" id="next_turn_from_E7D7_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_right" posLat="0" color="0,0.4,.8" x="200.9" y="318.9" angle="0.0" id="next_turn_from_D7D6_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_right" posLat="0" color="0,0.4,.8" x="178.89999999999998" y="314.09999999999997" angle="-270.0" id="next_turn_from_D6C6_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_left" posLat="0" color="0,0.4,.8" x="174.1" y="336.1" angle="-180.0" id="next_turn_from_C6C7_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_left" posLat="0" color="0,0.4,.8" x="143.89999999999998" y="349.09999999999997" angle="-270.0" id="next_turn_from_C7B7_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="130.9" y="318.9" angle="0.0" id="next_turn_from_B7B6_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="130.9" y="283.9" angle="0.0" id="next_turn_from_B6B5_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_left" posLat="0" color="0,0.4,.8" x="130.9" y="248.89999999999998" angle="0.0" id="next_turn_from_B5B4_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_left" posLat="0" color="0,0.4,.8" x="161.10000000000002" y="235.9" angle="-90.0" id="next_turn_from_B4C4_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_right" posLat="0" color="0,0.4,.8" x="174.1" y="266.1" angle="-180.0" id="next_turn_from_C4C5_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_right" posLat="0" color="0,0.4,.8" x="196.10000000000002" y="270.90000000000003" angle="-90.0" id="next_turn_from_C5D5_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="200.9" y="248.89999999999998" angle="0.0" id="next_turn_from_D5D4_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_right" posLat="0" color="0,0.4,.8" x="200.9" y="213.89999999999998" angle="0.0" id="next_turn_from_D4D3_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="178.89999999999998" y="209.1" angle="-270.0" id="next_turn_from_D3C3_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_left" posLat="0" color="0,0.4,.8" x="143.89999999999998" y="209.1" angle="-270.0" id="next_turn_from_C3B3_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_left" posLat="0" color="0,0.4,.8" x="130.9" y="178.89999999999998" angle="0.0" id="next_turn_from_B3B2_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="161.10000000000002" y="165.9" angle="-90.0" id="next_turn_from_B2C2_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="196.10000000000002" y="165.9" angle="-90.0" id="next_turn_from_C2D2_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_right" posLat="0" color="0,0.4,.8" x="231.10000000000002" y="165.9" angle="-90.0" id="next_turn_from_D2E2_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_right" posLat="0" color="0,0.4,.8" x="235.9" y="143.89999999999998" angle="0.0" id="next_turn_from_E2E1_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="213.89999999999998" y="139.1" angle="-270.0" id="next_turn_from_E1D1_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="178.89999999999998" y="139.1" angle="-270.0" id="next_turn_from_D1C1_0"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="523.6999999999999" y="196.199" angle="-180.0" id="streetSign_priority_M2M3"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="528.801" y="208.70000000000002" angle="-270.0" id="streetSign_yield_N3M3"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="516.3000000000001" y="213.801" angle="0.0" id="streetSign_priority_M4M3"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="511.199" y="201.29999999999998" angle="-90.0" id="streetSign_yield_L3M3"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="488.7" y="196.199" angle="-180.0" id="streetSign_priority_L2L3"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="493.801" y="208.70000000000002" angle="-270.0" id="streetSign_yield_M3L3"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="481.3" y="213.801" angle="0.0" id="streetSign_priority_L4L3"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="476.199" y="201.29999999999998" angle="-90.0" id="streetSign_yield_K3L3"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="453.7" y="196.199" angle="-180.0" id="streetSign_priority_K2K3"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="458.801" y="208.70000000000002" angle="-270.0" id="streetSign_yield_L3K3"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="446.3" y="213.801" angle="0.0" id="streetSign_priority_K4K3"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="441.199" y="201.29999999999998" angle="-90.0" id="streetSign_yield_J3K3"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="453.7" y="231.199" angle="-180.0" id="streetSign_priority_K3K4"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="458.801" y="243.70000000000002" angle="-270.0" id="streetSign_yield_L4K4"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="446.3" y="248.801" angle="0.0" id="streetSign_priority_K5K4"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="441.199" y="236.29999999999998" angle="-90.0" id="streetSign_yield_J4K4"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="453.7" y="266.199" angle="-180.0" id="streetSign_priority_K4K5"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="458.801" y="278.7" angle="-270.0" id="streetSign_yield_L5K5"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="446.3" y="283.801" angle="0.0" id="streetSign_priority_K6K5"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="441.199" y="271.3" angle="-90.0" id="streetSign_yield_J5K5"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="453.7" y="301.199" angle="-180.0" id="streetSign_priority_K5K6"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="458.801" y="313.7" angle="-270.0" id="streetSign_yield_L6K6"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="446.3" y="318.801" angle="0.0" id="streetSign_priority_K7K6"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="441.199" y="306.3" angle="-90.0" id="streetSign_yield_J6K6"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="453.7" y="336.199" angle="-180.0" id="streetSign_priority_K6K7"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="458.801" y="348.7" angle="-270.0" id="streetSign_yield_L7K7"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="446.3" y="353.801" angle="0.0" id="streetSign_priority_K8K7"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="441.199" y="341.3" angle="-90.0" id="streetSign_yield_J7K7"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="453.7" y="371.199" angle="-180.0" id="streetSign_priority_K7K8"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="458.801" y="383.7" angle="-270.0" id="streetSign_yield_L8K8"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="446.3" y="388.801" angle="0.0" id="streetSign_priority_K9K8"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="441.199" y="376.3" angle="-90.0" id="streetSign_yield_J8K8"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="453.7" y="406.199" angle="-180.0" id="streetSign_priority_K8K9"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="458.801" y="418.7" angle="-270.0" id="streetSign_yield_L9K9"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="446.3" y="423.801" angle="0.0" id="streetSign_priority_K10K9"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="441.199" y="411.3" angle="-90.0" id="streetSign_yield_J9K9"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="453.7" y="441.199" angle="-180.0" id="streetSign_priority_K9K10"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="458.801" y="453.7" angle="-270.0" id="streetSign_yield_L10K10"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="446.3" y="458.801" angle="0.0" id="streetSign_priority_K11K10"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="441.199" y="446.3" angle="-90.0" id="streetSign_yield_J10K10"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="453.7" y="476.199" angle="-180.0" id="streetSign_priority_K10K11"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="458.801" y="488.7" angle="-270.0" id="streetSign_yield_L11K11"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="446.3" y="493.801" angle="0.0" id="streetSign_priority_K12K11"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="441.199" y="481.3" angle="-90.0" id="streetSign_yield_J11K11"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="481.3" y="493.801" angle="0.0" id="streetSign_priority_L12L11"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="476.199" y="481.3" angle="-90.0" id="streetSign_yield_K11L11"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="488.7" y="476.199" angle="-180.0" id="streetSign_priority_L10L11"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="493.801" y="488.7" angle="-270.0" id="streetSign_yield_M11L11"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="516.3000000000001" y="493.801" angle="0.0" id="streetSign_priority_M12M11"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="511.199" y="481.3" angle="-90.0" id="streetSign_yield_L11M11"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="523.6999999999999" y="476.199" angle="-180.0" id="streetSign_priority_M10M11"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="528.801" y="488.7" angle="-270.0" id="streetSign_yield_N11M11"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="523.6999999999999" y="511.199" angle="-180.0" id="streetSign_priority_M11M12"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="528.801" y="523.6999999999999" angle="-270.0" id="streetSign_yield_N12M12"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="516.3000000000001" y="528.801" angle="0.0" id="streetSign_priority_M13M12"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="511.199" y="516.3000000000001" angle="-90.0" id="streetSign_yield_L12M12"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="488.7" y="511.199" angle="-180.0" id="streetSign_priority_L11L12"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="493.801" y="523.6999999999999" angle="-270.0" id="streetSign_yield_M12L12"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="481.3" y="528.801" angle="0.0" id="streetSign_priority_L13L12"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="476.199" y="516.3000000000001" angle="-90.0" id="streetSign_yield_K12L12"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="453.7" y="511.199" angle="-180.0" id="streetSign_priority_K11K12"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="458.801" y="523.6999999999999" angle="-270.0" id="streetSign_yield_L12K12"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="446.3" y="528.801" angle="0.0" id="streetSign_priority_K13K12"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="441.199" y="516.3000000000001" angle="-90.0" id="streetSign_yield_J12K12"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="418.7" y="511.199" angle="-180.0" id="streetSign_priority_J11J12"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="423.801" y="523.6999999999999" angle="-270.0" id="streetSign_yield_K12J12"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="411.3" y="528.801" angle="0.0" id="streetSign_priority_J13J12"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="406.199" y="516.3000000000001" angle="-90.0" id="streetSign_yield_I12J12"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="383.7" y="511.199" angle="-180.0" id="streetSign_priority_I11I12"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="388.801" y="523.6999999999999" angle="-270.0" id="streetSign_yield_J12I12"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="376.3" y="528.801" angle="0.0" id="streetSign_priority_I13I12"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="371.199" y="516.3000000000001" angle="-90.0" id="streetSign_yield_H12I12"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="348.7" y="511.199" angle="-180.0" id="streetSign_priority_H11H12"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="353.801" y="523.6999999999999" angle="-270.0" id="streetSign_yield_I12H12"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="341.3" y="528.801" angle="0.0" id="streetSign_priority_H13H12"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="336.199" y="516.3000000000001" angle="-90.0" id="streetSign_yield_G12H12"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="313.7" y="511.199" angle="-180.0" id="streetSign_priority_G11G12"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="318.801" y="523.6999999999999" angle="-270.0" id="streetSign_yield_H12G12"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="306.3" y="528.801" angle="0.0" id="streetSign_priority_G13G12"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="301.199" y="516.3000000000001" angle="-90.0" id="streetSign_yield_F12G12"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="313.7" y="546.199" angle="-180.0" id="streetSign_priority_G12G13"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="318.801" y="558.6999999999999" angle="-270.0" id="streetSign_yield_H13G13"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="306.3" y="563.801" angle="0.0" id="streetSign_priority_G14G13"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="301.199" y="551.3000000000001" angle="-90.0" id="streetSign_yield_F13G13"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="341.3" y="563.801" angle="0.0" id="streetSign_priority_H14H13"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="336.199" y="551.3000000000001" angle="-90.0" id="streetSign_yield_G13H13"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="348.7" y="546.199" angle="-180.0" id="streetSign_priority_H12H13"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="353.801" y="558.6999999999999" angle="-270.0" id="streetSign_yield_I13H13"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="376.3" y="563.801" angle="0.0" id="streetSign_priority_I14I13"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="371.199" y="551.3000000000001" angle="-90.0" id="streetSign_yield_H13I13"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="383.7" y="546.199" angle="-180.0" id="streetSign_priority_I12I13"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="388.801" y="558.6999999999999" angle="-270.0" id="streetSign_yield_J13I13"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="411.3" y="563.801" angle="0.0" id="streetSign_priority_J14J13"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="406.199" y="551.3000000000001" angle="-90.0" id="streetSign_yield_I13J13"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="418.7" y="546.199" angle="-180.0" id="streetSign_priority_J12J13"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="423.801" y="558.6999999999999" angle="-270.0" id="streetSign_yield_K13J13"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="446.3" y="563.801" angle="0.0" id="streetSign_priority_K14K13"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="441.199" y="551.3000000000001" angle="-90.0" id="streetSign_yield_J13K13"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="453.7" y="546.199" angle="-180.0" id="streetSign_priority_K12K13"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="458.801" y="558.6999999999999" angle="-270.0" id="streetSign_yield_L13K13"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="481.3" y="563.801" angle="0.0" id="streetSign_priority_L14L13"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="476.199" y="551.3000000000001" angle="-90.0" id="streetSign_yield_K13L13"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="488.7" y="546.199" angle="-180.0" id="streetSign_priority_L12L13"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="493.801" y="558.6999999999999" angle="-270.0" id="streetSign_yield_M13L13"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="516.3000000000001" y="563.801" angle="0.0" id="streetSign_priority_M14M13"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="511.199" y="551.3000000000001" angle="-90.0" id="streetSign_yield_L13M13"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="523.6999999999999" y="546.199" angle="-180.0" id="streetSign_priority_M12M13"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="528.801" y="558.6999999999999" angle="-270.0" id="streetSign_yield_N13M13"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="551.3000000000001" y="563.801" angle="0.0" id="streetSign_priority_N14N13"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="546.199" y="551.3000000000001" angle="-90.0" id="streetSign_yield_M13N13"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="558.6999999999999" y="546.199" angle="-180.0" id="streetSign_priority_N12N13"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="563.801" y="558.6999999999999" angle="-270.0" id="streetSign_yield_O13N13"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="551.3000000000001" y="528.801" angle="0.0" id="streetSign_priority_N13N12"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="546.199" y="516.3000000000001" angle="-90.0" id="streetSign_yield_M12N12"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="558.6999999999999" y="511.199" angle="-180.0" id="streetSign_priority_N11N12"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="563.801" y="523.6999999999999" angle="-270.0" id="streetSign_yield_O12N12"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="551.3000000000001" y="493.801" angle="0.0" id="streetSign_priority_N12N11"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="546.199" y="481.3" angle="-90.0" id="streetSign_yield_M11N11"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="558.6999999999999" y="476.199" angle="-180.0" id="streetSign_priority_N10N11"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="563.801" y="488.7" angle="-270.0" id="streetSign_yield_O11N11"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="551.3000000000001" y="458.801" angle="0.0" id="streetSign_priority_N11N10"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="546.199" y="446.3" angle="-90.0" id="streetSign_yield_M10N10"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="558.6999999999999" y="441.199" angle="-180.0" id="streetSign_priority_N9N10"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="563.801" y="453.7" angle="-270.0" id="streetSign_yield_O10N10"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="551.3000000000001" y="423.801" angle="0.0" id="streetSign_priority_N10N9"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="546.199" y="411.3" angle="-90.0" id="streetSign_yield_M9N9"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="558.6999999999999" y="406.199" angle="-180.0" id="streetSign_priority_N8N9"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="563.801" y="418.7" angle="-270.0" id="streetSign_yield_O9N9"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="523.6999999999999" y="406.199" angle="-180.0" id="streetSign_priority_M8M9"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="528.801" y="418.7" angle="-270.0" id="streetSign_yield_N9M9"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="516.3000000000001" y="423.801" angle="0.0" id="streetSign_priority_M10M9"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="511.199" y="411.3" angle="-90.0" id="streetSign_yield_L9M9"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="523.6999999999999" y="441.199" angle="-180.0" id="streetSign_priority_M9M10"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="528.801" y="453.7" angle="-270.0" id="streetSign_yield_N10M10"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="516.3000000000001" y="458.801" angle="0.0" id="streetSign_priority_M11M10"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="511.199" y="446.3" angle="-90.0" id="streetSign_yield_L10M10"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="488.7" y="441.199" angle="-180.0" id="streetSign_priority_L9L10"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="493.801" y="453.7" angle="-270.0" id="streetSign_yield_M10L10"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="481.3" y="458.801" angle="0.0" id="streetSign_priority_L11L10"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="476.199" y="446.3" angle="-90.0" id="streetSign_yield_K10L10"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="481.3" y="423.801" angle="0.0" id="streetSign_priority_L10L9"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="476.199" y="411.3" angle="-90.0" id="streetSign_yield_K9L9"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="488.7" y="406.199" angle="-180.0" id="streetSign_priority_L8L9"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="493.801" y="418.7" angle="-270.0" id="streetSign_yield_M9L9"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="481.3" y="388.801" angle="0.0" id="streetSign_priority_L9L8"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="476.199" y="376.3" angle="-90.0" id="streetSign_yield_K8L8"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="488.7" y="371.199" angle="-180.0" id="streetSign_priority_L7L8"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="493.801" y="383.7" angle="-270.0" id="streetSign_yield_M8L8"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="481.3" y="353.801" angle="0.0" id="streetSign_priority_L8L7"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="476.199" y="341.3" angle="-90.0" id="streetSign_yield_K7L7"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="488.7" y="336.199" angle="-180.0" id="streetSign_priority_L6L7"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="493.801" y="348.7" angle="-270.0" id="streetSign_yield_M7L7"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="481.3" y="318.801" angle="0.0" id="streetSign_priority_L7L6"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="476.199" y="306.3" angle="-90.0" id="streetSign_yield_K6L6"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="488.7" y="301.199" angle="-180.0" id="streetSign_priority_L5L6"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="493.801" y="313.7" angle="-270.0" id="streetSign_yield_M6L6"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="481.3" y="283.801" angle="0.0" id="streetSign_priority_L6L5"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="476.199" y="271.3" angle="-90.0" id="streetSign_yield_K5L5"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="488.7" y="266.199" angle="-180.0" id="streetSign_priority_L4L5"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="493.801" y="278.7" angle="-270.0" id="streetSign_yield_M5L5"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="481.3" y="248.801" angle="0.0" id="streetSign_priority_L5L4"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="476.199" y="236.29999999999998" angle="-90.0" id="streetSign_yield_K4L4"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="488.7" y="231.199" angle="-180.0" id="streetSign_priority_L3L4"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="493.801" y="243.70000000000002" angle="-270.0" id="streetSign_yield_M4L4"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="516.3000000000001" y="248.801" angle="0.0" id="streetSign_priority_M5M4"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="511.199" y="236.29999999999998" angle="-90.0" id="streetSign_yield_L4M4"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="523.6999999999999" y="231.199" angle="-180.0" id="streetSign_priority_M3M4"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="528.801" y="243.70000000000002" angle="-270.0" id="streetSign_yield_N4M4"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="523.6999999999999" y="266.199" angle="-180.0" id="streetSign_priority_M4M5"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="528.801" y="278.7" angle="-270.0" id="streetSign_yield_N5M5"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="516.3000000000001" y="283.801" angle="0.0" id="streetSign_priority_M6M5"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="511.199" y="271.3" angle="-90.0" id="streetSign_yield_L5M5"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="523.6999999999999" y="301.199" angle="-180.0" id="streetSign_priority_M5M6"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="528.801" y="313.7" angle="-270.0" id="streetSign_yield_N6M6"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="516.3000000000001" y="318.801" angle="0.0" id="streetSign_priority_M7M6"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="511.199" y="306.3" angle="-90.0" id="streetSign_yield_L6M6"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="523.6999999999999" y="336.199" angle="-180.0" id="streetSign_priority_M6M7"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="528.801" y="348.7" angle="-270.0" id="streetSign_yield_N7M7"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="516.3000000000001" y="353.801" angle="0.0" id="streetSign_priority_M8M7"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="511.199" y="341.3" angle="-90.0" id="streetSign_yield_L7M7"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="523.6999999999999" y="371.199" angle="-180.0" id="streetSign_priority_M7M8"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="528.801" y="383.7" angle="-270.0" id="streetSign_yield_N8M8"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="516.3000000000001" y="388.801" angle="0.0" id="streetSign_priority_M9M8"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="511.199" y="376.3" angle="-90.0" id="streetSign_yield_L8M8"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="551.3000000000001" y="388.801" angle="0.0" id="streetSign_priority_N9N8"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="546.199" y="376.3" angle="-90.0" id="streetSign_yield_M8N8"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="558.6999999999999" y="371.199" angle="-180.0" id="streetSign_priority_N7N8"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="563.801" y="383.7" angle="-270.0" id="streetSign_yield_O8N8"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="551.3000000000001" y="353.801" angle="0.0" id="streetSign_priority_N8N7"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="546.199" y="341.3" angle="-90.0" id="streetSign_yield_M7N7"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="558.6999999999999" y="336.199" angle="-180.0" id="streetSign_priority_N6N7"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="563.801" y="348.7" angle="-270.0" id="streetSign_yield_O7N7"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="551.3000000000001" y="318.801" angle="0.0" id="streetSign_priority_N7N6"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="546.199" y="306.3" angle="-90.0" id="streetSign_yield_M6N6"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="558.6999999999999" y="301.199" angle="-180.0" id="streetSign_priority_N5N6"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="563.801" y="313.7" angle="-270.0" id="streetSign_yield_O6N6"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="551.3000000000001" y="283.801" angle="0.0" id="streetSign_priority_N6N5"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="546.199" y="271.3" angle="-90.0" id="streetSign_yield_M5N5"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="558.6999999999999" y="266.199" angle="-180.0" id="streetSign_priority_N4N5"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="563.801" y="278.7" angle="-270.0" id="streetSign_yield_O5N5"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="551.3000000000001" y="248.801" angle="0.0" id="streetSign_priority_N5N4"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="546.199" y="236.29999999999998" angle="-90.0" id="streetSign_yield_M4N4"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="558.6999999999999" y="231.199" angle="-180.0" id="streetSign_priority_N3N4"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="563.801" y="243.70000000000002" angle="-270.0" id="streetSign_yield_O4N4"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="551.3000000000001" y="213.801" angle="0.0" id="streetSign_priority_N4N3"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="546.199" y="201.29999999999998" angle="-90.0" id="streetSign_yield_M3N3"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="558.6999999999999" y="196.199" angle="-180.0" id="streetSign_priority_N2N3"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="563.801" y="208.70000000000002" angle="-270.0" id="streetSign_yield_O3N3"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="551.3000000000001" y="178.801" angle="0.0" id="streetSign_priority_N3N2"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="546.199" y="166.29999999999998" angle="-90.0" id="streetSign_yield_M2N2"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="558.6999999999999" y="161.199" angle="-180.0" id="streetSign_priority_N1N2"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="563.801" y="173.70000000000002" angle="-270.0" id="streetSign_yield_O2N2"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="551.3000000000001" y="143.801" angle="0.0" id="streetSign_priority_N2N1"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="546.199" y="131.29999999999998" angle="-90.0" id="streetSign_yield_M1N1"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="558.6999999999999" y="126.199" angle="-180.0" id="streetSign_priority_N0N1"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="563.801" y="138.70000000000002" angle="-270.0" id="streetSign_yield_O1N1"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="523.6999999999999" y="126.199" angle="-180.0" id="streetSign_priority_M0M1"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="528.801" y="138.70000000000002" angle="-270.0" id="streetSign_yield_N1M1"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="516.3000000000001" y="143.801" angle="0.0" id="streetSign_priority_M2M1"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="511.199" y="131.29999999999998" angle="-90.0" id="streetSign_yield_L1M1"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="488.7" y="126.199" angle="-180.0" id="streetSign_priority_L0L1"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="493.801" y="138.70000000000002" angle="-270.0" id="streetSign_yield_M1L1"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="481.3" y="143.801" angle="0.0" id="streetSign_priority_L2L1"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="476.199" y="131.29999999999998" angle="-90.0" id="streetSign_yield_K1L1"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="488.7" y="161.199" angle="-180.0" id="streetSign_priority_L1L2"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="493.801" y="173.70000000000002" angle="-270.0" id="streetSign_yield_M2L2"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="481.3" y="178.801" angle="0.0" id="streetSign_priority_L3L2"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="476.199" y="166.29999999999998" angle="-90.0" id="streetSign_yield_K2L2"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="453.7" y="161.199" angle="-180.0" id="streetSign_priority_K1K2"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="458.801" y="173.70000000000002" angle="-270.0" id="streetSign_yield_L2K2"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="446.3" y="178.801" angle="0.0" id="streetSign_priority_K3K2"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="441.199" y="166.29999999999998" angle="-90.0" id="streetSign_yield_J2K2"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="446.3" y="143.801" angle="0.0" id="streetSign_priority_K2K1"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="441.199" y="131.29999999999998" angle="-90.0" id="streetSign_yield_J1K1"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="453.7" y="126.199" angle="-180.0" id="streetSign_priority_K0K1"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="458.801" y="138.70000000000002" angle="-270.0" id="streetSign_yield_L1K1"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="418.7" y="126.199" angle="-180.0" id="streetSign_priority_J0J1"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="423.801" y="138.70000000000002" angle="-270.0" id="streetSign_yield_K1J1"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="411.3" y="143.801" angle="0.0" id="streetSign_priority_J2J1"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="406.199" y="131.29999999999998" angle="-90.0" id="streetSign_yield_I1J1"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="383.7" y="126.199" angle="-180.0" id="streetSign_priority_I0I1"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="388.801" y="138.70000000000002" angle="-270.0" id="streetSign_yield_J1I1"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="376.3" y="143.801" angle="0.0" id="streetSign_priority_I2I1"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="371.199" y="131.29999999999998" angle="-90.0" id="streetSign_yield_H1I1"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="348.7" y="126.199" angle="-180.0" id="streetSign_priority_H0H1"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="353.801" y="138.70000000000002" angle="-270.0" id="streetSign_yield_I1H1"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="341.3" y="143.801" angle="0.0" id="streetSign_priority_H2H1"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="336.199" y="131.29999999999998" angle="-90.0" id="streetSign_yield_G1H1"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="348.7" y="161.199" angle="-180.0" id="streetSign_priority_H1H2"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="353.801" y="173.70000000000002" angle="-270.0" id="streetSign_yield_I2H2"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="341.3" y="178.801" angle="0.0" id="streetSign_priority_H3H2"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="336.199" y="166.29999999999998" angle="-90.0" id="streetSign_yield_G2H2"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="348.7" y="196.199" angle="-180.0" id="streetSign_priority_H2H3"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="353.801" y="208.70000000000002" angle="-270.0" id="streetSign_yield_I3H3"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="341.3" y="213.801" angle="0.0" id="streetSign_priority_H4H3"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="336.199" y="201.29999999999998" angle="-90.0" id="streetSign_yield_G3H3"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="313.7" y="196.199" angle="-180.0" id="streetSign_priority_G2G3"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="318.801" y="208.70000000000002" angle="-270.0" id="streetSign_yield_H3G3"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="306.3" y="213.801" angle="0.0" id="streetSign_priority_G4G3"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="301.199" y="201.29999999999998" angle="-90.0" id="streetSign_yield_F3G3"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="306.3" y="178.801" angle="0.0" id="streetSign_priority_G3G2"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="301.199" y="166.29999999999998" angle="-90.0" id="streetSign_yield_F2G2"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="313.7" y="161.199" angle="-180.0" id="streetSign_priority_G1G2"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="318.801" y="173.70000000000002" angle="-270.0" id="streetSign_yield_H2G2"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="306.3" y="143.801" angle="0.0" id="streetSign_priority_G2G1"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="301.199" y="131.29999999999998" angle="-90.0" id="streetSign_yield_F1G1"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="313.7" y="126.199" angle="-180.0" id="streetSign_priority_G0G1"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="318.801" y="138.70000000000002" angle="-270.0" id="streetSign_yield_H1G1"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="278.7" y="126.199" angle="-180.0" id="streetSign_priority_F0F1"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="283.801" y="138.70000000000002" angle="-270.0" id="streetSign_yield_G1F1"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="271.3" y="143.801" angle="0.0" id="streetSign_priority_F2F1"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="266.199" y="131.29999999999998" angle="-90.0" id="streetSign_yield_E1F1"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="278.7" y="161.199" angle="-180.0" id="streetSign_priority_F1F2"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="283.801" y="173.70000000000002" angle="-270.0" id="streetSign_yield_G2F2"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="271.3" y="178.801" angle="0.0" id="streetSign_priority_F3F2"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="266.199" y="166.29999999999998" angle="-90.0" id="streetSign_yield_E2F2"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="278.7" y="196.199" angle="-180.0" id="streetSign_priority_F2F3"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="283.801" y="208.70000000000002" angle="-270.0" id="streetSign_yield_G3F3"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="271.3" y="213.801" angle="0.0" id="streetSign_priority_F4F3"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="266.199" y="201.29999999999998" angle="-90.0" id="streetSign_yield_E3F3"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="243.70000000000002" y="196.199" angle="-180.0" id="streetSign_priority_E2E3"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="248.801" y="208.70000000000002" angle="-270.0" id="streetSign_yield_F3E3"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="236.29999999999998" y="213.801" angle="0.0" id="streetSign_priority_E4E3"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="231.199" y="201.29999999999998" angle="-90.0" id="streetSign_yield_D3E3"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="243.70000000000002" y="231.199" angle="-180.0" id="streetSign_priority_E3E4"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="248.801" y="243.70000000000002" angle="-270.0" id="streetSign_yield_F4E4"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="236.29999999999998" y="248.801" angle="0.0" id="streetSign_priority_E5E4"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="231.199" y="236.29999999999998" angle="-90.0" id="streetSign_yield_D4E4"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="271.3" y="248.801" angle="0.0" id="streetSign_priority_F5F4"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="266.199" y="236.29999999999998" angle="-90.0" id="streetSign_yield_E4F4"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="278.7" y="231.199" angle="-180.0" id="streetSign_priority_F3F4"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="283.801" y="243.70000000000002" angle="-270.0" id="streetSign_yield_G4F4"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="278.7" y="266.199" angle="-180.0" id="streetSign_priority_F4F5"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="283.801" y="278.7" angle="-270.0" id="streetSign_yield_G5F5"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="271.3" y="283.801" angle="0.0" id="streetSign_priority_F6F5"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="266.199" y="271.3" angle="-90.0" id="streetSign_yield_E5F5"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="243.70000000000002" y="266.199" angle="-180.0" id="streetSign_priority_E4E5"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="248.801" y="278.7" angle="-270.0" id="streetSign_yield_F5E5"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="236.29999999999998" y="283.801" angle="0.0" id="streetSign_priority_E6E5"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="231.199" y="271.3" angle="-90.0" id="streetSign_yield_D5E5"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="243.70000000000002" y="301.199" angle="-180.0" id="streetSign_priority_E5E6"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="248.801" y="313.7" angle="-270.0" id="streetSign_yield_F6E6"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="236.29999999999998" y="318.801" angle="0.0" id="streetSign_priority_E7E6"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="231.199" y="306.3" angle="-90.0" id="streetSign_yield_D6E6"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="271.3" y="318.801" angle="0.0" id="streetSign_priority_F7F6"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="266.199" y="306.3" angle="-90.0" id="streetSign_yield_E6F6"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="278.7" y="301.199" angle="-180.0" id="streetSign_priority_F5F6"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="283.801" y="313.7" angle="-270.0" id="streetSign_yield_G6F6"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="306.3" y="318.801" angle="0.0" id="streetSign_priority_G7G6"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="301.199" y="306.3" angle="-90.0" id="streetSign_yield_F6G6"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="313.7" y="301.199" angle="-180.0" id="streetSign_priority_G5G6"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="318.801" y="313.7" angle="-270.0" id="streetSign_yield_H6G6"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="341.3" y="318.801" angle="0.0" id="streetSign_priority_H7H6"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="336.199" y="306.3" angle="-90.0" id="streetSign_yield_G6H6"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="348.7" y="301.199" angle="-180.0" id="streetSign_priority_H5H6"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="353.801" y="313.7" angle="-270.0" id="streetSign_yield_I6H6"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="376.3" y="318.801" angle="0.0" id="streetSign_priority_I7I6"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="371.199" y="306.3" angle="-90.0" id="streetSign_yield_H6I6"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="383.7" y="301.199" angle="-180.0" id="streetSign_priority_I5I6"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="388.801" y="313.7" angle="-270.0" id="streetSign_yield_J6I6"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="376.3" y="283.801" angle="0.0" id="streetSign_priority_I6I5"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="371.199" y="271.3" angle="-90.0" id="streetSign_yield_H5I5"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="383.7" y="266.199" angle="-180.0" id="streetSign_priority_I4I5"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="388.801" y="278.7" angle="-270.0" id="streetSign_yield_J5I5"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="348.7" y="266.199" angle="-180.0" id="streetSign_priority_H4H5"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="353.801" y="278.7" angle="-270.0" id="streetSign_yield_I5H5"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="341.3" y="283.801" angle="0.0" id="streetSign_priority_H6H5"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="336.199" y="271.3" angle="-90.0" id="streetSign_yield_G5H5"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="313.7" y="266.199" angle="-180.0" id="streetSign_priority_G4G5"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="318.801" y="278.7" angle="-270.0" id="streetSign_yield_H5G5"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="306.3" y="283.801" angle="0.0" id="streetSign_priority_G6G5"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="301.199" y="271.3" angle="-90.0" id="streetSign_yield_F5G5"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="306.3" y="248.801" angle="0.0" id="streetSign_priority_G5G4"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="301.199" y="236.29999999999998" angle="-90.0" id="streetSign_yield_F4G4"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="313.7" y="231.199" angle="-180.0" id="streetSign_priority_G3G4"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="318.801" y="243.70000000000002" angle="-270.0" id="streetSign_yield_H4G4"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="341.3" y="248.801" angle="0.0" id="streetSign_priority_H5H4"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="336.199" y="236.29999999999998" angle="-90.0" id="streetSign_yield_G4H4"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="348.7" y="231.199" angle="-180.0" id="streetSign_priority_H3H4"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="353.801" y="243.70000000000002" angle="-270.0" id="streetSign_yield_I4H4"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="376.3" y="248.801" angle="0.0" id="streetSign_priority_I5I4"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="371.199" y="236.29999999999998" angle="-90.0" id="streetSign_yield_H4I4"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="383.7" y="231.199" angle="-180.0" id="streetSign_priority_I3I4"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="388.801" y="243.70000000000002" angle="-270.0" id="streetSign_yield_J4I4"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="376.3" y="213.801" angle="0.0" id="streetSign_priority_I4I3"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="371.199" y="201.29999999999998" angle="-90.0" id="streetSign_yield_H3I3"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="383.7" y="196.199" angle="-180.0" id="streetSign_priority_I2I3"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="388.801" y="208.70000000000002" angle="-270.0" id="streetSign_yield_J3I3"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="376.3" y="178.801" angle="0.0" id="streetSign_priority_I3I2"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="371.199" y="166.29999999999998" angle="-90.0" id="streetSign_yield_H2I2"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="383.7" y="161.199" angle="-180.0" id="streetSign_priority_I1I2"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="388.801" y="173.70000000000002" angle="-270.0" id="streetSign_yield_J2I2"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="411.3" y="178.801" angle="0.0" id="streetSign_priority_J3J2"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="406.199" y="166.29999999999998" angle="-90.0" id="streetSign_yield_I2J2"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="418.7" y="161.199" angle="-180.0" id="streetSign_priority_J1J2"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="423.801" y="173.70000000000002" angle="-270.0" id="streetSign_yield_K2J2"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="418.7" y="196.199" angle="-180.0" id="streetSign_priority_J2J3"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="423.801" y="208.70000000000002" angle="-270.0" id="streetSign_yield_K3J3"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="411.3" y="213.801" angle="0.0" id="streetSign_priority_J4J3"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="406.199" y="201.29999999999998" angle="-90.0" id="streetSign_yield_I3J3"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="418.7" y="231.199" angle="-180.0" id="streetSign_priority_J3J4"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="423.801" y="243.70000000000002" angle="-270.0" id="streetSign_yield_K4J4"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="411.3" y="248.801" angle="0.0" id="streetSign_priority_J5J4"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="406.199" y="236.29999999999998" angle="-90.0" id="streetSign_yield_I4J4"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="418.7" y="266.199" angle="-180.0" id="streetSign_priority_J4J5"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="423.801" y="278.7" angle="-270.0" id="streetSign_yield_K5J5"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="411.3" y="283.801" angle="0.0" id="streetSign_priority_J6J5"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="406.199" y="271.3" angle="-90.0" id="streetSign_yield_I5J5"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="418.7" y="301.199" angle="-180.0" id="streetSign_priority_J5J6"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="423.801" y="313.7" angle="-270.0" id="streetSign_yield_K6J6"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="411.3" y="318.801" angle="0.0" id="streetSign_priority_J7J6"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="406.199" y="306.3" angle="-90.0" id="streetSign_yield_I6J6"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="418.7" y="336.199" angle="-180.0" id="streetSign_priority_J6J7"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="423.801" y="348.7" angle="-270.0" id="streetSign_yield_K7J7"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="411.3" y="353.801" angle="0.0" id="streetSign_priority_J8J7"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="406.199" y="341.3" angle="-90.0" id="streetSign_yield_I7J7"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="418.7" y="371.199" angle="-180.0" id="streetSign_priority_J7J8"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="423.801" y="383.7" angle="-270.0" id="streetSign_yield_K8J8"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="411.3" y="388.801" angle="0.0" id="streetSign_priority_J9J8"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="406.199" y="376.3" angle="-90.0" id="streetSign_yield_I8J8"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="418.7" y="406.199" angle="-180.0" id="streetSign_priority_J8J9"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="423.801" y="418.7" angle="-270.0" id="streetSign_yield_K9J9"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="411.3" y="423.801" angle="0.0" id="streetSign_priority_J10J9"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="406.199" y="411.3" angle="-90.0" id="streetSign_yield_I9J9"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="418.7" y="441.199" angle="-180.0" id="streetSign_priority_J9J10"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="423.801" y="453.7" angle="-270.0" id="streetSign_yield_K10J10"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="411.3" y="458.801" angle="0.0" id="streetSign_priority_J11J10"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="406.199" y="446.3" angle="-90.0" id="streetSign_yield_I10J10"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="418.7" y="476.199" angle="-180.0" id="streetSign_priority_J10J11"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="423.801" y="488.7" angle="-270.0" id="streetSign_yield_K11J11"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="411.3" y="493.801" angle="0.0" id="streetSign_priority_J12J11"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="406.199" y="481.3" angle="-90.0" id="streetSign_yield_I11J11"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="383.7" y="476.199" angle="-180.0" id="streetSign_priority_I10I11"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="388.801" y="488.7" angle="-270.0" id="streetSign_yield_J11I11"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="376.3" y="493.801" angle="0.0" id="streetSign_priority_I12I11"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="371.199" y="481.3" angle="-90.0" id="streetSign_yield_H11I11"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="348.7" y="476.199" angle="-180.0" id="streetSign_priority_H10H11"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="353.801" y="488.7" angle="-270.0" id="streetSign_yield_I11H11"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="341.3" y="493.801" angle="0.0" id="streetSign_priority_H12H11"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="336.199" y="481.3" angle="-90.0" id="streetSign_yield_G11H11"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="313.7" y="476.199" angle="-180.0" id="streetSign_priority_G10G11"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="318.801" y="488.7" angle="-270.0" id="streetSign_yield_H11G11"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="306.3" y="493.801" angle="0.0" id="streetSign_priority_G12G11"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="301.199" y="481.3" angle="-90.0" id="streetSign_yield_F11G11"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="306.3" y="458.801" angle="0.0" id="streetSign_priority_G11G10"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="301.199" y="446.3" angle="-90.0" id="streetSign_yield_F10G10"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="313.7" y="441.199" angle="-180.0" id="streetSign_priority_G9G10"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="318.801" y="453.7" angle="-270.0" id="streetSign_yield_H10G10"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="341.3" y="458.801" angle="0.0" id="streetSign_priority_H11H10"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="336.199" y="446.3" angle="-90.0" id="streetSign_yield_G10H10"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="348.7" y="441.199" angle="-180.0" id="streetSign_priority_H9H10"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="353.801" y="453.7" angle="-270.0" id="streetSign_yield_I10H10"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="376.3" y="458.801" angle="0.0" id="streetSign_priority_I11I10"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="371.199" y="446.3" angle="-90.0" id="streetSign_yield_H10I10"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="383.7" y="441.199" angle="-180.0" id="streetSign_priority_I9I10"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="388.801" y="453.7" angle="-270.0" id="streetSign_yield_J10I10"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="376.3" y="423.801" angle="0.0" id="streetSign_priority_I10I9"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="371.199" y="411.3" angle="-90.0" id="streetSign_yield_H9I9"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="383.7" y="406.199" angle="-180.0" id="streetSign_priority_I8I9"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="388.801" y="418.7" angle="-270.0" id="streetSign_yield_J9I9"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="348.7" y="406.199" angle="-180.0" id="streetSign_priority_H8H9"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="353.801" y="418.7" angle="-270.0" id="streetSign_yield_I9H9"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="341.3" y="423.801" angle="0.0" id="streetSign_priority_H10H9"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="336.199" y="411.3" angle="-90.0" id="streetSign_yield_G9H9"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="341.3" y="388.801" angle="0.0" id="streetSign_priority_H9H8"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="336.199" y="376.3" angle="-90.0" id="streetSign_yield_G8H8"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="348.7" y="371.199" angle="-180.0" id="streetSign_priority_H7H8"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="353.801" y="383.7" angle="-270.0" id="streetSign_yield_I8H8"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="376.3" y="388.801" angle="0.0" id="streetSign_priority_I9I8"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="371.199" y="376.3" angle="-90.0" id="streetSign_yield_H8I8"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="383.7" y="371.199" angle="-180.0" id="streetSign_priority_I7I8"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="388.801" y="383.7" angle="-270.0" id="streetSign_yield_J8I8"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="376.3" y="353.801" angle="0.0" id="streetSign_priority_I8I7"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="371.199" y="341.3" angle="-90.0" id="streetSign_yield_H7I7"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="383.7" y="336.199" angle="-180.0" id="streetSign_priority_I6I7"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="388.801" y="348.7" angle="-270.0" id="streetSign_yield_J7I7"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="348.7" y="336.199" angle="-180.0" id="streetSign_priority_H6H7"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="353.801" y="348.7" angle="-270.0" id="streetSign_yield_I7H7"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="341.3" y="353.801" angle="0.0" id="streetSign_priority_H8H7"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="336.199" y="341.3" angle="-90.0" id="streetSign_yield_G7H7"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="313.7" y="336.199" angle="-180.0" id="streetSign_priority_G6G7"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="318.801" y="348.7" angle="-270.0" id="streetSign_yield_H7G7"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="306.3" y="353.801" angle="0.0" id="streetSign_priority_G8G7"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="301.199" y="341.3" angle="-90.0" id="streetSign_yield_F7G7"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="278.7" y="336.199" angle="-180.0" id="streetSign_priority_F6F7"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="283.801" y="348.7" angle="-270.0" id="streetSign_yield_G7F7"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="271.3" y="353.801" angle="0.0" id="streetSign_priority_F8F7"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="266.199" y="341.3" angle="-90.0" id="streetSign_yield_E7F7"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="278.7" y="371.199" angle="-180.0" id="streetSign_priority_F7F8"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="283.801" y="383.7" angle="-270.0" id="streetSign_yield_G8F8"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="271.3" y="388.801" angle="0.0" id="streetSign_priority_F9F8"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="266.199" y="376.3" angle="-90.0" id="streetSign_yield_E8F8"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="306.3" y="388.801" angle="0.0" id="streetSign_priority_G9G8"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="301.199" y="376.3" angle="-90.0" id="streetSign_yield_F8G8"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="313.7" y="371.199" angle="-180.0" id="streetSign_priority_G7G8"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="318.801" y="383.7" angle="-270.0" id="streetSign_yield_H8G8"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="313.7" y="406.199" angle="-180.0" id="streetSign_priority_G8G9"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="318.801" y="418.7" angle="-270.0" id="streetSign_yield_H9G9"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="306.3" y="423.801" angle="0.0" id="streetSign_priority_G10G9"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="301.199" y="411.3" angle="-90.0" id="streetSign_yield_F9G9"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="278.7" y="406.199" angle="-180.0" id="streetSign_priority_F8F9"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="283.801" y="418.7" angle="-270.0" id="streetSign_yield_G9F9"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="271.3" y="423.801" angle="0.0" id="streetSign_priority_F10F9"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="266.199" y="411.3" angle="-90.0" id="streetSign_yield_E9F9"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="278.7" y="441.199" angle="-180.0" id="streetSign_priority_F9F10"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="283.801" y="453.7" angle="-270.0" id="streetSign_yield_G10F10"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="271.3" y="458.801" angle="0.0" id="streetSign_priority_F11F10"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="266.199" y="446.3" angle="-90.0" id="streetSign_yield_E10F10"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="278.7" y="476.199" angle="-180.0" id="streetSign_priority_F10F11"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="283.801" y="488.7" angle="-270.0" id="streetSign_yield_G11F11"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="271.3" y="493.801" angle="0.0" id="streetSign_priority_F12F11"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="266.199" y="481.3" angle="-90.0" id="streetSign_yield_E11F11"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="278.7" y="511.199" angle="-180.0" id="streetSign_priority_F11F12"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="283.801" y="523.6999999999999" angle="-270.0" id="streetSign_yield_G12F12"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="271.3" y="528.801" angle="0.0" id="streetSign_priority_F13F12"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="266.199" y="516.3000000000001" angle="-90.0" id="streetSign_yield_E12F12"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="278.7" y="546.199" angle="-180.0" id="streetSign_priority_F12F13"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="283.801" y="558.6999999999999" angle="-270.0" id="streetSign_yield_G13F13"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="271.3" y="563.801" angle="0.0" id="streetSign_priority_F14F13"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="266.199" y="551.3000000000001" angle="-90.0" id="streetSign_yield_E13F13"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="243.70000000000002" y="546.199" angle="-180.0" id="streetSign_priority_E12E13"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="248.801" y="558.6999999999999" angle="-270.0" id="streetSign_yield_F13E13"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="236.29999999999998" y="563.801" angle="0.0" id="streetSign_priority_E14E13"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="231.199" y="551.3000000000001" angle="-90.0" id="streetSign_yield_D13E13"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="208.70000000000002" y="546.199" angle="-180.0" id="streetSign_priority_D12D13"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="213.801" y="558.6999999999999" angle="-270.0" id="streetSign_yield_E13D13"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="201.29999999999998" y="563.801" angle="0.0" id="streetSign_priority_D14D13"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="196.199" y="551.3000000000001" angle="-90.0" id="streetSign_yield_C13D13"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="173.70000000000002" y="546.199" angle="-180.0" id="streetSign_priority_C12C13"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="178.801" y="558.6999999999999" angle="-270.0" id="streetSign_yield_D13C13"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="166.29999999999998" y="563.801" angle="0.0" id="streetSign_priority_C14C13"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="161.199" y="551.3000000000001" angle="-90.0" id="streetSign_yield_B13C13"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="138.70000000000002" y="546.199" angle="-180.0" id="streetSign_priority_B12B13"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="143.801" y="558.6999999999999" angle="-270.0" id="streetSign_yield_C13B13"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="131.29999999999998" y="563.801" angle="0.0" id="streetSign_priority_B14B13"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="126.199" y="551.3000000000001" angle="-90.0" id="streetSign_yield_A13B13"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="131.29999999999998" y="528.801" angle="0.0" id="streetSign_priority_B13B12"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="126.199" y="516.3000000000001" angle="-90.0" id="streetSign_yield_A12B12"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="138.70000000000002" y="511.199" angle="-180.0" id="streetSign_priority_B11B12"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="143.801" y="523.6999999999999" angle="-270.0" id="streetSign_yield_C12B12"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="131.29999999999998" y="493.801" angle="0.0" id="streetSign_priority_B12B11"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="126.199" y="481.3" angle="-90.0" id="streetSign_yield_A11B11"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="138.70000000000002" y="476.199" angle="-180.0" id="streetSign_priority_B10B11"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="143.801" y="488.7" angle="-270.0" id="streetSign_yield_C11B11"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="131.29999999999998" y="458.801" angle="0.0" id="streetSign_priority_B11B10"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="126.199" y="446.3" angle="-90.0" id="streetSign_yield_A10B10"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="138.70000000000002" y="441.199" angle="-180.0" id="streetSign_priority_B9B10"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="143.801" y="453.7" angle="-270.0" id="streetSign_yield_C10B10"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="166.29999999999998" y="458.801" angle="0.0" id="streetSign_priority_C11C10"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="161.199" y="446.3" angle="-90.0" id="streetSign_yield_B10C10"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="173.70000000000002" y="441.199" angle="-180.0" id="streetSign_priority_C9C10"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="178.801" y="453.7" angle="-270.0" id="streetSign_yield_D10C10"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="173.70000000000002" y="476.199" angle="-180.0" id="streetSign_priority_C10C11"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="178.801" y="488.7" angle="-270.0" id="streetSign_yield_D11C11"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="166.29999999999998" y="493.801" angle="0.0" id="streetSign_priority_C12C11"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="161.199" y="481.3" angle="-90.0" id="streetSign_yield_B11C11"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="173.70000000000002" y="511.199" angle="-180.0" id="streetSign_priority_C11C12"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="178.801" y="523.6999999999999" angle="-270.0" id="streetSign_yield_D12C12"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="166.29999999999998" y="528.801" angle="0.0" id="streetSign_priority_C13C12"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="161.199" y="516.3000000000001" angle="-90.0" id="streetSign_yield_B12C12"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="201.29999999999998" y="528.801" angle="0.0" id="streetSign_priority_D13D12"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="196.199" y="516.3000000000001" angle="-90.0" id="streetSign_yield_C12D12"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="208.70000000000002" y="511.199" angle="-180.0" id="streetSign_priority_D11D12"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="213.801" y="523.6999999999999" angle="-270.0" id="streetSign_yield_E12D12"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="236.29999999999998" y="528.801" angle="0.0" id="streetSign_priority_E13E12"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="231.199" y="516.3000000000001" angle="-90.0" id="streetSign_yield_D12E12"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="243.70000000000002" y="511.199" angle="-180.0" id="streetSign_priority_E11E12"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="248.801" y="523.6999999999999" angle="-270.0" id="streetSign_yield_F12E12"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="236.29999999999998" y="493.801" angle="0.0" id="streetSign_priority_E12E11"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="231.199" y="481.3" angle="-90.0" id="streetSign_yield_D11E11"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="243.70000000000002" y="476.199" angle="-180.0" id="streetSign_priority_E10E11"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="248.801" y="488.7" angle="-270.0" id="streetSign_yield_F11E11"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="208.70000000000002" y="476.199" angle="-180.0" id="streetSign_priority_D10D11"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="213.801" y="488.7" angle="-270.0" id="streetSign_yield_E11D11"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="201.29999999999998" y="493.801" angle="0.0" id="streetSign_priority_D12D11"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="196.199" y="481.3" angle="-90.0" id="streetSign_yield_C11D11"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="201.29999999999998" y="458.801" angle="0.0" id="streetSign_priority_D11D10"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="196.199" y="446.3" angle="-90.0" id="streetSign_yield_C10D10"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="208.70000000000002" y="441.199" angle="-180.0" id="streetSign_priority_D9D10"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="213.801" y="453.7" angle="-270.0" id="streetSign_yield_E10D10"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="236.29999999999998" y="458.801" angle="0.0" id="streetSign_priority_E11E10"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="231.199" y="446.3" angle="-90.0" id="streetSign_yield_D10E10"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="243.70000000000002" y="441.199" angle="-180.0" id="streetSign_priority_E9E10"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="248.801" y="453.7" angle="-270.0" id="streetSign_yield_F10E10"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="236.29999999999998" y="423.801" angle="0.0" id="streetSign_priority_E10E9"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="231.199" y="411.3" angle="-90.0" id="streetSign_yield_D9E9"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="243.70000000000002" y="406.199" angle="-180.0" id="streetSign_priority_E8E9"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="248.801" y="418.7" angle="-270.0" id="streetSign_yield_F9E9"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="208.70000000000002" y="406.199" angle="-180.0" id="streetSign_priority_D8D9"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="213.801" y="418.7" angle="-270.0" id="streetSign_yield_E9D9"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="201.29999999999998" y="423.801" angle="0.0" id="streetSign_priority_D10D9"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="196.199" y="411.3" angle="-90.0" id="streetSign_yield_C9D9"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="173.70000000000002" y="406.199" angle="-180.0" id="streetSign_priority_C8C9"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="178.801" y="418.7" angle="-270.0" id="streetSign_yield_D9C9"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="166.29999999999998" y="423.801" angle="0.0" id="streetSign_priority_C10C9"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="161.199" y="411.3" angle="-90.0" id="streetSign_yield_B9C9"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="138.70000000000002" y="406.199" angle="-180.0" id="streetSign_priority_B8B9"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="143.801" y="418.7" angle="-270.0" id="streetSign_yield_C9B9"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="131.29999999999998" y="423.801" angle="0.0" id="streetSign_priority_B10B9"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="126.199" y="411.3" angle="-90.0" id="streetSign_yield_A9B9"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="131.29999999999998" y="388.801" angle="0.0" id="streetSign_priority_B9B8"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="126.199" y="376.3" angle="-90.0" id="streetSign_yield_A8B8"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="138.70000000000002" y="371.199" angle="-180.0" id="streetSign_priority_B7B8"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="143.801" y="383.7" angle="-270.0" id="streetSign_yield_C8B8"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="166.29999999999998" y="388.801" angle="0.0" id="streetSign_priority_C9C8"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="161.199" y="376.3" angle="-90.0" id="streetSign_yield_B8C8"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="173.70000000000002" y="371.199" angle="-180.0" id="streetSign_priority_C7C8"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="178.801" y="383.7" angle="-270.0" id="streetSign_yield_D8C8"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="201.29999999999998" y="388.801" angle="0.0" id="streetSign_priority_D9D8"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="196.199" y="376.3" angle="-90.0" id="streetSign_yield_C8D8"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="208.70000000000002" y="371.199" angle="-180.0" id="streetSign_priority_D7D8"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="213.801" y="383.7" angle="-270.0" id="streetSign_yield_E8D8"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="236.29999999999998" y="388.801" angle="0.0" id="streetSign_priority_E9E8"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="231.199" y="376.3" angle="-90.0" id="streetSign_yield_D8E8"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="243.70000000000002" y="371.199" angle="-180.0" id="streetSign_priority_E7E8"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="248.801" y="383.7" angle="-270.0" id="streetSign_yield_F8E8"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="236.29999999999998" y="353.801" angle="0.0" id="streetSign_priority_E8E7"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="231.199" y="341.3" angle="-90.0" id="streetSign_yield_D7E7"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="243.70000000000002" y="336.199" angle="-180.0" id="streetSign_priority_E6E7"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="248.801" y="348.7" angle="-270.0" id="streetSign_yield_F7E7"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="208.70000000000002" y="336.199" angle="-180.0" id="streetSign_priority_D6D7"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="213.801" y="348.7" angle="-270.0" id="streetSign_yield_E7D7"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="201.29999999999998" y="353.801" angle="0.0" id="streetSign_priority_D8D7"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="196.199" y="341.3" angle="-90.0" id="streetSign_yield_C7D7"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="201.29999999999998" y="318.801" angle="0.0" id="streetSign_priority_D7D6"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="196.199" y="306.3" angle="-90.0" id="streetSign_yield_C6D6"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="208.70000000000002" y="301.199" angle="-180.0" id="streetSign_priority_D5D6"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="213.801" y="313.7" angle="-270.0" id="streetSign_yield_E6D6"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="173.70000000000002" y="301.199" angle="-180.0" id="streetSign_priority_C5C6"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="178.801" y="313.7" angle="-270.0" id="streetSign_yield_D6C6"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="166.29999999999998" y="318.801" angle="0.0" id="streetSign_priority_C7C6"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="161.199" y="306.3" angle="-90.0" id="streetSign_yield_B6C6"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="173.70000000000002" y="336.199" angle="-180.0" id="streetSign_priority_C6C7"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="178.801" y="348.7" angle="-270.0" id="streetSign_yield_D7C7"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="166.29999999999998" y="353.801" angle="0.0" id="streetSign_priority_C8C7"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="161.199" y="341.3" angle="-90.0" id="streetSign_yield_B7C7"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="138.70000000000002" y="336.199" angle="-180.0" id="streetSign_priority_B6B7"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="143.801" y="348.7" angle="-270.0" id="streetSign_yield_C7B7"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="131.29999999999998" y="353.801" angle="0.0" id="streetSign_priority_B8B7"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="126.199" y="341.3" angle="-90.0" id="streetSign_yield_A7B7"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="131.29999999999998" y="318.801" angle="0.0" id="streetSign_priority_B7B6"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="126.199" y="306.3" angle="-90.0" id="streetSign_yield_A6B6"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="138.70000000000002" y="301.199" angle="-180.0" id="streetSign_priority_B5B6"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="143.801" y="313.7" angle="-270.0" id="streetSign_yield_C6B6"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="131.29999999999998" y="283.801" angle="0.0" id="streetSign_priority_B6B5"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="126.199" y="271.3" angle="-90.0" id="streetSign_yield_A5B5"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="138.70000000000002" y="266.199" angle="-180.0" id="streetSign_priority_B4B5"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="143.801" y="278.7" angle="-270.0" id="streetSign_yield_C5B5"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="131.29999999999998" y="248.801" angle="0.0" id="streetSign_priority_B5B4"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="126.199" y="236.29999999999998" angle="-90.0" id="streetSign_yield_A4B4"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="138.70000000000002" y="231.199" angle="-180.0" id="streetSign_priority_B3B4"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="143.801" y="243.70000000000002" angle="-270.0" id="streetSign_yield_C4B4"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="166.29999999999998" y="248.801" angle="0.0" id="streetSign_priority_C5C4"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="161.199" y="236.29999999999998" angle="-90.0" id="streetSign_yield_B4C4"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="173.70000000000002" y="231.199" angle="-180.0" id="streetSign_priority_C3C4"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="178.801" y="243.70000000000002" angle="-270.0" id="streetSign_yield_D4C4"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="173.70000000000002" y="266.199" angle="-180.0" id="streetSign_priority_C4C5"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="178.801" y="278.7" angle="-270.0" id="streetSign_yield_D5C5"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="166.29999999999998" y="283.801" angle="0.0" id="streetSign_priority_C6C5"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="161.199" y="271.3" angle="-90.0" id="streetSign_yield_B5C5"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="201.29999999999998" y="283.801" angle="0.0" id="streetSign_priority_D6D5"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="196.199" y="271.3" angle="-90.0" id="streetSign_yield_C5D5"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="208.70000000000002" y="266.199" angle="-180.0" id="streetSign_priority_D4D5"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="213.801" y="278.7" angle="-270.0" id="streetSign_yield_E5D5"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="201.29999999999998" y="248.801" angle="0.0" id="streetSign_priority_D5D4"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="196.199" y="236.29999999999998" angle="-90.0" id="streetSign_yield_C4D4"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="208.70000000000002" y="231.199" angle="-180.0" id="streetSign_priority_D3D4"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="213.801" y="243.70000000000002" angle="-270.0" id="streetSign_yield_E4D4"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="201.29999999999998" y="213.801" angle="0.0" id="streetSign_priority_D4D3"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="196.199" y="201.29999999999998" angle="-90.0" id="streetSign_yield_C3D3"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="208.70000000000002" y="196.199" angle="-180.0" id="streetSign_priority_D2D3"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="213.801" y="208.70000000000002" angle="-270.0" id="streetSign_yield_E3D3"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="173.70000000000002" y="196.199" angle="-180.0" id="streetSign_priority_C2C3"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="178.801" y="208.70000000000002" angle="-270.0" id="streetSign_yield_D3C3"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="166.29999999999998" y="213.801" angle="0.0" id="streetSign_priority_C4C3"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="161.199" y="201.29999999999998" angle="-90.0" id="streetSign_yield_B3C3"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="138.70000000000002" y="196.199" angle="-180.0" id="streetSign_priority_B2B3"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="143.801" y="208.70000000000002" angle="-270.0" id="streetSign_yield_C3B3"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="131.29999999999998" y="213.801" angle="0.0" id="streetSign_priority_B4B3"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="126.199" y="201.29999999999998" angle="-90.0" id="streetSign_yield_A3B3"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="131.29999999999998" y="178.801" angle="0.0" id="streetSign_priority_B3B2"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="126.199" y="166.29999999999998" angle="-90.0" id="streetSign_yield_A2B2"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="138.70000000000002" y="161.199" angle="-180.0" id="streetSign_priority_B1B2"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="143.801" y="173.70000000000002" angle="-270.0" id="streetSign_yield_C2B2"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="166.29999999999998" y="178.801" angle="0.0" id="streetSign_priority_C3C2"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="161.199" y="166.29999999999998" angle="-90.0" id="streetSign_yield_B2C2"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="173.70000000000002" y="161.199" angle="-180.0" id="streetSign_priority_C1C2"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="178.801" y="173.70000000000002" angle="-270.0" id="streetSign_yield_D2C2"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="201.29999999999998" y="178.801" angle="0.0" id="streetSign_priority_D3D2"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="196.199" y="166.29999999999998" angle="-90.0" id="streetSign_yield_C2D2"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="208.70000000000002" y="161.199" angle="-180.0" id="streetSign_priority_D1D2"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="213.801" y="173.70000000000002" angle="-270.0" id="streetSign_yield_E2D2"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="236.29999999999998" y="178.801" angle="0.0" id="streetSign_priority_E3E2"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="231.199" y="166.29999999999998" angle="-90.0" id="streetSign_yield_D2E2"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="243.70000000000002" y="161.199" angle="-180.0" id="streetSign_priority_E1E2"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="248.801" y="173.70000000000002" angle="-270.0" id="streetSign_yield_F2E2"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="236.29999999999998" y="143.801" angle="0.0" id="streetSign_priority_E2E1"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="231.199" y="131.29999999999998" angle="-90.0" id="streetSign_yield_D1E1"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="243.70000000000002" y="126.199" angle="-180.0" id="streetSign_priority_E0E1"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="248.801" y="138.70000000000002" angle="-270.0" id="streetSign_yield_F1E1"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="208.70000000000002" y="126.199" angle="-180.0" id="streetSign_priority_D0D1"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="213.801" y="138.70000000000002" angle="-270.0" id="streetSign_yield_E1D1"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="201.29999999999998" y="143.801" angle="0.0" id="streetSign_priority_D2D1"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="196.199" y="131.29999999999998" angle="-90.0" id="streetSign_yield_C1D1"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="173.70000000000002" y="126.199" angle="-180.0" id="streetSign_priority_C0C1"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="178.801" y="138.70000000000002" angle="-270.0" id="streetSign_yield_D1C1"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="166.29999999999998" y="143.801" angle="0.0" id="streetSign_priority_C2C1"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="161.199" y="131.29999999999998" angle="-90.0" id="streetSign_yield_B1C1"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="138.70000000000002" y="126.199" angle="-180.0" id="streetSign_priority_B0B1"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="143.801" y="138.70000000000002" angle="-270.0" id="streetSign_yield_C1B1"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="131.29999999999998" y="143.801" angle="0.0" id="streetSign_priority_B2B1"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="126.199" y="131.29999999999998" angle="-90.0" id="streetSign_yield_A1B1"/>
+  <poi type="EndOfLevel" width="7" height="7" posLat="0" color="0.5,.7,1" id="endOfLevel_0/1_level-5" x="462.8" y="520.0" angle="-180.0"/>
+</additional>

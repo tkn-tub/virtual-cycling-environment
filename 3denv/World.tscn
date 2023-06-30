@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://VCEInstance.cs" type="Script" id=1]
+[ext_resource path="res://SumoImporter/NetworkGenerator.cs" type="Script" id=2]
+[ext_resource path="res://UI/VCESettings.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Environment/Sky/SkySphere.png" type="Texture" id=4]
+
+[sub_resource type="PanoramaSky" id=1]
+panorama = ExtResource( 4 )
+
+[sub_resource type="Environment" id=2]
+background_mode = 2
+background_sky = SubResource( 1 )
+ambient_light_color = Color( 0.207843, 0.207843, 0.207843, 1 )
+ambient_light_energy = 0.4
+ambient_light_sky_contribution = 0.5
+fog_enabled = true
+ss_reflections_enabled = true
+ss_reflections_max_steps = 16
+ss_reflections_fade_in = 0.166435
+ss_reflections_fade_out = 1.31951
+ssao_enabled = true
+ssao_intensity = 1.18
+
+[node name="World" type="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00346422, 0.0138091, -0.0120754 )
+script = ExtResource( 1 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 2 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 1, -0.000283383, -0.000153727, 0.000285084, 0.554603, 0.832115, -0.00015055, -0.832115, 0.554603, 0, 3.29513, 2.69931 )
+light_energy = 0.5
+shadow_enabled = true
+
+[node name="NetworkGenerator" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.119393, -0.0531082, 0.0413857 )
+script = ExtResource( 2 )
+
+[node name="VCESettings" parent="." instance=ExtResource( 3 )]

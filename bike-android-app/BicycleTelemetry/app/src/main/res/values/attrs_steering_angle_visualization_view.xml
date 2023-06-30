@@ -1,0 +1,11 @@
+<resources>
+    <declare-styleable name="SteeringAngleVisualizationView">
+        <attr name="bikeFrameSrc" format="reference" />
+        <attr name="bikeHandleSrc" format="reference" />
+        <attr name="bikeFrontWheelSrc" format="reference" />
+        <attr name="exampleString" format="string" />
+        <attr name="exampleDimension" format="dimension" />
+        <attr name="exampleColor" format="color" />
+        <attr name="exampleDrawable" format="color|reference" />
+    </declare-styleable>
+</resources>

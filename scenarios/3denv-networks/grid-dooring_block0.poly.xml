@@ -1,0 +1,315 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<additional>
+  <poly id="0" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="108,108 108,182 182,182 182,108"/>
+  <poly id="1" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="198,108 198,182 272,182 272,108"/>
+  <poly id="2" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="288,108 288,182 362,182 362,108"/>
+  <poly id="3" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="378,108 378,182 452,182 452,108"/>
+  <poly id="4" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="468,108 468,182 542,182 542,108"/>
+  <poly id="5" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="108,198 108,272 182,272 182,198"/>
+  <poly id="6" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="198,198 198,272 272,272 272,198"/>
+  <poly id="7" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="288,198 288,272 362,272 362,198"/>
+  <poly id="8" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="378,198 378,272 452,272 452,198"/>
+  <poly id="9" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="468,198 468,272 542,272 542,198"/>
+  <poly id="10" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="108,288 108,362 182,362 182,288"/>
+  <poly id="11" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="198,288 198,362 272,362 272,288"/>
+  <poly id="12" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="288,288 288,362 362,362 362,288"/>
+  <poly id="13" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="378,288 378,362 452,362 452,288"/>
+  <poly id="14" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="468,288 468,362 542,362 542,288"/>
+  <poly id="15" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="108,378 108,452 182,452 182,378"/>
+  <poly id="16" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="198,378 198,452 272,452 272,378"/>
+  <poly id="17" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="288,378 288,452 362,452 362,378"/>
+  <poly id="18" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="378,378 378,452 452,452 452,378"/>
+  <poly id="19" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="468,378 468,452 542,452 542,378"/>
+  <poly id="20" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="108,468 108,542 182,542 182,468"/>
+  <poly id="21" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="198,468 198,542 272,542 272,468"/>
+  <poly id="22" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="288,468 288,542 362,542 362,468"/>
+  <poly id="23" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="378,468 378,542 452,542 452,468"/>
+  <poly id="24" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="468,468 468,542 542,542 542,468"/>
+  <poly id="25" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="108,558 108,632 182,632 182,558"/>
+  <poly id="26" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="198,558 198,632 272,632 272,558"/>
+  <poly id="27" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="288,558 288,632 362,632 362,558"/>
+  <poly id="28" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="378,558 378,632 452,632 452,558"/>
+  <poly id="29" type="building" color="0.7,0.3,0.1" fill="1" layer="4" shape="468,558 468,632 542,632 542,558"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_0_two-gems_tutorial_high-traffic" x="196.8" y="185.5" angle="-0.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_1_two-gems_tutorial_high-traffic" x="205.8" y="185.5" angle="-0.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_2_two-gems_tutorial_high-traffic" x="214.8" y="185.5" angle="-0.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_3_two-gems_tutorial_high-traffic" x="223.8" y="185.5" angle="-0.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_4_two-gems_tutorial_high-traffic" x="232.8" y="185.5" angle="-0.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_5_two-gems_tutorial_high-traffic" x="241.8" y="185.5" angle="-0.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_6_two-gems_tutorial_high-traffic" x="250.8" y="185.5" angle="-0.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_7_two-gems_tutorial_high-traffic" x="259.8" y="185.5" angle="-0.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_8_two-gems_tutorial_high-traffic" x="268.8" y="185.5" angle="-0.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_9_two-gems_tutorial_high-traffic" x="284.5" y="196.8" angle="-90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_10_two-gems_tutorial_high-traffic" x="284.5" y="205.8" angle="-90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_11_two-gems_tutorial_high-traffic" x="284.5" y="214.8" angle="-90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_12_two-gems_tutorial_high-traffic" x="284.5" y="223.8" angle="-90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_13_two-gems_tutorial_high-traffic" x="284.5" y="232.8" angle="-90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_14_two-gems_tutorial_high-traffic" x="284.5" y="241.8" angle="-90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_15_two-gems_tutorial_high-traffic" x="284.5" y="250.8" angle="-90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_16_two-gems_tutorial_high-traffic" x="284.5" y="259.8" angle="-90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_17_two-gems_tutorial_high-traffic" x="284.5" y="268.8" angle="-90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_18_two-gems_tutorial_high-traffic" x="286.8" y="275.5" angle="-0.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_19_two-gems_tutorial_high-traffic" x="295.8" y="275.5" angle="-0.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_20_two-gems_tutorial_high-traffic" x="304.8" y="275.5" angle="-0.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_21_two-gems_tutorial_high-traffic" x="313.8" y="275.5" angle="-0.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_22_two-gems_tutorial_high-traffic" x="322.8" y="275.5" angle="-0.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_23_two-gems_tutorial_high-traffic" x="331.8" y="275.5" angle="-0.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_24_two-gems_tutorial_high-traffic" x="340.8" y="275.5" angle="-0.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_25_two-gems_tutorial_high-traffic" x="349.8" y="275.5" angle="-0.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_26_two-gems_tutorial_high-traffic" x="358.8" y="275.5" angle="-0.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_27_two-gems_tutorial_high-traffic" x="365.5" y="273.2" angle="90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_28_two-gems_tutorial_high-traffic" x="365.5" y="264.2" angle="90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_29_two-gems_tutorial_high-traffic" x="365.5" y="255.2" angle="90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_30_two-gems_tutorial_high-traffic" x="365.5" y="246.2" angle="90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_31_two-gems_tutorial_high-traffic" x="365.5" y="237.2" angle="90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_32_two-gems_tutorial_high-traffic" x="365.5" y="228.2" angle="90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_33_two-gems_tutorial_high-traffic" x="365.5" y="219.2" angle="90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_34_two-gems_level-1_high-traffic" x="376.8" y="185.5" angle="-0.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_35_two-gems_level-1_high-traffic" x="385.8" y="185.5" angle="-0.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_36_two-gems_level-1_high-traffic" x="394.8" y="185.5" angle="-0.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_37_two-gems_level-1_high-traffic" x="403.8" y="185.5" angle="-0.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_38_two-gems_level-1_high-traffic" x="412.8" y="185.5" angle="-0.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_39_two-gems_level-1_high-traffic" x="421.8" y="185.5" angle="-0.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_40_two-gems_level-1_high-traffic" x="430.8" y="185.5" angle="-0.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_41_two-gems_level-1_high-traffic" x="439.8" y="185.5" angle="-0.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_42_two-gems_level-1_high-traffic" x="448.8" y="185.5" angle="-0.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_43_two-gems_level-1_high-traffic" x="464.5" y="196.8" angle="-90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_44_two-gems_level-1_high-traffic" x="464.5" y="205.8" angle="-90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_45_two-gems_level-1_high-traffic" x="464.5" y="214.8" angle="-90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_46_two-gems_level-1_high-traffic" x="464.5" y="223.8" angle="-90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_47_two-gems_level-1_high-traffic" x="464.5" y="232.8" angle="-90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_48_two-gems_level-1_high-traffic" x="464.5" y="241.8" angle="-90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_49_two-gems_level-1_high-traffic" x="464.5" y="250.8" angle="-90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_50_two-gems_level-1_high-traffic" x="464.5" y="259.8" angle="-90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_51_two-gems_level-1_high-traffic" x="464.5" y="268.8" angle="-90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_52_two-gems_level-1_high-traffic" x="464.5" y="286.8" angle="-90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_53_two-gems_level-1_high-traffic" x="464.5" y="295.8" angle="-90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_54_two-gems_level-1_high-traffic" x="464.5" y="304.8" angle="-90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_55_two-gems_level-1_high-traffic" x="464.5" y="313.8" angle="-90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_56_two-gems_level-1_high-traffic" x="464.5" y="322.8" angle="-90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_57_two-gems_level-1_high-traffic" x="464.5" y="331.8" angle="-90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_58_two-gems_level-1_high-traffic" x="464.5" y="340.8" angle="-90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_59_two-gems_level-1_high-traffic" x="464.5" y="349.8" angle="-90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_60_two-gems_level-1_high-traffic" x="464.5" y="358.8" angle="-90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_61_two-gems_level-1_high-traffic" x="453.2" y="374.5" angle="-180.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_62_two-gems_level-1_high-traffic" x="444.2" y="374.5" angle="-180.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_63_two-gems_level-1_high-traffic" x="435.2" y="374.5" angle="-180.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_64_two-gems_level-1_high-traffic" x="426.2" y="374.5" angle="-180.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_65_two-gems_level-1_high-traffic" x="417.2" y="374.5" angle="-180.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_66_two-gems_level-1_high-traffic" x="408.2" y="374.5" angle="-180.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_67_two-gems_level-1_high-traffic" x="399.2" y="374.5" angle="-180.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_68_two-gems_level-1_high-traffic" x="390.2" y="374.5" angle="-180.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_69_two-gems_level-1_high-traffic" x="381.2" y="374.5" angle="-180.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_70_two-gems_level-1_high-traffic" x="374.5" y="376.8" angle="-90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_71_two-gems_level-1_high-traffic" x="374.5" y="385.8" angle="-90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_72_two-gems_level-1_high-traffic" x="374.5" y="394.8" angle="-90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_73_two-gems_level-1_high-traffic" x="374.5" y="403.8" angle="-90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_74_two-gems_level-1_high-traffic" x="374.5" y="412.8" angle="-90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_75_two-gems_level-1_high-traffic" x="374.5" y="421.8" angle="-90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_76_two-gems_level-1_high-traffic" x="374.5" y="430.8" angle="-90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_77_two-gems_level-1_high-traffic" x="374.5" y="439.8" angle="-90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_78_two-gems_level-1_high-traffic" x="374.5" y="448.8" angle="-90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_79_two-gems_level-1_high-traffic" x="376.8" y="455.5" angle="-0.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_80_two-gems_level-1_high-traffic" x="385.8" y="455.5" angle="-0.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_81_two-gems_level-1_high-traffic" x="394.8" y="455.5" angle="-0.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_82_two-gems_level-1_high-traffic" x="403.8" y="455.5" angle="-0.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_83_two-gems_level-1_high-traffic" x="412.8" y="455.5" angle="-0.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_84_two-gems_level-1_high-traffic" x="421.8" y="455.5" angle="-0.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_85_two-gems_level-1_high-traffic" x="430.8" y="455.5" angle="-0.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_86_two-gems_level-1_high-traffic" x="439.8" y="455.5" angle="-0.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_87_two-gems_level-1_high-traffic" x="448.8" y="455.5" angle="-0.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_88_two-gems_level-1_high-traffic" x="464.5" y="466.8" angle="-90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_89_two-gems_level-1_high-traffic" x="464.5" y="475.8" angle="-90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_90_two-gems_level-1_high-traffic" x="464.5" y="484.8" angle="-90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_91_two-gems_level-1_high-traffic" x="464.5" y="493.8" angle="-90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_92_two-gems_level-1_high-traffic" x="464.5" y="502.8" angle="-90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_93_two-gems_level-1_high-traffic" x="464.5" y="511.8" angle="-90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_94_two-gems_level-1_high-traffic" x="464.5" y="520.8" angle="-90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_95_two-gems_level-1_high-traffic" x="464.5" y="529.8" angle="-90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_96_two-gems_level-1_high-traffic" x="464.5" y="538.8" angle="-90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_97_two-gems_level-1_high-traffic" x="453.2" y="554.5" angle="-180.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_98_two-gems_level-1_high-traffic" x="444.2" y="554.5" angle="-180.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_99_two-gems_level-1_high-traffic" x="435.2" y="554.5" angle="-180.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_100_two-gems_level-1_high-traffic" x="426.2" y="554.5" angle="-180.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_101_two-gems_level-1_high-traffic" x="417.2" y="554.5" angle="-180.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_102_two-gems_level-1_high-traffic" x="408.2" y="554.5" angle="-180.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_103_two-gems_level-1_high-traffic" x="399.2" y="554.5" angle="-180.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_104_two-gems_level-1_high-traffic" x="390.2" y="554.5" angle="-180.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_105_two-gems_level-1_high-traffic" x="381.2" y="554.5" angle="-180.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_106_two-gems_level-1_high-traffic" x="363.2" y="554.5" angle="-180.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_107_two-gems_level-1_high-traffic" x="354.2" y="554.5" angle="-180.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_108_two-gems_level-1_high-traffic" x="345.2" y="554.5" angle="-180.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_109_two-gems_level-1_high-traffic" x="336.2" y="554.5" angle="-180.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_110_two-gems_level-1_high-traffic" x="327.2" y="554.5" angle="-180.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_111_two-gems_level-1_high-traffic" x="318.2" y="554.5" angle="-180.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_112_two-gems_level-1_high-traffic" x="309.2" y="554.5" angle="-180.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_113_two-gems_level-1_high-traffic" x="300.2" y="554.5" angle="-180.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_114_two-gems_level-1_high-traffic" x="291.2" y="554.5" angle="-180.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_115_two-gems_level-1_high-traffic" x="273.2" y="554.5" angle="-180.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_116_two-gems_level-1_high-traffic" x="264.2" y="554.5" angle="-180.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_117_two-gems_level-1_high-traffic" x="255.2" y="554.5" angle="-180.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_118_two-gems_level-1_high-traffic" x="246.2" y="554.5" angle="-180.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_119_two-gems_level-1_high-traffic" x="237.2" y="554.5" angle="-180.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_120_two-gems_level-1_high-traffic" x="228.2" y="554.5" angle="-180.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_121_two-gems_level-1_high-traffic" x="219.2" y="554.5" angle="-180.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_122_two-gems_level-1_high-traffic" x="210.2" y="554.5" angle="-180.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_123_two-gems_level-1_high-traffic" x="201.2" y="554.5" angle="-180.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_124_two-gems_level-1_high-traffic" x="185.5" y="543.2" angle="90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_125_two-gems_level-1_high-traffic" x="185.5" y="534.2" angle="90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_126_two-gems_level-1_high-traffic" x="185.5" y="525.2" angle="90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_127_two-gems_level-1_high-traffic" x="185.5" y="516.2" angle="90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_128_two-gems_level-1_high-traffic" x="185.5" y="507.20000000000005" angle="90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_129_two-gems_level-1_high-traffic" x="185.5" y="498.20000000000005" angle="90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_130_two-gems_level-1_high-traffic" x="185.5" y="489.20000000000005" angle="90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_131_two-gems_level-1_high-traffic" x="185.5" y="480.20000000000005" angle="90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_132_two-gems_level-1_high-traffic" x="185.5" y="471.20000000000005" angle="90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_133_two-gems_level-1_high-traffic" x="196.8" y="455.5" angle="-0.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_134_two-gems_level-1_high-traffic" x="205.8" y="455.5" angle="-0.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_135_two-gems_level-1_high-traffic" x="214.8" y="455.5" angle="-0.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_136_two-gems_level-1_high-traffic" x="223.8" y="455.5" angle="-0.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_137_two-gems_level-1_high-traffic" x="232.8" y="455.5" angle="-0.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_138_two-gems_level-1_high-traffic" x="241.8" y="455.5" angle="-0.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_139_two-gems_level-1_high-traffic" x="250.8" y="455.5" angle="-0.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_140_two-gems_level-1_high-traffic" x="259.8" y="455.5" angle="-0.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_141_two-gems_level-1_high-traffic" x="268.8" y="455.5" angle="-0.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_142_two-gems_level-1_high-traffic" x="275.5" y="453.2" angle="90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_143_two-gems_level-1_high-traffic" x="275.5" y="444.2" angle="90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_144_two-gems_level-1_high-traffic" x="275.5" y="435.2" angle="90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_145_two-gems_level-1_high-traffic" x="275.5" y="426.2" angle="90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_146_two-gems_level-1_high-traffic" x="275.5" y="417.2" angle="90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_147_two-gems_level-1_high-traffic" x="275.5" y="408.2" angle="90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_148_two-gems_level-1_high-traffic" x="275.5" y="399.2" angle="90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_149_two-gems_level-1_high-traffic" x="275.5" y="390.2" angle="90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_150_two-gems_level-1_high-traffic" x="275.5" y="381.2" angle="90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_151_two-gems_level-1_high-traffic" x="273.2" y="374.5" angle="-180.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_152_two-gems_level-1_high-traffic" x="264.2" y="374.5" angle="-180.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_153_two-gems_level-1_high-traffic" x="255.2" y="374.5" angle="-180.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_154_two-gems_level-1_high-traffic" x="246.2" y="374.5" angle="-180.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_155_two-gems_level-1_high-traffic" x="237.2" y="374.5" angle="-180.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_156_two-gems_level-1_high-traffic" x="228.2" y="374.5" angle="-180.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_157_two-gems_level-1_high-traffic" x="219.2" y="374.5" angle="-180.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_158_two-gems_level-1_high-traffic" x="210.2" y="374.5" angle="-180.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_159_two-gems_level-1_high-traffic" x="201.2" y="374.5" angle="-180.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_160_two-gems_level-1_high-traffic" x="185.5" y="363.2" angle="90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_161_two-gems_level-1_high-traffic" x="185.5" y="354.2" angle="90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_162_two-gems_level-1_high-traffic" x="185.5" y="345.2" angle="90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_163_two-gems_level-1_high-traffic" x="185.5" y="336.2" angle="90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_164_two-gems_level-1_high-traffic" x="185.5" y="327.2" angle="90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_165_two-gems_level-1_high-traffic" x="185.5" y="318.2" angle="90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_166_two-gems_level-1_high-traffic" x="185.5" y="309.2" angle="90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_167_two-gems_level-1_high-traffic" x="185.5" y="300.2" angle="90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_168_two-gems_level-1_high-traffic" x="185.5" y="291.2" angle="90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_169_two-gems_level-1_high-traffic" x="185.5" y="273.2" angle="90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_170_two-gems_level-1_high-traffic" x="185.5" y="264.2" angle="90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_171_two-gems_level-1_high-traffic" x="185.5" y="255.2" angle="90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_172_two-gems_level-1_high-traffic" x="185.5" y="246.2" angle="90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_173_two-gems_level-1_high-traffic" x="185.5" y="237.2" angle="90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_174_two-gems_level-1_high-traffic" x="185.5" y="228.2" angle="90.0"/>
+  <poi imgFile="arrow.png" width="3" height="3" layer="5" type="Psych_Trial" posLat="0" color="1,0.3725,0" id="Psych_Trial_175_two-gems_level-1_high-traffic" x="185.5" y="219.2" angle="90.0"/>
+  <poi width="7" height="7" layer="5" type="EgoVehicleStart" posLat="0" color="1,1,0" id="EgoVehicleStart0" x="188.8" y="186.8" angle="-0.0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_left" posLat="0" color="0,0.4,.8" x="271.1" y="183.3" angle="-90.0" id="next_turn_from_B1C1_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_right" posLat="0" color="0,0.4,.8" x="286.7" y="271.1" angle="-180.0" id="next_turn_from_C1C2_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_right" posLat="0" color="0,0.4,.8" x="361.1" y="273.3" angle="-90.0" id="next_turn_from_C2D2_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_left" posLat="0" color="0,0.4,.8" x="363.3" y="198.89999999999998" angle="0.0" id="next_turn_from_D2D1_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_left" posLat="0" color="0,0.4,.8" x="451.1" y="183.3" angle="-90.0" id="next_turn_from_D1E1_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="466.7" y="271.1" angle="-180.0" id="next_turn_from_E1E2_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_left" posLat="0" color="0,0.4,.8" x="466.7" y="361.1" angle="-180.0" id="next_turn_from_E2E3_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_right" posLat="0" color="0,0.4,.8" x="378.9" y="376.7" angle="-270.0" id="next_turn_from_E3D3_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_right" posLat="0" color="0,0.4,.8" x="376.7" y="451.1" angle="-180.0" id="next_turn_from_D3D4_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_left" posLat="0" color="0,0.4,.8" x="451.1" y="453.3" angle="-90.0" id="next_turn_from_D4E4_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_left" posLat="0" color="0,0.4,.8" x="466.7" y="541.1" angle="-180.0" id="next_turn_from_E4E5_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="378.9" y="556.7" angle="-270.0" id="next_turn_from_E5D5_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="288.9" y="556.7" angle="-270.0" id="next_turn_from_D5C5_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_left" posLat="0" color="0,0.4,.8" x="198.89999999999998" y="556.7" angle="-270.0" id="next_turn_from_C5B5_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_left" posLat="0" color="0,0.4,.8" x="183.3" y="468.90000000000003" angle="0.0" id="next_turn_from_B5B4_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_right" posLat="0" color="0,0.4,.8" x="271.1" y="453.3" angle="-90.0" id="next_turn_from_B4C4_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_right" posLat="0" color="0,0.4,.8" x="273.3" y="378.9" angle="0.0" id="next_turn_from_C4C3_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_left" posLat="0" color="0,0.4,.8" x="198.89999999999998" y="376.7" angle="-270.0" id="next_turn_from_C3B3_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_straight" posLat="0" color="0,0.4,.8" x="183.3" y="288.9" angle="0.0" id="next_turn_from_B3B2_0"/>
+  <poi width="3" height="3" layer="5" type="streetSign_nextTurn_left" posLat="0" color="0,0.4,.8" x="183.3" y="198.89999999999998" angle="0.0" id="next_turn_from_B2B1_0"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="273.8" y="198.801" angle="0.0" id="streetSign_priority_C2C1"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="271.199" y="183.8" angle="-90.0" id="streetSign_yield_B1C1"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="286.2" y="181.199" angle="-180.0" id="streetSign_priority_C0C1"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="288.801" y="196.2" angle="-270.0" id="streetSign_yield_D1C1"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="286.2" y="271.199" angle="-180.0" id="streetSign_priority_C1C2"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="288.801" y="286.2" angle="-270.0" id="streetSign_yield_D2C2"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="273.8" y="288.801" angle="0.0" id="streetSign_priority_C3C2"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="271.199" y="273.8" angle="-90.0" id="streetSign_yield_B2C2"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="363.8" y="288.801" angle="0.0" id="streetSign_priority_D3D2"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="361.199" y="273.8" angle="-90.0" id="streetSign_yield_C2D2"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="376.2" y="271.199" angle="-180.0" id="streetSign_priority_D1D2"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="378.801" y="286.2" angle="-270.0" id="streetSign_yield_E2D2"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="363.8" y="198.801" angle="0.0" id="streetSign_priority_D2D1"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="361.199" y="183.8" angle="-90.0" id="streetSign_yield_C1D1"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="376.2" y="181.199" angle="-180.0" id="streetSign_priority_D0D1"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="378.801" y="196.2" angle="-270.0" id="streetSign_yield_E1D1"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="453.8" y="198.801" angle="0.0" id="streetSign_priority_E2E1"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="451.199" y="183.8" angle="-90.0" id="streetSign_yield_D1E1"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="466.2" y="181.199" angle="-180.0" id="streetSign_priority_E0E1"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="468.80100000000004" y="196.2" angle="-270.0" id="streetSign_yield_F1E1"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="466.2" y="271.199" angle="-180.0" id="streetSign_priority_E1E2"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="468.80100000000004" y="286.2" angle="-270.0" id="streetSign_yield_F2E2"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="453.8" y="288.801" angle="0.0" id="streetSign_priority_E3E2"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="451.199" y="273.8" angle="-90.0" id="streetSign_yield_D2E2"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="466.2" y="361.199" angle="-180.0" id="streetSign_priority_E2E3"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="468.80100000000004" y="376.2" angle="-270.0" id="streetSign_yield_F3E3"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="453.8" y="378.801" angle="0.0" id="streetSign_priority_E4E3"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="451.199" y="363.8" angle="-90.0" id="streetSign_yield_D3E3"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="376.2" y="361.199" angle="-180.0" id="streetSign_priority_D2D3"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="378.801" y="376.2" angle="-270.0" id="streetSign_yield_E3D3"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="363.8" y="378.801" angle="0.0" id="streetSign_priority_D4D3"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="361.199" y="363.8" angle="-90.0" id="streetSign_yield_C3D3"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="376.2" y="451.199" angle="-180.0" id="streetSign_priority_D3D4"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="378.801" y="466.2" angle="-270.0" id="streetSign_yield_E4D4"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="363.8" y="468.80100000000004" angle="0.0" id="streetSign_priority_D5D4"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="361.199" y="453.8" angle="-90.0" id="streetSign_yield_C4D4"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="453.8" y="468.80100000000004" angle="0.0" id="streetSign_priority_E5E4"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="451.199" y="453.8" angle="-90.0" id="streetSign_yield_D4E4"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="466.2" y="451.199" angle="-180.0" id="streetSign_priority_E3E4"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="468.80100000000004" y="466.2" angle="-270.0" id="streetSign_yield_F4E4"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="466.2" y="541.1990000000001" angle="-180.0" id="streetSign_priority_E4E5"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="468.80100000000004" y="556.2" angle="-270.0" id="streetSign_yield_F5E5"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="453.8" y="558.801" angle="0.0" id="streetSign_priority_E6E5"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="451.199" y="543.8" angle="-90.0" id="streetSign_yield_D5E5"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="376.2" y="541.1990000000001" angle="-180.0" id="streetSign_priority_D4D5"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="378.801" y="556.2" angle="-270.0" id="streetSign_yield_E5D5"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="363.8" y="558.801" angle="0.0" id="streetSign_priority_D6D5"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="361.199" y="543.8" angle="-90.0" id="streetSign_yield_C5D5"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="286.2" y="541.1990000000001" angle="-180.0" id="streetSign_priority_C4C5"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="288.801" y="556.2" angle="-270.0" id="streetSign_yield_D5C5"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="273.8" y="558.801" angle="0.0" id="streetSign_priority_C6C5"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="271.199" y="543.8" angle="-90.0" id="streetSign_yield_B5C5"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="196.2" y="541.1990000000001" angle="-180.0" id="streetSign_priority_B4B5"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="198.801" y="556.2" angle="-270.0" id="streetSign_yield_C5B5"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="183.8" y="558.801" angle="0.0" id="streetSign_priority_B6B5"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="181.199" y="543.8" angle="-90.0" id="streetSign_yield_A5B5"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="183.8" y="468.80100000000004" angle="0.0" id="streetSign_priority_B5B4"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="181.199" y="453.8" angle="-90.0" id="streetSign_yield_A4B4"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="196.2" y="451.199" angle="-180.0" id="streetSign_priority_B3B4"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="198.801" y="466.2" angle="-270.0" id="streetSign_yield_C4B4"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="273.8" y="468.80100000000004" angle="0.0" id="streetSign_priority_C5C4"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="271.199" y="453.8" angle="-90.0" id="streetSign_yield_B4C4"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="286.2" y="451.199" angle="-180.0" id="streetSign_priority_C3C4"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="288.801" y="466.2" angle="-270.0" id="streetSign_yield_D4C4"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="273.8" y="378.801" angle="0.0" id="streetSign_priority_C4C3"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="271.199" y="363.8" angle="-90.0" id="streetSign_yield_B3C3"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="286.2" y="361.199" angle="-180.0" id="streetSign_priority_C2C3"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="288.801" y="376.2" angle="-270.0" id="streetSign_yield_D3C3"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="196.2" y="361.199" angle="-180.0" id="streetSign_priority_B2B3"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="198.801" y="376.2" angle="-270.0" id="streetSign_yield_C3B3"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="183.8" y="378.801" angle="0.0" id="streetSign_priority_B4B3"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="181.199" y="363.8" angle="-90.0" id="streetSign_yield_A3B3"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="183.8" y="288.801" angle="0.0" id="streetSign_priority_B3B2"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="181.199" y="273.8" angle="-90.0" id="streetSign_yield_A2B2"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="196.2" y="271.199" angle="-180.0" id="streetSign_priority_B1B2"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="198.801" y="286.2" angle="-270.0" id="streetSign_yield_C2B2"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="183.8" y="198.801" angle="0.0" id="streetSign_priority_B2B1"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="181.199" y="183.8" angle="-90.0" id="streetSign_yield_A1B1"/>
+  <poi type="streetSign_priority" imgFile="priority.png" color="1,1,1" x="196.2" y="181.199" angle="-180.0" id="streetSign_priority_B0B1"/>
+  <poi type="streetSign_yield" imgFile="yield.png" color="1,1,1" x="198.801" y="196.2" angle="-270.0" id="streetSign_yield_C1B1"/>
+  <poi type="EndOfLevel" width="7" height="7" posLat="0" color="0.5,.7,1" id="endOfLevel_0/2_34trials_tutorial" x="370.0" y="202.79999999999998" angle="90.0"/>
+  <poi type="EndOfLevel" width="7" height="7" posLat="0" color="0.5,.7,1" id="endOfLevel_1/2_142trials_level-1" x="190.0" y="202.79999999999998" angle="90.0"/>
+  <poi type="TutorialBanner" width="7" height="7" color="0.5,1,0.5" id="Tutorial_Step-0" x="198.8" y="185.8" angle="-0.0"/>
+  <poi type="TutorialBanner" width="7" height="7" color="0.5,1,0.5" id="Tutorial_Step-1" x="213.8" y="185.8" angle="-0.0"/>
+  <poi type="TutorialBanner" width="7" height="7" color="0.5,1,0.5" id="Tutorial_Step-2" x="228.8" y="185.8" angle="-0.0"/>
+</additional>

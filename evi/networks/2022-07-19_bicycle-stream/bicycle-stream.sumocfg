@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+    <input>
+        <net-file value="bicycle-stream.net.xml"/>
+        <route-files value="bicycle-stream.rou.xml"/>
+    </input>
+
+    <time>
+        <begin value="0"/>
+        <end value="1000"/>
+        <step-length value="0.1"/>
+    </time>
+
+    <processing>
+        <!-- Enable sublane model. Default lane width is 3.2 m, so resolution 1.6 m -> 2 sublanes -->
+        <lateral-resolution value="1.6"/>
+    </processing>
+</configuration>

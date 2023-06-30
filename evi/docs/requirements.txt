@@ -1,0 +1,7 @@
+# ONLY for dependencies specific for the doc generator
+# manage all dependencies of the library itself using Pipenv
+# or in a separate requirements.txt file
+sphinx>=1.3
+sphinx-rtd-theme
+recommonmark
+typing_extensions

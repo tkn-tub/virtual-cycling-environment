@@ -1,0 +1,81 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Vehicles/DefaultCar/Mesh/car.glb" type="PackedScene" id=1]
+[ext_resource path="res://Vehicles/DefaultCar/Mesh/Bottom.material" type="Material" id=2]
+[ext_resource path="res://Vehicles/DefaultCar/Mesh/CarFrame.material" type="Material" id=3]
+[ext_resource path="res://Vehicles/DefaultCar/Mesh/Lights.material" type="Material" id=4]
+[ext_resource path="res://Vehicles/DefaultCar/Mesh/Seats.material" type="Material" id=5]
+[ext_resource path="res://Vehicles/DefaultCar/Mesh/NumberPlate.material" type="Material" id=6]
+[ext_resource path="res://Vehicles/DefaultCar/Mesh/wheels.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Vehicles/DefaultCar/Mesh/Window.material" type="Material" id=8]
+
+[node name="car" instance=ExtResource( 1 )]
+
+[node name="CarCase" parent="." index="0"]
+layers = 2
+material/0 = ExtResource( 3 )
+material/1 = ExtResource( 2 )
+
+[node name="Wheel_FL" parent="CarCase" index="0" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.54965, 0.327513, -0.547316 )
+
+[node name="Wheel_FR" parent="CarCase" index="1" instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.55, 0.328, 0.547 )
+
+[node name="Wheel_BL" parent="CarCase" index="2" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.10225, 0.327513, -0.547316 )
+
+[node name="Wheel_BR" parent="CarCase" index="3" instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.102, 0.328, 0.547 )
+
+[node name="NumberPlate" parent="." index="1"]
+layers = 2
+material/0 = ExtResource( 6 )
+
+[node name="DoorFront" parent="." index="2"]
+layers = 2
+
+[node name="DoorBack" parent="." index="3"]
+layers = 2
+
+[node name="Exaust" parent="." index="4"]
+layers = 2
+
+[node name="Window" parent="." index="5"]
+layers = 2
+material/0 = ExtResource( 8 )
+
+[node name="Lights" parent="." index="6"]
+layers = 2
+material/0 = ExtResource( 4 )
+
+[node name="Backseat" parent="." index="7"]
+layers = 2
+material/0 = ExtResource( 5 )
+
+[node name="Frontseat" parent="." index="8"]
+layers = 2
+material/0 = ExtResource( 5 )
+
+[node name="TurnRightSignal" type="OmniLight" parent="." index="10"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.68262, 0.764743, 0.896119 )
+light_color = Color( 0.890196, 0.666667, 0, 1 )
+light_energy = 16.0
+light_indirect_energy = 16.0
+light_specular = 0.649
+omni_range = 0.185
+
+[node name="TurnLeftSignal" type="OmniLight" parent="." index="11"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.68262, 0.764743, -0.925606 )
+light_color = Color( 0.890196, 0.666667, 0, 1 )
+light_energy = 16.0
+light_indirect_energy = 16.0
+light_specular = 0.649
+omni_range = 0.185
+
+[node name="StopSignal" type="OmniLight" parent="." index="12"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.14311, 1.22253, 0 )
+light_color = Color( 1, 0, 0, 1 )
+light_energy = 16.0
+light_specular = 16.0
+omni_range = 0.1

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Vehicles/Bicycle/Mesh/bike_full.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Vehicles/ForeignVehicleController.cs" type="Script" id=2]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.825986, 0.471991, 0.224741 )
+
+[node name="KinematicBody" type="KinematicBody"]
+transform = Transform( 0.999998, 0.00123769, 0.0012478, -0.00123876, 0.999999, 0.000854934, -0.00124674, -0.000856476, 0.999999, 0, 0, 0 )
+script = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, -5.38876e-10, -4.65661e-10, -7.23048e-11, 1, -1.16415e-10, 2.32831e-10, -6.98492e-10, 1, 0.000894334, 0.473885, -0.000617228 )
+shape = SubResource( 1 )
+
+[node name="bike_full" parent="." instance=ExtResource( 1 )]
+transform = Transform( -4.36557e-08, -7.72161e-10, -1, 4.07454e-10, 1, -6.82121e-12, 0.999999, -4.07454e-10, -4.44707e-08, 0, 0, 0 )

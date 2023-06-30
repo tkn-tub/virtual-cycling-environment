@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on Fri Apr 30 17:23:46 2021 by Eclipse SUMO netedit Version 1.9.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <sumo-net-file value="parkingAreaOnRoadSharedCyclelane.net.xml"/>
+    </input>
+
+    <output>
+        <output-file value="parkingAreaOnRoadSharedCyclelane.net.xml"/>
+    </output>
+
+    <processing>
+        <geometry.min-radius.fix.railways value="false"/>
+        <geometry.max-grade.fix value="false"/>
+        <offset.disable-normalization value="true"/>
+        <lefthand value="false"/>
+    </processing>
+
+    <junctions>
+        <no-turnarounds value="true"/>
+        <junctions.corner-detail value="5"/>
+        <junctions.limit-turn-speed value="-1"/>
+        <rectangular-lane-cut value="false"/>
+    </junctions>
+
+    <pedestrian>
+        <walkingareas value="false"/>
+    </pedestrian>
+
+    <netedit>
+        <additional-files value="parkingAreaOnRoadSharedCyclelane.poly.xml"/>
+    </netedit>
+
+    <report>
+        <aggregate-warnings value="5"/>
+    </report>
+
+</configuration>
+-->
+
+<additionals xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <parkingArea id="parkingArea_OnRoad" lane="parkingAreaOnRoad_0" startPos="0.00" endPos="41.00" roadsideCapacity="5" onRoad="1"/>
+    <poly id="poly_0" type="building" color="red" fill="1" layer="0.00" shape="235.410000,59.200000 218.460000,59.200000 218.360000,82.240000 234.790000,82.240000"/>
+    <poly id="poly_1" type="building" color="red" fill="1" layer="0.00" shape="201.730000,67.780000 128.570000,67.880000 128.570000,94.120000 146.550000,94.120000 146.550000,84.620000 183.540000,84.510000 183.540000,101.670000 201.620000,101.560000"/>
+    <poly id="poly_2" type="building" color="red" fill="1" layer="0.00" shape="254.320000,44.220000 254.210000,27.890000 198.520000,28.100000 198.420000,44.730000"/>
+    <poly id="poly_3" type="building" color="red" fill="1" layer="0.00" shape="196.460000,44.420000 196.660000,19.320000 165.970000,19.520000 165.660000,45.150000"/>
+    <poly id="poly_4" type="building" color="red" fill="1" layer="0.00" shape="153.680000,45.150000 153.780000,19.110000 115.240000,19.420000 115.860000,45.560000"/>
+    <poly id="poly_5" type="building" color="red" fill="1" layer="0.00" shape="100.260000,63.230000 100.360000,19.320000 81.760000,19.420000 82.070000,63.330000"/>
+    <poly id="poly_6" type="building" color="red" fill="1" layer="0.00" shape="100.360000,93.300000 100.260000,70.670000 82.280000,70.260000 82.590000,93.300000"/>
+    <poly id="poly_7" type="building" color="red" fill="1" layer="0.00" shape="65.230000,75.220000 65.540000,42.150000 47.770000,42.460000 48.490000,75.730000"/>
+</additionals>

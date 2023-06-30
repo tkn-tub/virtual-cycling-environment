@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Vehicles/SimpleVehicleController.cs" type="Script" id=1]
+[ext_resource path="res://Vehicles/DefaultCar/Mesh/CarMesh.tscn" type="PackedScene" id=2]
+
+[sub_resource type="BoxShape" id=1]
+
+[node name="KinematicBody" type="KinematicBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.09805, 0.0119054, 0.00193524 )
+script = ExtResource( 1 )
+SteeringRate = 2.0
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 2.184, 0, 0, 0, 0.649, 0, 0, 0, 0.869, 0.144291, 0.643155, 0.0151489 )
+shape = SubResource( 1 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( -0.00104274, 0.262024, -0.965061, -0.000157638, 0.965061, 0.262024, 0.999999, 0.000425354, -0.000965003, -3.94511, 1.8823, 0.000173812 )
+cull_mask = 3
+fov = 90.0
+far = 600.0
+
+[node name="Car" parent="." instance=ExtResource( 2 )]

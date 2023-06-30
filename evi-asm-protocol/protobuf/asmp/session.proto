@@ -1,0 +1,63 @@
+syntax = "proto3";
+
+package asmp.session;
+
+// session control message wrapper
+message Message {
+    oneof message_oneof {
+        Initialize initialize = 1;
+        Teardown teardown = 2;
+        Response response = 3;
+        NetworkInitData netinit = 4;
+        TimeReached time_reached = 5;
+    }
+}
+
+// create and synchronize connection
+message Initialize {
+    double time_s = 1;
+}
+
+// shut down connection
+message Teardown {
+}
+
+// acknowledge previous messages
+message Response {
+    uint32 message_id = 1;
+    bool ok = 2;
+}
+
+// network initialization data from sumo for, e.g., veins
+message NetworkInitData {
+    message Point {
+        double x = 1;
+        double y = 2;
+    }
+
+    message Version {
+        uint32 api = 1;
+        string server = 2;
+    }
+
+    message NetworkBoundaries {
+        Point topleft = 1;
+        Point bottomright = 2;
+    }
+
+    message Polygon {
+        string id = 1;
+        string type = 2;
+        repeated Point shape = 3;
+    }
+
+    Version version = 1;
+    NetworkBoundaries network_boundaries = 2;
+    repeated Polygon polygons = 3;
+    double init_time_s = 4;
+    double sync_interval_s = 5;
+}
+
+message TimeReached {
+    double time_s = 1;
+}

@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Bicycle Telemetry</string>
+    <string name="server_address">Server address</string>
+    <string name="set_default_server">Load default server address</string>
+    <string name="connect">Start</string>
+    <string name="stop_sending">Stop</string>
+    <string name="steering_angle_title">Steering angle:</string>
+    <string name="connection_status_not_connected">Not started</string>
+    <string name="reset_straight">Calibrate straight</string>
+    <string name="server_address_default">131.234.121.241:15007</string>
+    <string name="low_pass_cutoff_default">0.0</string>
+    <string name="sharedprefs_id">org.ccs_labs.bicycletelemetry.settings</string>
+    <string name="sharedprefs_key_server_address">server_address</string>
+    <string name="cbInvertRotation">Invert rotation</string>
+    <string name="invalid_address">Server address must be `[host]:[port]`!</string>
+    <string name="invalid_port">Port `%s` is not an integer!</string>
+    <string name="socket_exception">Socket exception: %s</string>
+    <string name="security_exception">Security exception, can\'t open socket</string>
+    <string name="send_io_exception">Can\'t send packet: IOException: %s</string>
+    <string name="send_security_exception">Can\'t send packet: SecurityException: %s</string>
+    <string name="send_port_unreachable_exception">Can\'t send packet: port unreachable</string>
+    <string name="connection_status_sending">Transmitting packets…</string>
+    <string name="current_steering_angle_initial">0.0°</string>
+    <string name="current_steering_angle_format">%.1f°</string>
+    <string name="service_description">VCE steering sensor</string>
+    <string name="notification_content">Sensing and transmitting steering angle…</string>
+    <string name="channel_name">VCE Steering Sensor</string>
+    <string name="channel_description">Steering sensor for the Virtual Cycling Environment (VCE)</string>
+</resources>

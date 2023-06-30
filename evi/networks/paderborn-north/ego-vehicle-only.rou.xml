@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+	<!-- type and route information for ego vehicle to allow external spawning -->
+	<vType id="ego-type" color="blue"/>
+	<route id="ego-route" edges="-19206342#0 -19206341#6 -19206341#4 -19206341#3 -19206341#1 -323350445#1 -369470720"/>
+</routes>

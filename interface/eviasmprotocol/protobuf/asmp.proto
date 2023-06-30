@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+import "asmp/session.proto";
+import "asmp/vehicle.proto";
+import "asmp/cloud.proto";
+import "asmp/trafficlight.proto";
+import "asmp/visualization.proto";
+import "asmp/hapticsignals.proto";
+import "asmp/horizon.proto";
+
+package asmp;
+
+message Message {
+    uint32 id = 1;
+
+    oneof message_oneof {
+        session.Message session = 100;
+        vehicle.Message vehicle = 101;
+        cloud.Message cloud = 102;
+        trafficlight.Message trafficlight = 103;
+        visualization.Message visualization = 104;
+        hapticsignals.Message hapticsignals = 105;
+        horizon.Message horizon = 106;
+    }
+}

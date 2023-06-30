@@ -1,0 +1,21 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[[source]]
+url = "https://static.dbuse.org/pypi"
+verify_ssl = true
+name = "evi"
+
+[packages]
+evi-asm-protocol = {version = ">=0.11.0",index = "evi"}
+sumolib = {version = "==1.6.0",index = "evi"}
+traci = {version = "==1.6.0",index = "evi"}
+evi = {editable = true,path = "../../../evi"}
+vcegrid = {editable = true,path = "../.."}
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"

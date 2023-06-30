@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "biketoevi"
+version = "0.1.0"
+description = ""
+authors = ["Lukas Stratmann <stratmann@ccs-labs.org>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pygame = "^2.1.2"
+pyusb = "^1.2.1"
+pyzmq = "^25.1.0"
+openant = {path = "dependencies/openant", develop = true}
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

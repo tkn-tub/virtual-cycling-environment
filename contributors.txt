@@ -1,0 +1,33 @@
+This file contains a list of people who have made large contributions
+to the public version of the Virtual Cycling Environment.
+
+TKN Staff:
+    Dominik S. Buse <buse@ccs-labs.org>
+    Julian Heinovski <heinovski@ccs-labs.org>
+    Marie-Christin H. Oczko <oczko@ccs-labs.org>
+    Lukas Stratmann <stratmann@ccs-labs.org>
+
+Theses:
+    Mario Franke, "Interactive Driving Simulator for Car2X Scenarios," Bachelor Thesis, Department of Computer Science, Paderborn University (UPB), July 2018. (Advisors: Dominik S. Buse, Sven Henning, Ansgar Trächtler and Falko Dressler)
+    Lukas Stratmann, "Measuring Cyclists' Visual Attention and Interaction with an Interactive Real-Time 3D Simulation," Master's Thesis, Department of Computer Science, Paderborn University (UPB), May 2019. (Advisors: Dominik S. Buse, Ingrid Scharlau and Falko Dressler; Referees: Falko Dressler and Ingrid Scharlau)
+    Marie-Christin H. Oczko, "How to Apply Haptic Signals on Bicycles for Safety," Bachelor Thesis, Department of Computer Science, Paderborn University (UPB), August 2019. (Advisors: Falko Dressler and Ingrid Scharlau; Referees: Falko Dressler and Ingrid Scharlau)
+    Julian Bilden, "A V2X-based Framework for Advanced Driver Assistance Systems for Vulnerable Road Users," Bachelor Thesis, School of Electrical Engineering and Computer Science (EECS), TU Berlin (TUB), May 2021. (Advisors: Julian Heinovski and Lukas Stratmann; Referees: Falko Dressler and Thomas Sikora)
+    Ngoc Chi Banh, "Dooring as a Hazard for Bicyclists - Modelling Hazard Scenarios in an Interactive Real-time 3D Simulation," Master's Thesis, Department of Computer Science, Paderborn University (UPB), August 2021. (Advisors: Ingrid Scharlau and Falko Dressler; Referees: Ingrid Scharlau and Falko Dressler) 
+    Vivien Annabelle Jiranek, "Automatic Positioning of Street Signs from Map Data for Virtual Cycling Environment," Bachelor Thesis, School of Electrical Engineering and Computer Science (EECS), TU Berlin (TUB), August 2021. (Advisor: Lukas Stratmann; Referees: Falko Dressler and Thomas Sikora)
+    Leon Winkelmann, "A Framework for Generation of Typical Experiment Scenarios for VRU Safety within the VCE," Bachelor Thesis, School of Electrical Engineering and Computer Science (EECS), TU Berlin (TUB), November 2021. (Advisor: Julian Heinovski; Referees: Falko Dressler and Thomas Sikora)
+    Marie-Christin H. Oczko, "On Time Constraints for Internet-Connected Virtual Cycling Environments," Master's Thesis, Department of Computer Science, Paderborn University (UPB), December 2022. (Advisors: Falko Dressler and Lukas Stratmann; Referees: Florian Klingler and Falko Dressler)
+
+Student Projects:
+    Winter semester 2019/2020: Integrating a new bicycle trainer
+        Osama Ali
+        Shreyasi Warunkar
+    Winter semester 2020/2021: "Enabling Cooperative Human-in-the-Loop Experiments for Vulnerable Road Users in the Virtual Cycling Environment"
+        Azadeh Ataei
+        Kevin Kitzlinger
+        Christian Timm
+        Leon Winkelmann
+    Summer semeseter 2022: "Programmierpraktikum Kommunikationstechnologien" (integration of pedestrians; not yet ported to Godot)
+    Winter semester 2022/2023: "Making the Virtual Cycling Environment FOSS" (porting of the Unity implementation of the 3D envrionment to Godot)
+        Jacek Kmiecik
+        Mariusz Trzeciakiewicz
+        Leon Winkelmann

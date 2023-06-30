@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on Fr 19 Okt 2018 14:51:34 CEST by Eclipse SUMO netedit Version 1.0.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <sumo-net-file value="/home/franke/ccs_labs/safety4bikes/videos/meeting_13.11.2018_oldenburg/scenario/hidden_car.net.xml"/>
+    </input>
+
+    <output>
+        <output-file value="/home/franke/ccs_labs/safety4bikes/videos/meeting_13.11.2018_oldenburg/scenario/hidden_car.net.xml"/>
+    </output>
+
+    <processing>
+        <offset.disable-normalization value="true"/>
+        <lefthand value="false"/>
+    </processing>
+
+    <junctions>
+        <no-turnarounds value="true"/>
+        <junctions.corner-detail value="5"/>
+        <junctions.limit-turn-speed value="5.5"/>
+        <rectangular-lane-cut value="false"/>
+    </junctions>
+
+    <pedestrian>
+        <walkingareas value="false"/>
+    </pedestrian>
+
+</configuration>
+-->
+
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <poly id="poly_0" type="building" color="181,107,80" fill="1" layer="128.00" shape="24.330000,116.200000 114.380000,116.200000 114.380000,93.230000 24.330000,93.230000 24.330000,116.140000 24.330000,116.200000"/>
+</additional>

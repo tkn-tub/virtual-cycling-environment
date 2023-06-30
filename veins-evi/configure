@@ -1,0 +1,139 @@
+#!/usr/bin/env python3
+
+"""
+Creates Makefile(s) for building Veins.
+"""
+
+import os
+import subprocess
+import logging
+import argparse
+
+proj_name = "veins_evi"
+
+# Option handling
+parser = argparse.ArgumentParser(
+    formatter_class=argparse.ArgumentDefaultsHelpFormatter,
+)
+parser.add_argument(
+    '--veins',
+    dest='veins',
+    required=True,
+    help="Path to Veins library",
+)
+parser.add_argument(
+    '--etsimsg',
+    dest='etsi',
+    default=None,
+    help="Path to Etsi Messages library",
+)
+parser.add_argument(
+    '--lara',
+    dest='lara',
+    default=None,
+    help="Path to Veins Lanradio Extension library",
+)
+parser.add_argument(
+    '--protobuf',
+    dest='protobuf',
+    default='../evi-asm-protocol',
+    help="Path to evi protobuf sources",
+)
+args = parser.parse_args()
+
+
+def make_path_relative(inpath):
+    """
+    Turn inpath into a relative path to this file if it is absolute.
+    """
+    if os.path.isabs(inpath):
+        return os.path.relpath(inpath, os.path.dirname(__file__))
+    else:
+        return inpath
+
+
+logging.getLogger().setLevel(logging.INFO)
+
+# Start with default flags
+makemake_flags = [
+    '-f',
+    '--deep',
+    '--no-deep-includes',
+    '--make-so',
+    '-I', '.',
+    '-o', proj_name,
+    '-O', '../out',
+    # for veins
+    '-I', f'../{make_path_relative(args.veins)}/src',
+    '-L', f'../{make_path_relative(args.veins)}/src/',
+    '-lveins$(D)',
+]
+run_libs = [
+    f'src/{proj_name}',
+    f'{args.veins}/src/veins',
+]
+run_neds = [
+    f'src/{proj_name}',
+    f'{args.veins}/src/veins',
+]
+run_imgs = [
+    os.path.join('images'),
+    os.path.join(args.veins, 'images'),
+]
+
+if args.etsi is not None and args.lara is not None:
+    makemake_flags.extend([
+        # for lanradio (including etsi-messages)
+        '-I', f'../{make_path_relative(args.etsi)}/include',
+        '-L', f'../{make_path_relative(args.etsi)}/',
+        '-letsimsg',
+        '-I', f'../{make_path_relative(args.lara)}/src/',
+        '-L', f'../{make_path_relative(args.lara)}/src/',
+        '-lveins_lara$(D)',
+    ])
+    run_libs.extend([
+        f'{args.lara}/src/veins_lara',
+    ])
+    run_neds.extend([
+        f'{args.lara}/src/veins_lara',
+    ])
+    run_imgs.extend([
+        os.path.join(args.lara, 'images'),
+    ])
+else:
+    logging.warning(
+        "ETSI and/or LANRadio not specified, not linking against those!"
+    )
+
+# Start creating files
+if not os.path.isdir('out'):
+    os.mkdir('out')
+
+f = open(os.path.join('out', 'config.py'), 'w')
+f.write(f'run_libs = {repr(run_libs)}\n')
+f.write(f'run_neds = {repr(run_neds)}\n')
+f.write(f'run_imgs = {repr(run_imgs)}\n')
+f.close()
+
+# compile protobuf proto files
+proto_cppout = 'src/protobuf'
+proto_source_dirs = [
+    # add paths to proto files here
+    f"{args.protobuf}/protobuf",
+]
+if not os.path.isdir(proto_cppout):
+    os.mkdir(proto_cppout)
+for proto_source in proto_source_dirs:
+    protoc_flags = ['--proto_path', proto_source, '--cpp_out', proto_cppout]
+    # recursivly find proto files
+    protoc_files = [
+        os.path.join(path, fname)
+        for (path, _, fnames) in os.walk(proto_source)
+        for fname in fnames
+        if fname.endswith('.proto')
+    ]
+    subprocess.check_call(['env', 'protoc'] + protoc_flags + protoc_files)
+
+subprocess.check_call(['env', 'opp_makemake'] + makemake_flags, cwd='src')
+
+logging.info("Configure done. You can now run `make`.")

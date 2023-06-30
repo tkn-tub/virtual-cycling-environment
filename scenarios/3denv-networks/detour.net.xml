@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on Di 24 Apr 2018 13:09:42 CEST by Netedit Version 0.30.0
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <sumo-net-file value="/home/franke/Documents/studium/bachelor-thesis/veins-franke/veins/examples/c2x_exercise_04_2017/scenario/detour.net.xml"/>
+    </input>
+
+    <output>
+        <output-file value="/home/franke/Documents/studium/bachelor-thesis/veins-franke/veins/examples/c2x_exercise_04_2017/scenario/detour.net.xml"/>
+    </output>
+
+    <processing>
+        <no-turnarounds value="true"/>
+        <offset.disable-normalization value="true"/>
+        <lefthand value="false"/>
+        <junctions.corner-detail value="0"/>
+        <rectangular-lane-cut value="false"/>
+    </processing>
+
+</configuration>
+-->
+
+<net version="0.27" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/net_file.xsd">
+
+    <location netOffset="0.00,0.00" convBoundary="-32.99,0.00,600.00,100.00" origBoundary="0.00,0.00,600.00,100.00" projParameter="!"/>
+
+    <edge id=":andright_0" function="internal">
+        <lane id=":andright_0_0" index="0" speed="14.00" length="2.58" shape="201.65,96.75 201.75,97.45 202.05,97.95 202.55,98.25 203.25,98.35"/>
+    </edge>
+    <edge id=":detourend_0" function="internal">
+        <lane id=":detourend_0_0" index="0" speed="14.00" length="5.00" shape="501.65,95.25 501.84,96.61 502.42,97.57 503.39,98.16 504.75,98.35"/>
+    </edge>
+    <edge id=":detourend_1" function="internal">
+        <lane id=":detourend_1_0" index="0" speed="14.00" length="6.20" shape="498.55,98.35 504.75,98.35"/>
+    </edge>
+    <edge id=":detourleft_0" function="internal">
+        <lane id=":detourleft_0_0" index="0" speed="14.00" length="2.58" shape="298.35,-0.05 298.45,-0.75 298.75,-1.25 299.25,-1.55 299.95,-1.65"/>
+    </edge>
+    <edge id=":detourleftagain_0" function="internal">
+        <lane id=":detourleftagain_0_0" index="0" speed="14.00" length="2.58" shape="500.05,-1.65 500.75,-1.55 501.25,-1.25 501.55,-0.75 501.65,-0.05"/>
+    </edge>
+    <edge id=":detourstart_0" function="internal">
+        <lane id=":detourstart_0_0" index="0" speed="14.00" length="5.00" shape="295.25,98.35 296.61,98.16 297.58,97.57 298.16,96.61 298.35,95.25"/>
+    </edge>
+    <edge id=":detourstart_1" function="internal">
+        <lane id=":detourstart_1_0" index="0" speed="14.00" length="6.20" shape="295.25,98.35 301.45,98.35"/>
+    </edge>
+    <edge id=":leftagain_0" function="internal">
+        <lane id=":leftagain_0_0" index="0" speed="14.00" length="2.58" shape="200.05,-1.65 200.75,-1.55 201.25,-1.25 201.55,-0.75 201.65,-0.05"/>
+    </edge>
+    <edge id=":leftbend_0" function="internal">
+        <lane id=":leftbend_0_0" index="0" speed="14.00" length="2.58" shape="98.35,-0.05 98.45,-0.75 98.75,-1.25 99.25,-1.55 99.95,-1.65"/>
+    </edge>
+    <edge id=":rightbend_0" function="internal">
+        <lane id=":rightbend_0_0" index="0" speed="14.00" length="2.58" shape="96.75,98.35 97.45,98.25 97.95,97.95 98.25,97.45 98.35,96.75"/>
+    </edge>
+    <edge id=":start_0" function="internal">
+        <lane id=":start_0_0" index="0" speed="14.00" length="5.00" shape="1.63,95.24 1.83,96.60 2.42,97.57 3.38,98.16 4.74,98.35"/>
+    </edge>
+    <edge id=":start_1" function="internal">
+        <lane id=":start_1_0" index="0" speed="14.00" length="6.20" shape="-1.46,98.35 4.74,98.35"/>
+    </edge>
+
+    <edge id="0" from="start" to="rightbend" priority="-1">
+        <lane id="0_0" index="0" speed="14.00" length="92.01" shape="4.74,98.35 96.75,98.35"/>
+    </edge>
+    <edge id="1" from="rightbend" to="leftbend" priority="-1">
+        <lane id="1_0" index="0" speed="14.00" length="96.80" shape="98.35,96.75 98.35,-0.05"/>
+    </edge>
+    <edge id="2" from="leftbend" to="leftagain" priority="-1">
+        <lane id="2_0" index="0" speed="14.00" length="100.10" shape="99.95,-1.65 200.05,-1.65"/>
+    </edge>
+    <edge id="3" from="leftagain" to="andright" priority="-1">
+        <lane id="3_0" index="0" speed="14.00" length="96.80" shape="201.65,-0.05 201.65,96.75"/>
+    </edge>
+    <edge id="4" from="andright" to="detourstart" priority="-1">
+        <lane id="4_0" index="0" speed="14.00" length="92.00" shape="203.25,98.35 295.25,98.35"/>
+    </edge>
+    <edge id="5" from="detourstart" to="detourleft" priority="-1">
+        <lane id="5_0" index="0" speed="14.00" length="95.30" shape="298.35,95.25 298.35,-0.05"/>
+    </edge>
+    <edge id="6" from="detourleft" to="detourleftagain" priority="-1">
+        <lane id="6_0" index="0" speed="14.00" length="200.10" shape="299.95,-1.65 500.05,-1.65"/>
+    </edge>
+    <edge id="7" from="detourleftagain" to="detourend" priority="-1">
+        <lane id="7_0" index="0" speed="14.00" length="95.30" shape="501.65,-0.05 501.65,95.25"/>
+    </edge>
+    <edge id="8" from="detourend" to="end" priority="-1">
+        <lane id="8_0" index="0" speed="14.00" length="95.25" shape="504.75,98.35 600.00,98.35"/>
+    </edge>
+    <edge id="9" from="detourstart" to="detourend" priority="-1">
+        <lane id="9_0" index="0" speed="14.00" length="197.10" shape="301.45,98.35 498.55,98.35"/>
+    </edge>
+    <edge id="egoVehicleStart" from="gneJ11" to="start" priority="-1">
+        <lane id="egoVehicleStart_0" index="0" speed="14.00" length="13.62" shape="1.59,81.63 1.63,95.24"/>
+    </edge>
+    <edge id="fellowVehicleStart" from="gneJ13" to="start" priority="-1">
+        <lane id="fellowVehicleStart_0" index="0" speed="14.00" length="31.53" shape="-32.99,98.35 -1.46,98.35"/>
+    </edge>
+
+    <tlLogic id="start" type="static" programID="0" offset="0">
+        <phase duration="24" state="rG"/>
+        <phase duration="0.50" state="ry"/>
+        <phase duration="0.50" state="yr"/>
+        <phase duration="2" state="Gr"/>
+        <phase duration="0.50" state="yr"/>
+        <phase duration="40" state="rG"/>
+    </tlLogic>
+
+    <junction id="andright" type="priority" x="200.00" y="100.00" incLanes="3_0" intLanes=":andright_0_0" shape="203.25,99.95 203.25,96.75 200.05,96.75">
+        <request index="0" response="0" foes="0" cont="0"/>
+    </junction>
+    <junction id="detourend" type="priority" x="500.00" y="100.00" incLanes="7_0 9_0" intLanes=":detourend_0_0 :detourend_1_0" shape="504.75,99.95 504.75,96.75 503.25,95.25 500.05,95.25 498.55,96.75 498.55,99.95">
+        <request index="0" response="00" foes="10" cont="0"/>
+        <request index="1" response="01" foes="01" cont="0"/>
+    </junction>
+    <junction id="detourleft" type="priority" x="300.00" y="0.00" incLanes="5_0" intLanes=":detourleft_0_0" shape="296.75,-0.05 299.95,-0.05 299.95,-3.25">
+        <request index="0" response="0" foes="0" cont="0"/>
+    </junction>
+    <junction id="detourleftagain" type="priority" x="500.00" y="0.00" incLanes="6_0" intLanes=":detourleftagain_0_0" shape="500.05,-0.05 503.25,-0.05 500.05,-3.25">
+        <request index="0" response="0" foes="0" cont="0"/>
+    </junction>
+    <junction id="detourstart" type="priority" x="300.00" y="100.00" incLanes="4_0" intLanes=":detourstart_0_0 :detourstart_1_0" shape="301.45,99.95 301.45,96.75 299.95,95.25 296.75,95.25 295.25,96.75 295.25,99.95">
+        <request index="0" response="00" foes="00" cont="0"/>
+        <request index="1" response="00" foes="00" cont="0"/>
+    </junction>
+    <junction id="end" type="dead_end" x="600.00" y="100.00" incLanes="8_0" intLanes="" shape="600.00,96.75 600.00,99.95"/>
+    <junction id="gneJ11" type="dead_end" x="-0.06" y="81.63" incLanes="" intLanes="" shape="-0.01,81.63 3.19,81.62"/>
+    <junction id="gneJ13" type="dead_end" x="-32.99" y="100.00" incLanes="" intLanes="" shape="-32.99,99.95 -32.99,96.75"/>
+    <junction id="leftagain" type="priority" x="200.00" y="0.00" incLanes="2_0" intLanes=":leftagain_0_0" shape="200.05,-0.05 203.25,-0.05 200.05,-3.25">
+        <request index="0" response="0" foes="0" cont="0"/>
+    </junction>
+    <junction id="leftbend" type="priority" x="100.00" y="0.00" incLanes="1_0" intLanes=":leftbend_0_0" shape="96.75,-0.05 99.95,-0.05 99.95,-3.25">
+        <request index="0" response="0" foes="0" cont="0"/>
+    </junction>
+    <junction id="rightbend" type="priority" x="100.00" y="100.00" incLanes="0_0" intLanes=":rightbend_0_0" shape="99.95,96.75 96.75,96.75 96.75,99.95">
+        <request index="0" response="0" foes="0" cont="0"/>
+    </junction>
+    <junction id="start" type="traffic_light" x="0.00" y="100.00" incLanes="egoVehicleStart_0 fellowVehicleStart_0" intLanes=":start_0_0 :start_1_0" shape="4.74,99.95 4.74,96.75 3.23,95.24 0.03,95.25 -1.46,96.75 -1.46,99.95">
+        <request index="0" response="00" foes="10" cont="0"/>
+        <request index="1" response="01" foes="01" cont="0"/>
+    </junction>
+
+    <connection from="0" to="1" fromLane="0" toLane="0" via=":rightbend_0_0" dir="r" state="M"/>
+    <connection from="1" to="2" fromLane="0" toLane="0" via=":leftbend_0_0" dir="l" state="M"/>
+    <connection from="2" to="3" fromLane="0" toLane="0" via=":leftagain_0_0" dir="l" state="M"/>
+    <connection from="3" to="4" fromLane="0" toLane="0" via=":andright_0_0" dir="r" state="M"/>
+    <connection from="4" to="5" fromLane="0" toLane="0" via=":detourstart_0_0" dir="r" state="M"/>
+    <connection from="4" to="9" fromLane="0" toLane="0" via=":detourstart_1_0" dir="s" state="M"/>
+    <connection from="5" to="6" fromLane="0" toLane="0" via=":detourleft_0_0" dir="l" state="M"/>
+    <connection from="6" to="7" fromLane="0" toLane="0" via=":detourleftagain_0_0" dir="l" state="M"/>
+    <connection from="7" to="8" fromLane="0" toLane="0" via=":detourend_0_0" dir="r" state="M"/>
+    <connection from="9" to="8" fromLane="0" toLane="0" via=":detourend_1_0" dir="s" state="m"/>
+    <connection from="egoVehicleStart" to="0" fromLane="0" toLane="0" via=":start_0_0" tl="start" linkIndex="0" dir="r" state="o"/>
+    <connection from="fellowVehicleStart" to="0" fromLane="0" toLane="0" via=":start_1_0" tl="start" linkIndex="1" dir="s" state="o"/>
+
+    <connection from=":andright_0" to="4" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":detourend_0" to="8" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":detourend_1" to="8" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":detourleft_0" to="6" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":detourleftagain_0" to="7" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":detourstart_0" to="5" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":detourstart_1" to="9" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":leftagain_0" to="3" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":leftbend_0" to="2" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":rightbend_0" to="1" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":start_0" to="0" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":start_1" to="0" fromLane="0" toLane="0" dir="s" state="M"/>
+
+</net>

@@ -1,0 +1,22 @@
+[evi]
+config_file="../evi/networks/paderborn-north/paderborn-north.evi.ini"
+args="--verbosity WARNING --sumo-binary sumo-gui"
+
+[veins-evi]
+scenario="../veins-evi/examples/minimap"
+args="-u Cmdenv -c LanradioDisabled"
+
+[3denv]
+# TODO: launch Godot or compiled game with correct scene
+
+[bike-interface]
+args="""\
+    --unity-ip localhost \
+    --wheel-diameter 0.7 \
+    --num-spokes 18 \
+    --steering-sensor android \
+    --android-deadzone 0 \
+    --speed-sensor irspeed_esp32 \
+    --initial-orientation 0 \
+    --speed-factor 2\
+    """

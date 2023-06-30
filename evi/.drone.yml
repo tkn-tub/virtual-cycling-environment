@@ -1,0 +1,157 @@
+---
+kind: pipeline
+type: docker
+name: tests
+
+steps:
+  - name: tox setup
+    image: python:3.8-buster
+    commands:
+      - python -mvenv .venv
+      - . .venv/bin/activate
+      - which python
+      - python --version
+      - python -mpip install --upgrade pip wheel
+      - python -mpip install --progress-bar=off tox -r requirements.txt
+      - tox -e clean
+
+  - name: tox checks
+    image: python:3.8-buster
+    failure: ignore
+    commands:
+      - . .venv/bin/activate
+      - tox -e check
+
+  - name: typecheck
+    image: python:3.8-buster
+    failure: ignore
+    commands:
+      - . .venv/bin/activate
+      - tox -e typecheck
+
+  - name: docs
+    image: python:3.8-buster
+    failure: ignore
+    commands:
+      - . .venv/bin/activate
+      - tox -e docs
+
+  - name: doc tests
+    image: python:3.8-buster
+    commands:
+      - . .venv/bin/activate
+      - tox -e doctest
+
+  - name: unit tests
+    image: python:3.8-buster
+    commands:
+      - . .venv/bin/activate
+      - tox -e py38
+
+---
+kind: pipeline
+type: docker
+name: build
+
+steps:
+  - name: build python
+    image: python:3.8-buster
+    commands:
+      - apt-get update && apt-get install -y protobuf-compiler
+      - python setup.py sdist bdist_wheel
+
+  - name: Deploy distribution
+    image: kroniak/ssh-client
+    when:
+      event:
+        - tag
+        - promote
+    environment:
+      SSH_USER:
+        from_secret: ssh_user
+      SSH_KEY:
+        from_secret: ssh_key
+    commands:
+      # Fail on attempted overwrite: - chmod -w dist/*
+      - mkdir /root/.ssh && echo "$SSH_KEY" > /root/.ssh/id_rsa && chmod 0600 /root/.ssh/id_rsa
+      - scp -o StrictHostKeyChecking=no dist/* $SSH_USER@ccs1.tkn.tu-berlin.de:/srv/www/intern.ccs-labs.org/mirror/python-packages/evi/
+
+---
+kind: pipeline
+type: docker
+name: integrationtest
+
+steps:
+  - name: tox setup
+    image: python:3.8-buster
+    commands:
+      - python -mvenv .venv
+      - . .venv/bin/activate
+      - which python
+      - python --version
+      - python -mpip install --upgrade pip wheel
+      - python -mpip install --progress-bar=off tox -r requirements.txt
+      - tox -e clean
+
+  - name: integration test
+    image: dbuse/sumo-python:3.8-buster-1_6_0-slim
+    commands:
+      - . .venv/bin/activate
+      - tox -e integrationtest
+
+  - name: benchmark
+    image: python:3.8-buster
+    commands:
+      - . .venv/bin/activate
+      - tox -e benchmark
+
+---
+kind: pipeline
+type: docker
+name: profiling
+
+steps:
+  - name: build
+    image: python:3.8-buster
+    commands:
+      - apt-get update && apt-get install -y protobuf-compiler
+      - python setup.py bdist_wheel
+
+  - name: deploy
+    image: dbuse/sumo-python:3.8-buster-1_6_0-slim
+    commands:
+      - python -mvenv .pvenv
+      - . .pvenv/bin/activate
+      - pip install --upgrade pip wheel wait-for-it
+      - pip install -r requirements.txt
+      - pip install dist/evi-*.whl
+
+  - name: evid
+    image: dbuse/sumo-python:3.8-buster-1_6_0-slim
+    commands:
+      - . .pvenv/bin/activate
+      - scripts/port_announcer.sh &
+      - scripts/evid.py --config-file networks/paderborn-hynets/paderborn-hynets.evi.ini
+    detach: true
+
+  - name: pcapreplay
+    image: dbuse/sumo-python:3.8-buster-1_6_0-slim
+    commands:
+      - apt-get update && apt-get install -y time
+      - . .pvenv/bin/activate
+      - wait-for-it -s evid:9999
+      - echo "${DRONE_COMMIT_SHA:0:8} ${DRONE_BUILD_NUMBER}" > time.log
+      - time scripts/pcapreplay.py --replay --csv-infile networks/paderborn-hynets/asm-replay-2022-03-09.csv --range 0 1000 --range 2284 None --reactive --dst evid --src pcapreplay 2>> time.log
+      - cat time.log
+
+  - name: wiki-upload
+    image: alpine/git
+    commands:
+      - echo "Username '$DRONE_ASKPASS_USERNAME'"
+      - echo "machine webgit.ccs-labs.org login $DRONE_ASKPASS_USERNAME password $DRONE_ASKPASS_PASSWORD" > ~/.netrc
+      - git clone ${DRONE_GIT_HTTP_URL/.git/.wiki.git} /wiki
+      - cat time.log | tr '\n' ' ' >> /wiki/profiling.log
+      - git -C /wiki add profiling.log
+      - git -C /wiki commit -m"Add profiling run data for ${DRONE_COMMIT_SHA:0:8} from run ${DRONE_BUILD_NUMBER}"
+      - git -C /wiki push
+...

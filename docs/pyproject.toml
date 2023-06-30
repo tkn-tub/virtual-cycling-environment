@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "vcedocs"
+version = "0.2.0"
+description = ""
+authors = ["Lukas Stratmann <stratmann@ccs-labs.org>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+Sphinx = "^7.0"
+# sphinx-rtd-theme = "^1.2.2"
+furo = "^2023.5.20"  # sphinx theme
+sphinxcontrib-bibtex = "^2.5.0"
+sphinxext-opengraph = "^0.8.2"
+sphinx-copybutton = "^0.5.2"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

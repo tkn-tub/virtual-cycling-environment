@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="512" height="512" version="1.1" viewBox="0 0 135.47 135.47" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <marker id="TriangleStart" overflow="visible" markerHeight="3.3437293" markerWidth="2.8923259" orient="auto-start-reverse" preserveAspectRatio="none" refX="-0.7474286" refY="-9.8120751e-08" viewBox="0 0 5.3244081 6.1553851">
+   <path transform="scale(.5)" d="m5.77 0-8.65 5v-10z" fill="context-stroke" fill-rule="evenodd" stroke="context-stroke" stroke-width="1pt"/>
+  </marker>
+  <clipPath id="clipPath4864">
+   <rect x="50.663" y="91.595" width="34.141" height="35.231" d="m 50.662697,91.594727 h 34.14127 v 35.230913 h -34.14127 z" display="none" fill-opacity=".56967" style="paint-order:stroke fill markers"/>
+   <path class="powerclip" d="m13.885 13.885h107.7v107.7h-107.7zm36.778 77.71v35.231h34.141v-35.231z" fill-opacity=".56967" style="paint-order:stroke fill markers"/>
+  </clipPath>
+ </defs>
+ <g display="none" stroke="#000">
+  <path d="m67.733 124.47v-55.155" fill="none" marker-end="url(#TriangleStart)" stroke-width="7.9375"/>
+  <path d="m113.39 67.733a45.658 45.658 0 0 1-45.658 45.658 45.658 45.658 0 0 1-45.658-45.658 45.658 45.658 0 0 1 45.658-45.658 45.658 45.658 0 0 1 45.658 45.658z" clip-path="url(#clipPath4864)" fill-opacity="0" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.3807" style="paint-order:stroke fill markers"/>
+ </g>
+ <g>
+  <path d="m63.764 65.373v55.154h7.9375v-55.154z" color="#000000" style="-inkscape-stroke:none"/>
+  <g fill-rule="evenodd">
+   <path d="m67.733 49.71 10.78 18.649h-21.559z" color="#000000" stroke-width="2.1559pt" style="-inkscape-stroke:none"/>
+   <path d="m67.732 46.838-1.2441 2.1523-12.025 20.807h26.541zm0 5.7461 8.2891 14.338h-16.578z" color="#000000" style="-inkscape-stroke:none"/>
+  </g>
+  <g transform="translate(4.8333e-6 -3.9466)" stroke-linecap="round" stroke-linejoin="round">
+   <path d="m67.732 18.885c-26.94-1e-6 -48.848 21.907-48.848 48.848 0 20.938 13.234 38.837 31.778 45.773v-6.8652c-14.967-6.5603-25.397-21.492-25.397-38.908-1e-6 -23.492 18.975-42.467 42.467-42.467 23.492 1e-6 42.469 18.975 42.469 42.467 0 17.415-10.43 32.347-25.397 38.907v6.8652c18.544-6.9368 31.778-24.835 31.778-45.772 0-26.94-21.909-48.848-48.85-48.848z" color="#000000" style="-inkscape-stroke:none;paint-order:stroke fill markers"/>
+   <path d="m113.39 67.733a45.658 45.658 0 0 1-45.658 45.658 45.658 45.658 0 0 1-45.658-45.658 45.658 45.658 0 0 1 45.658-45.658 45.658 45.658 0 0 1 45.658 45.658z" color="#000000" fill-opacity="0" stroke-width="6.3807" style="-inkscape-stroke:none;paint-order:stroke fill markers"/>
+  </g>
+ </g>
+</svg>

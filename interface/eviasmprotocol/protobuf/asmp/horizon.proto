@@ -1,0 +1,49 @@
+syntax = "proto3";
+
+package asmp.horizon;
+
+message Point {
+    double x = 1;
+    double y = 2;
+}
+
+enum Variable {
+    NONE = 0;
+    MEAN_LANE_SPEED = 1;  // scalar
+    MAX_LANE_SPEED = 2;  // scalar
+    CURRENT_LANE_VEHICLES = 3;  // integral
+}
+
+message DoubleVector {
+    repeated double value = 1;
+}
+
+message IntegerVector {
+    repeated int32 value = 1;
+}
+
+message ResponseItem {
+    Variable variable = 1;
+    oneof result_oneof {
+        DoubleVector double_vector = 100;
+        IntegerVector integer_vector = 101;
+    }
+}
+
+message Request {
+    uint32 request_id = 1;
+    uint32 vehicle_id = 2;
+    repeated Point points = 3;
+    repeated Variable variables = 4;
+}
+
+message Response {
+    Request request = 1; // replace with id if too much data
+    repeated ResponseItem items = 2;
+}
+
+message Message {
+    double time_s = 1;
+    repeated Request requests = 2;
+    repeated Response responses = 3;
+}

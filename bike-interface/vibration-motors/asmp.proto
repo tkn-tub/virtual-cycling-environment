@@ -1,0 +1,13 @@
+syntax = "proto2";
+
+import "hapticsignals.proto";
+
+package asmp;
+
+message Message {
+    optional uint32 id = 1;
+
+    oneof message_oneof {
+	hapticsignals.Message hapticsignals = 105;
+    }
+}

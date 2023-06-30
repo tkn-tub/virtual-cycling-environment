@@ -1,0 +1,8 @@
+# build dir
+/asmp
+
+# generic
+/build
+/dist
+/MANIFEST
+*.egg-info

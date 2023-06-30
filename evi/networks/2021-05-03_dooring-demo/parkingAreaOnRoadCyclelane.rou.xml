@@ -1,0 +1,14 @@
+<routes>
+    <vType id="ego-type" sigma="0.5" length="3.5" minGap="2.5" color="1,0,0"/>
+    <route id="ego-route" edges="-gneE2 flowIntersectionToParkingAreaStart parkingAreaOnRoad parkingAreaStopToFlowEnd"/>
+
+    <vType id="parkingVehicle" latAlignment="nice"/>
+
+    <flow id="parkingVehicleFlow" color="1,1,0" begin="0" end="5" period="1" type="parkingVehicle">
+        <route edges="flowBeginToFlowIntersection flowIntersectionToParkingAreaStart parkingAreaOnRoad parkingAreaStopToFlowEnd"/>
+        <stop parkingArea="parkingArea_OnRoad" until="80"/>
+    </flow>
+    <flow id="NonParkingVehicleFlow" color="1,0,0" begin="0" end="5" period="1" type="parkingVehicle">
+        <route edges="flowBeginToFlowIntersection flowIntersectionToParkingAreaStart parkingAreaOnRoad parkingAreaStopToFlowEnd"/>
+    </flow>
+</routes>
