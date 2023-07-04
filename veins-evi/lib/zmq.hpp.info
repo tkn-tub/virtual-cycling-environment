@@ -1,0 +1,2 @@
+zmq.hpp has been included from the cppzmq repository on GitHub: https://github.com/zeromq/cppzmq/tree/master
+Currently it does not seem to be packaged with the zeromq package on Arch anymore.

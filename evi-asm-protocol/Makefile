@@ -17,7 +17,7 @@ SUBCLASSES = \
 	Horizon
 ROOT_PROTO_DIR = protobuf
 SUBCLASSES_PROTO_DIR = $(ROOT_PROTO_DIR)/asmp
-OUT_DIR = ../3denv/3denv/Assets/Scripts/Vehicle
+OUT_DIR = ../3denv/EVI
 SUBCLASSES_OUT_DIR = $(OUT_DIR)/asmp
 # When adding new classes, it may be required to manually import them
 # in Unity for generating the respective Output.cs.meta file.

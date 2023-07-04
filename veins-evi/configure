@@ -61,6 +61,8 @@ makemake_flags = [
     '--no-deep-includes',
     '--make-so',
     '-I', '.',
+    '-I', '../lib/',
+    '-L', '../lib/',
     '-o', proj_name,
     '-O', '../out',
     # for veins
