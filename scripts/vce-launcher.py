@@ -58,6 +58,13 @@ def main():
              "to run each component.",
     )
     parser.add_argument(
+        '--nv',
+        action='store_true',
+        help="Use the --nv option for all Apptainer commands. "
+             "This should provide basic access to Nvidia GPUs "
+             "from within the container (assuming --container).",
+    )
+    parser.add_argument(
         '--logs-dir',
         type=pathlib.Path,
         help="NOT IMPLEMENTED YET. "
@@ -79,6 +86,7 @@ def main():
         prepare_only=args.prepare_only,
         logs_dir=args.logs_dir,
         use_container=args.container,
+        container_nvidia=args.nv,
     )
 
 
@@ -91,6 +99,7 @@ class Component:
             prompt: str = "vce> ",
             greeting: str = "Press enter to launch the component.",
             container_img: pathlib.Path | None = None,
+            container_nvidia=False,
     ):
         self.env_cmd = env_cmd
         """
@@ -114,6 +123,7 @@ class Component:
 
         self.container_img = container_img
         self._container_enabled = False  # only enable once
+        self.container_nvidia = container_nvidia
         if container_img:
             self.enable_container()
 
@@ -124,7 +134,7 @@ class Component:
 
         def build_container_cmd(cmd_in: Cmd | str):
             return Cmd(
-                "apptainer exec ",
+                f"apptainer exec {'--nv' if self.container_nvidia else ''} ",
                 QuotedCmd(self.container_img),
                 " bash --init-file <(echo ",
                 QuotedCmd(cmd_in),
@@ -205,21 +215,24 @@ def launch_vce(
         workdir: pathlib.Path,
         use_tmux: bool,
         use_container: bool,
+        container_nvidia: bool,
         prepare_only: bool,
         logs_dir: pathlib.Path,
 ):
     container_img = DEFAULT_CONTAINER if use_container else None
     components: list[Component] = []
-    if evi_component := get_evi_component(cfg, workdir, container_img):
+    if evi_component := get_evi_component(
+            cfg, workdir, container_img, container_nvidia):
         components.append(evi_component)
     if veins_evi_component := get_veins_evi_component(
-            cfg, workdir, container_img):
+            cfg, workdir, container_img, container_nvidia):
         components.append(veins_evi_component)
-    if (
-            bike_interface_component
-            := get_bike_interface_component(cfg, workdir, container_img)
-    ):
+    if bike_interface_component := get_bike_interface_component(
+            cfg, workdir, container_img, container_nvidia):
         components.append(bike_interface_component)
+    if multiplayer_interface_component := get_multiplayer_interface_component(
+            cfg, workdir, container_img, container_nvidia):
+        components.append(multiplayer_interface_component)
 
     if use_tmux:
         launch_tmux(components, prepare_only=prepare_only)
@@ -249,6 +262,7 @@ def get_evi_component(
         cfg: dict,
         workdir: pathlib.Path,
         container_img: pathlib.Path,
+        container_nvidia: bool,
 ) -> Component | None:
     if not cfg.get('evi'):
         print("No configuration for [evi] -> "
@@ -277,6 +291,7 @@ def get_evi_component(
         ),
         full_cmd=None,  # use default
         container_img=container_img,
+        container_nvidia=container_nvidia,
         prompt="evi> ",
         greeting=(
             "--- EGO VEHICLE INTERFACE ---\n"
@@ -291,6 +306,7 @@ def get_veins_evi_component(
         cfg: dict,
         workdir: pathlib.Path,
         container_img: pathlib.Path,
+        container_nvidia: bool,
 ) -> Component | None:
     if not cfg.get('veins-evi'):
         print("No configuration for [veins-evi] -> "
@@ -313,6 +329,7 @@ def get_veins_evi_component(
         ),
         full_cmd=None,  # use default
         container_img=container_img,
+        container_nvidia=container_nvidia,
         prompt="veins-evi> ",
         greeting=(
             "--- VEINS-EVI ---\n"
@@ -329,6 +346,7 @@ def get_bike_interface_component(
         cfg: dict,
         workdir: pathlib.Path,
         container_img: pathlib.Path,
+        container_nvidia: bool,
 ) -> Component | None:
     if not cfg.get('bike-interface'):
         print("No configuration for [bike-interface] -> "
@@ -348,6 +366,7 @@ def get_bike_interface_component(
         ),
         full_cmd=None,  # use default
         container_img=container_img,
+        container_nvidia=container_nvidia,
         prompt="bike-interface> ",
         greeting=(
             "--- BICYCLE INTERFACE ---\n"
@@ -358,6 +377,63 @@ def get_bike_interface_component(
             "Otherwise, you may end up in unexpected places when the "
             "3D environment starts. "
             "If this happens, simply restart this component."
+            "\n\n"
+            "Press enter to launch this component.\n"
+        )
+    )
+
+
+def get_multiplayer_interface_component(
+    cfg: dict,
+    workdir: pathlib.Path,
+    container_img: pathlib.Path,
+    container_nvidia: bool,
+) -> Component | None:
+    if 'multiplayer-interface' not in cfg:
+        print("No configuration for [multiplayer-interface] -> "
+              "not launching component")
+        return None
+    cfg = cfg['multiplayer-interface']
+    if 'env3d_port' not in cfg:
+        sys.exit(
+            "Launch configuration of 'multiplayer-interface' is missing "
+            "a definition of 'env3d_port'."
+        )
+    if 'evi_port' not in cfg:
+        sys.exit(
+            "Launch configuration of 'multiplayer-interface' is missing "
+            "a definition of 'evi_port'."
+        )
+    if 'connections' not in cfg:
+        sys.exit(
+            "Launch configuration of 'multiplayer-interface' is missing "
+            "a definition of 'connections' (the number of clients)."
+        )
+    # The Multiplayer Interface is in a subfolder of the EVI,
+    # since they share dependencies.
+    evi_root = VCE_ROOT / "evi"
+    return Component(
+        env_cmd=Cmd(
+            "cd ",
+            QuotedCmd(f"{evi_root}"),
+        ),
+        # `poetry shell` doesn't work with our --prepare-only,
+        # so use `poetry run` in run_cmd instead:
+        run_cmd=Cmd(
+            "poetry run ",
+            QuotedCmd("scripts/multiplayer-interface/interface.py"),
+            f" --env3d-port {cfg['env3d_port']}",
+            f" --evi-port {cfg['evi_port']}",
+            f" --connections {cfg['connections']}",
+        ),
+        full_cmd=None,  # use default
+        container_img=container_img,
+        container_nvidia=container_nvidia,
+        prompt="multiplayer (evi)> ",
+        greeting=(
+            "--- MULTIPLAYER INTERFACE ---\n"
+            "Start this when the EVI is already running, "
+            "but before launching any of the 3D Environments."
             "\n\n"
             "Press enter to launch this component.\n"
         )
@@ -468,7 +544,7 @@ def launch_tmux(components: list[Component], prepare_only: bool):
 
     tmux_cmd = [
         "tmux new-session -s 'VCE' "  # session: VCE
-        "-n 'vce-run' \; "  # window: vce-run
+        "-n 'vce-run' \\; "  # window: vce-run
     ]
     for i, component in enumerate(components):
         # Prefixing each cmd with `bash -c` for compatibility
@@ -484,19 +560,24 @@ def launch_tmux(components: list[Component], prepare_only: bool):
                     "bash -c ",
                     QuotedCmd(component.env_cmd),
                 ),
-                " C-m \; send-keys ",
+                " C-m \\; send-keys ",
                 QuotedCmd(
+                    # Set bash prompt:
                     "PS1=",
                     QuotedCmd(component.prompt),
+                    # Hide previously entered commands from user:
                     " && clear",
+                    # If we're in a container, print its path:
                     container_info,
+                    # Print the current directory:
                     " && echo -n ", QuotedCmd("CWD: "),
                     " && pwd && echo ",
+                    # Print some info/greeting for this VCE component:
                     QuotedCmd("\n" + component.greeting),
                 ),
-                " C-m \; send-keys ",
+                " C-m \\; send-keys ",
                 QuotedCmd(component.run_cmd),
-                " \; ",  # without `C-m`
+                " \\; ",  # without `C-m`
             ])
             # does not work with `poetry shell`
             #  b/c it discards everything typed while it is starting up…
@@ -507,7 +588,7 @@ def launch_tmux(components: list[Component], prepare_only: bool):
                 "bash -c ",
                 QuotedCmd(component.full_cmd),
             ))
-            tmux_cmd.append(" C-m \; ")
+            tmux_cmd.append(" C-m \\; ")
 
         if i == len(components) - 1:
             # Don't split the window if this was the last cmd
@@ -515,7 +596,7 @@ def launch_tmux(components: list[Component], prepare_only: bool):
         # Let's make only at most one vertical split and
         # otherwise split windows horizontally:
         split = '-v' if i == len(components) // 2 else '-h'
-        tmux_cmd.append(f" split-window {split} \; ")
+        tmux_cmd.append(f" split-window {split} \\; ")
     # print(repr(QuotedCmd(*tmux_cmd)))
     tmux_cmd = str(Cmd(*tmux_cmd))
     # print()

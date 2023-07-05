@@ -17,6 +17,7 @@ For instructions on how to set up the bicycle, read :ref:`hardware-setup`.
     veins
     bikeinterface
     launcher
+    multiplayer
 
 What Is the Virtual Cycling Environment?
 ----------------------------------------
@@ -31,6 +32,6 @@ What Is the Virtual Cycling Environment?
     :width: 100%
 
     Basic components of the VCE and how messages are exchanged between them.
-    Figure based on [buse2019towards].
+    Figure based on :footcite:p:`buse2019towards`.
 
-
+.. footbibliography::

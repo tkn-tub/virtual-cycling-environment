@@ -47,13 +47,15 @@ VCE Launcher configurations are stored in TOML files.
 Let's look at an example to understand how you can write your own:
 
 .. code-block:: toml
+    :caption: scenarios/paderborn-north/with-minimap-and-bike-interface.launcher.toml
+    :linenos:
 
     [evi]
-    config_file="../evi/networks/paderborn-north/paderborn-north.evi.ini"
+    config_file="../../evi/networks/paderborn-north/paderborn-north.evi.ini"
     args="--verbosity WARNING --sumo-binary sumo-gui"
 
     [veins-evi]
-    scenario="../veins-evi/examples/minimap"
+    scenario="../../veins-evi/examples/minimap"
     args="-u Cmdenv -c LanradioDisabled"
 
     [bike-interface]

@@ -1,9 +1,14 @@
 [evi]
-config_file="../evi/networks/paderborn-north/paderborn-north.evi.ini"
-args="--verbosity WARNING --sumo-binary sumo-gui"
+config_file="../../evi/networks/paderborn-north/paderborn-north.evi.ini"
+args="""\
+    --verbosity WARNING \
+    --sumo-binary sumo-gui \
+    --veins-host localhost \
+    --veins-port 12347\
+    """
 
 [veins-evi]
-scenario="../veins-evi/examples/minimap"
+scenario="../../veins-evi/examples/minimap"
 args="-u Cmdenv -c LanradioDisabled"
 
 [3denv]

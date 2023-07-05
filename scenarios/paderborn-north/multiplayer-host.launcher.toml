@@ -1,0 +1,27 @@
+[evi]
+config_file="../../evi/networks/paderborn-north/paderborn-north.evi.ini"
+# Overriding 'evi_port' defined in '*.evi.ini':
+args="""
+    --verbosity WARNING \
+    --sumo-binary sumo-gui \
+    --veins-host localhost \
+    --veins-port 12347 \
+    --evi-port 12341\
+"""
+
+[veins-evi]
+scenario="../../veins-evi/examples/minimap"
+args="-u Cmdenv -c LanradioDisabled"
+
+[multiplayer-interface]
+env3d_port=12342  # To be set manually when launching each 3DEnv!
+evi_port=12341  # Same as defined for [evi]
+connections=2
+
+# [bike-interface]
+# Only using keyboard controls for this example.
+# See `with-minimap-and-bike-interface.launcher.toml` for an example
+# with bike-interface support.
+
+[3denv]
+# TODO: launch Godot or compiled game with correct scene and EVI address
