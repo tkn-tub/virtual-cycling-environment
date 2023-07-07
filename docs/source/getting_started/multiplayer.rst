@@ -32,12 +32,15 @@ Next, we can start the Multiplayer Interface (again from the ``evi`` subdirector
 
     poetry shell
     scripts/multiplayer-interface/interface.py \
-        --env3d-port 12342 \
+        --env3d-port 12346 \
         --evi-port 12341 \
         --connections 2
 
 Now you can launch the 3D Environments from any of the client machines.
 Make sure to specify the address of the host machine as the EVI address and to use the port specified with ``--env3d-port`` above.
+
+.. note::
+    The Multiplayer Interface will only establish a connection to the EVI once the specified number of clients (e.g., ``--connections 2``) have joined.
 
 .. note::
     You can find an example configuration for running EVI, Veins-EVI, and the Multiplayer Interface with the :ref:`launcher` in ``scenarios/paderborn-north/multiplayer-host.launcher.toml``.

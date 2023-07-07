@@ -26,12 +26,31 @@ public class VCEInstance : Spatial
 
 		TrafficLightsManager = new TrafficLightsManager();
 
-		//Load default network when starting the game
-		SUMONetworkGenerator.LoadNetwork(GameStatics.PaderbornScenarioPath);
-
+		// TODO: already use the settings from VCESettings here
+		//  (it should return either the defaults or cmdline values)
+		var settings = GetNode<LevelAndConnectionSettings>("/root/World/VCESettings/LevelAndConnectionSettings");
+		// Load default network when starting the game
+		SUMONetworkGenerator.LoadNetwork(
+			settings.GetSelectedSumoNetFile(),
+			settings.GetSeed(),
+			settings.GetStreetLightsChecked()
+		);
 		
-		ChangePlayerVehicle(GameStatics.DefaultBicyclePath);
+		ChangePlayerVehicle(
+			GameStatics.VehicleTypes[settings.GetSelectedVehicleType()].Item2
+			// Item2 is the resource path
+		);
 
+		SetMenuVisibility(!settings.GetSkipMenu());
+		if (settings.GetConnectToEVIOnLaunch())
+		{
+			ConnectToEVI(
+				settings.GetEgoVehicleName(),
+				settings.GetEVIAddress(),
+				settings.GetEVIPort(),
+				settings.GetSelectedVehicleType()
+			);
+		}
 	}
 
 	public override void _Input(InputEvent @event)
@@ -45,7 +64,7 @@ public class VCEInstance : Spatial
 
 	public void ChangePlayerVehicle(string VehiclePath)
 	{
-		if(PlayerVehicle is not null)
+		if (PlayerVehicle is not null)
 			PlayerVehicle.QueueFree();
 
 		PackedScene vehicleScene = ResourceLoader.Load<PackedScene>(VehiclePath);
@@ -57,13 +76,13 @@ public class VCEInstance : Spatial
 	public void UpdatePlayerStartPosition(Transform newPosition)
 	{
 		PlayerStartPoint = newPosition;
-		if(PlayerVehicle is not null)
+		if (PlayerVehicle is not null)
 		{
 			PlayerVehicle.Transform = newPosition;
 		}
 	}
 
-	public void ConnectToEVI(string EgoVehicleName, string IP, string Port, string VehicleType)
+	public void ConnectToEVI(string EgoVehicleName, string IP, int Port, string VehicleType)
 	{
 		PackedScene eviConnectorScene = ResourceLoader.Load<PackedScene>("res://EVI/EviConnector.tscn");
 		EviConnector eviConnector = eviConnectorScene.Instance<EviConnector>();
@@ -72,7 +91,8 @@ public class VCEInstance : Spatial
 		AddChild(eviConnector);
 
 		// Create connection to speed and steering sensors for bicycle interface
-		if(VehicleType=="Bicycle_Interface"){
+		if (VehicleType == "BICYCLE_INTERFACE")
+		{
 			PackedScene networkListenerScene = ResourceLoader.Load<PackedScene>("res://Vehicles/Bicycle/InterfaceController/NetworkListener.tscn");
 			NetworkListener networkListener = networkListenerScene.Instance<NetworkListener>();
 			//init receive
@@ -89,8 +109,14 @@ public class VCEInstance : Spatial
 
 	public void ToggleMenu()
 	{
-		VCESettings.Visible = !VCESettings.Visible;
-		Input.MouseMode = VCESettings.Visible ? Input.MouseModeEnum.Visible : Input.MouseModeEnum.Captured;
+		SetMenuVisibility(!VCESettings.Visible);
+	}
+
+	public void SetMenuVisibility(bool visible)
+	{
+		VCESettings.Visible = visible;
+		Input.MouseMode = VCESettings.Visible ?
+			Input.MouseModeEnum.Visible : Input.MouseModeEnum.Captured;
 	}
 
 

@@ -1,0 +1,9 @@
+[env3d]
+# executable_path="../../3denv/build/3denv.x86_64"  # already the default
+scenario="../../evi/networks/paderborn-north/paderborn-north.net.xml"
+evi_address="<REPLACE ME>"
+evi_port=12346  # Same as defined in [multiplayer-interface] for env3d_port on the host!
+scenario_seed=42
+connect_on_launch=false
+skip_menu=false
+vehicle_type="BICYCLE_WITH_MINIMAP"

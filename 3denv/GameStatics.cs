@@ -1,5 +1,7 @@
 using Godot;
+using System;
 using System.Globalization;
+using System.Collections.Generic;
 
 
 /// <summary>
@@ -7,20 +9,25 @@ using System.Globalization;
 /// </summary>
 public static class GameStatics
 {
-	public const string DefaultCarPath = @"Vehicles/DefaultCar/Car.tscn";
-	public const string DefaultBicyclePath = @"Vehicles/Bicycle/Bicycle.tscn";
 	public const string DynamicBuildingtPath = @"Environment/Buildings/DynamicBuilding.tscn";
 	public const string TrafficLightPath = @"Environment/TrafficLight/TrafficLight.tscn";
 	public const string TrafficLightPanelPath = @"Environment/TrafficLight/TrafficLightPanel.tscn";
 	public const string TrafficLightPoleExtendPath = @"Environment/TrafficLight/Mesh/TrafficLight_Extend.mesh";
-	public const string InterfaceBicyclePath = @"Vehicles/Bicycle/InterfaceBicycle.tscn";
-	public const string BicycleWithMinimapPath = @"Vehicles/Bicycle/BicycleWithMinimap.tscn";
 
-
+	/// <summary>
+	/// Define VehicleTypes
+	/// Index: Used for the OptionButton in the UI.
+	/// Keys: Used for the command line interface.
+	/// Values: Tuples
+	///   First item: Short description (again used for OptionButton)
+	///	  Second item: Resource path
+	/// </summary>
+	public static SortedList<String, Tuple<String, string>> VehicleTypes =
+		new SortedList<String, Tuple<String, string>>();
+	// Vehicle Types defined in constructor (GameStatics())
 
 	public const string DefaultScenarioPath = @"SumoImporter/DefaultEnv/DefaultGodotEnv.net.xml";
 	public const string DefaultScenarioPath2 = @"SumoImporter/DefaultEnv/10Traffic100Buildings.net.xml";
-	public const string PaderbornScenarioPath = @"../scenarios/3denv-networks/paderborn-north-toj.net.xml";
 
 	public const string StreetSingsBasePath = @"Environment/StreetSigns/";
 	public const string NoEntrySignPath = StreetSingsBasePath + @"NoEntry/sign_no_entry.glb";
@@ -81,7 +88,35 @@ public static class GameStatics
 
 	static GameStatics()
 	{
-
+		// The keys have to match with those used in MakeRegisterCommand in VehicleManager.
+		VehicleTypes.Add(
+			"BICYCLE",
+			new Tuple<string, string>(
+				"Bicycle",
+				@"Vehicles/Bicycle/Bicycle.tscn"
+			)
+		);
+		VehicleTypes.Add(
+			"BICYCLE_WITH_MINIMAP",
+			new Tuple<string, string>(
+				"Bicycle with Minimap",
+				@"Vehicles/Bicycle/BicycleWithMinimap.tscn"
+			)
+		);
+		VehicleTypes.Add(
+			"BICYCLE_INTERFACE",
+			new Tuple<string, string>(
+				"Bicycle Interface",
+				@"Vehicles/Bicycle/InterfaceBicycle.tscn"
+			)
+		);
+		VehicleTypes.Add(
+			"CAR",
+			new Tuple<string, string>(
+				"Car",
+				@"Vehicles/DefaultCar/Car.tscn"
+			)
+		);
 	}
 
 	public static void SetGameInstance(VCEInstance instance)

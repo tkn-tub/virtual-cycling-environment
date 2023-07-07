@@ -361,10 +361,10 @@ class Env3dProtocol:
             final_message = final_message + intermediate
 
             await asyncio.create_task(self._send_message_set(final_message))
-            print(
-                f"Send Message to 3DEnv: {final_message} "
-                f"with length {len(final_message)}"
-            )
+            # print(
+            #     f"Send Message to 3DEnv: {final_message} "
+            #     f"with length {len(final_message)}"
+            # )
 
     async def _send_message_set(self, message_strings):
         await self.connection.send_multipart(message_strings)

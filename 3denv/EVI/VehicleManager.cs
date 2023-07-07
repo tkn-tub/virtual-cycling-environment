@@ -24,7 +24,7 @@ public class VehicleManager : Spatial
 		_vehicleType = vehicleType;
 
 		// CHange between different bicycle controllers
-		if(_vehicleType == "Bicycle_Interface"){
+		if(_vehicleType == "BICYCLE_INTERFACE"){
 			_egoInterfaceVehicle = (BicycleInterfaceController)GameStatics.GameInstance.PlayerVehicle;
 		}else{
 			_egoSimpleVehicle = (SimpleVehicleController)GameStatics.GameInstance.PlayerVehicle;
@@ -208,7 +208,6 @@ public class VehicleManager : Spatial
 					vehicleScene = ResourceLoader.Load<PackedScene>("res://Vehicles/Bicycle/ForeignBicycle.tscn");
 					vehicle = vehicleScene.Instance<ForeignVehicleController>();
 					vehicle.vehicleId = veh.vehicleId;
-
 				}
 				else
 				{
@@ -279,13 +278,17 @@ public class VehicleManager : Spatial
 
 		GD.Print($"Registering ego vehicle with hash id {cmd.RegisterVehicleCommand.VehicleId}");
 
-		//TODO: Add other vehicle types
+		//TODO: Add other vehicle types; make minimap an option?
 		cmd.RegisterVehicleCommand.VehType = vehicleType switch
 		{
-			"Car" => RegisterVehicleCommand.Types.VehicleType.PassengerCar,
-			"Bicycle" => RegisterVehicleCommand.Types.VehicleType.Bicycle,
-			"Bicycle_Interface" => RegisterVehicleCommand.Types.VehicleType.Bicycle,
-			_ => RegisterVehicleCommand.Types.VehicleType.PassengerCar
+			"CAR" => RegisterVehicleCommand.Types.VehicleType.PassengerCar,
+			"BICYCLE" => RegisterVehicleCommand.Types.VehicleType.Bicycle,
+			"BICYCLE_INTERFACE" => RegisterVehicleCommand.Types.VehicleType.Bicycle,
+			"BICYCLE_WITH_MINIMAP" => RegisterVehicleCommand.Types.VehicleType.Bicycle,
+			_ => throw new ArgumentException(
+				$"Vehicle type {vehicleType} is not defined for "
+				+ "MakeRegisterCommand()."
+			)
 		};
 
 		return cmd;
@@ -324,7 +327,8 @@ public class VehicleManager : Spatial
 	{
 		// Get the current position of the ego vehicle in Godot, flip the X coordinate to match the Sumo coordinate system
 		
-		if(_vehicleType == "Bicycle_Interface"){
+		if (_vehicleType == "BICYCLE_INTERFACE")
+		{
 			return new VehicleData(
 				_egoVehicleHashId,
 				-(_egoInterfaceVehicle.Translation.x + _sumoOffset.x),
@@ -343,8 +347,9 @@ public class VehicleManager : Spatial
 				false,
 				false,
 				false);
-				
-		}else{
+		}
+		else
+		{
 			return new VehicleData(
 			_egoVehicleHashId,
 			-(_egoSimpleVehicle.Translation.x + _sumoOffset.x),
@@ -364,7 +369,5 @@ public class VehicleManager : Spatial
 			false,
 			false);
 		}
-			
-		
 	}
 }

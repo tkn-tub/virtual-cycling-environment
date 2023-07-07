@@ -58,6 +58,16 @@ Let's look at an example to understand how you can write your own:
     scenario="../../veins-evi/examples/minimap"
     args="-u Cmdenv -c LanradioDisabled"
 
+    [env3d]
+    # executable_path="../../3denv/build/3denv.x86_64"  # already the default
+    scenario="../../evi/networks/paderborn-north/paderborn-north.net.xml"
+    evi_address="localhost"
+    evi_port=12346
+    scenario_seed=42
+    connect_on_launch=true
+    skip_menu=true
+    vehicle_type="BICYCLE_WITH_MINIMAP"
+
     [bike-interface]
     args="""\
         --unity-ip localhost \
@@ -71,17 +81,4 @@ Let's look at an example to understand how you can write your own:
         """
 
 Each VCE component supported by VCE Launcher that you want to include in your simulation should have its own section in your ``launcher.toml``.
-In the above example, all currently supported components are included: ``evi``, ``veins-evi``, and ``bike-interface``.
-
-:``evi``:
-    This component has one mandatory argument, which is the ``config_file``.
-    Optionally, you can specify additional arguments to pass to ``evi/scripts/evid.py`` using ``args``.
-    Read more on this component in :ref:`evi-getting-started`.
-:``veins-evi``:
-    This component has one mandatory argument, which is the ``scenario`` – i.e., the folder in which the VCE Launcher can find an appropriate ``./run`` script.
-    Additional arguments to pass to ``./run`` (and thereby ``opp_run``) can be specified using ``args``.
-    Read more on this component in :ref:`veins-getting-started`.
-:``bike-interface``:
-    This component only needs the arguments that will be passed to ``bike-interface/bicycle-model/bikeToEvi/main.py``.
-    You can specify them using ``args``.
-    Read more on this component in :ref:`bicycleinterface-getting-started`.
+You can get a list of all supported components and parameters by running ``scripts/vce-launcher.py --help``.

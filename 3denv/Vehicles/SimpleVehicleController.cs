@@ -51,8 +51,6 @@ public class SimpleVehicleController : KinematicBody
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(float delta)
 	{
-
-
 		float turnAxis = Input.GetAxis("MoveRight", "MoveLeft");
 		if (bCanSteerInPlace || Speed > 0.0f)
 		{
@@ -63,7 +61,7 @@ public class SimpleVehicleController : KinematicBody
 
 	public override void _PhysicsProcess(float delta)
 	{
-		//Update minimap camera
+		// Update minimap camera
 		if (_miniMapCamera != null)
 		{
 			_miniMapCamera.GlobalTransform = GlobalTransform;
@@ -71,7 +69,7 @@ public class SimpleVehicleController : KinematicBody
 
 		float forwardAxis = Input.GetAxis("MoveBack", "MoveForward");
 
-		//Hard stop vehicle if speed is to low and no acceleration is applied
+		// Hard stop vehicle if speed is too low and no acceleration is applied
 		if (Mathf.Abs(Speed) < 1.0f && forwardAxis == 0.0f)
 		{
 			Speed = 0.0f;
@@ -80,7 +78,7 @@ public class SimpleVehicleController : KinematicBody
 		{
 			float direction = 1.0f;
 			Vector3 forwardVector = GetForwardVector();
-			//determine direction by checking if velocity is alligned with forward vector
+			// Determine direction by checking if velocity is alligned with forward vector
 			if (Speed > 0)
 			{
 				direction = (Velocity / Speed).Dot(forwardVector);
@@ -91,7 +89,6 @@ public class SimpleVehicleController : KinematicBody
 
 			Velocity = MoveAndSlide(targetVelocity, GetUpVector());
 			Speed = Velocity.Length();
-			
 
 			// Update minimap speed label if applicable
 			if (_miniMapSpeedLabel != null)
@@ -107,11 +104,11 @@ public class SimpleVehicleController : KinematicBody
 		{
 			return axisValue * Acceleration * Mathf.Pow(1 - Speed / MaxSpeed, 2.0f);
 		}
-		else if (Mathf.Abs(axisValue) > 0 && direction != Mathf.Sign(axisValue)) //Apply breaking force
+		else if (Mathf.Abs(axisValue) > 0 && direction != Mathf.Sign(axisValue)) // Apply breaking force
 		{
 			return axisValue * BreakForce;
 		}
-		else //Apply drag force when vehicle is not accelerating
+		else // Apply drag force when vehicle is not accelerating
 		{
 			return -direction * GroundFriction * (1 - Speed / (MaxSpeed + 0.1f));
 		}

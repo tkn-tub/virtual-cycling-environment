@@ -14,7 +14,7 @@ scenario="../../veins-evi/examples/minimap"
 args="-u Cmdenv -c LanradioDisabled"
 
 [multiplayer-interface]
-env3d_port=12342  # To be set manually when launching each 3DEnv!
+env3d_port=12346  # Same as defined in [env3d]
 evi_port=12341  # Same as defined for [evi]
 connections=2
 
@@ -23,5 +23,12 @@ connections=2
 # See `with-minimap-and-bike-interface.launcher.toml` for an example
 # with bike-interface support.
 
-[3denv]
-# TODO: launch Godot or compiled game with correct scene and EVI address
+[env3d]
+# executable_path="../../3denv/build/3denv.x86_64"  # already the default
+scenario="../../evi/networks/paderborn-north/paderborn-north.net.xml"
+evi_address="localhost"
+evi_port=12346  # Same as defined in [multiplayer-interface] for env3d_port!
+scenario_seed=42
+connect_on_launch=true
+skip_menu=true
+vehicle_type="BICYCLE_WITH_MINIMAP"

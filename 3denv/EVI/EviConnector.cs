@@ -18,7 +18,7 @@ public partial class EviConnector : Spatial//, IObserver<Dictionary<uint, Vehicl
 
 	public string egoVehicleName = "ego-vehicle";
 	public string EVIAddress;
-	public string EVIPort;
+	public int EVIPort;
 	
 	
 	double time;
@@ -44,7 +44,7 @@ public partial class EviConnector : Spatial//, IObserver<Dictionary<uint, Vehicl
 
 
 
-	public void Init(string EVIAddress, string EVIPort, string egoVehicleName, string vehicleType)
+	public void Init(string EVIAddress, int EVIPort, string egoVehicleName, string vehicleType)
 	{
 		this.EVIAddress = EVIAddress;
 		this.EVIPort = EVIPort;
@@ -95,7 +95,7 @@ public partial class EviConnector : Spatial//, IObserver<Dictionary<uint, Vehicl
 		time = time + delta;
 		//frames++;
 		//stepsWithoutVehicleUpdate++;
-		 bool gotVehicleCommands = false;
+		//bool gotVehicleCommands = false;
 
 		if (netWorker.registerCommands is { Count: > 0 })
 		{
