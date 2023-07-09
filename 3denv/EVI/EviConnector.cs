@@ -56,9 +56,8 @@ public partial class EviConnector : Spatial//, IObserver<Dictionary<uint, Vehicl
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-
-		//TODO: read in file from Menue
-		Extrapolation.ParseXmlFiles("../scenarios/3denv-networks/paderborn-north-toj.net.xml");
+		var settings = GetNode<LevelAndConnectionSettings>("/root/World/VCESettings/LevelAndConnectionSettings");
+		Extrapolation.ParseXmlFiles(settings.GetSelectedSumoNetFile());
 		
 		// Start the network worker
 		_egoVehicleHashStr = MD5Hasher.getMD5(egoVehicleName);

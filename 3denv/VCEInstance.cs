@@ -44,13 +44,14 @@ public class VCEInstance : Spatial
 		SetMenuVisibility(!settings.GetSkipMenu());
 		if (settings.GetConnectToEVIOnLaunch())
 		{
+			GD.Print("Connecting to EVI on launch…");
 			ConnectToEVI(
 				settings.GetEgoVehicleName(),
 				settings.GetEVIAddress(),
 				settings.GetEVIPort(),
 				settings.GetSelectedVehicleType()
 			);
-		}
+		} else { GD.Print("Not connecting to EVI on launch…"); }
 	}
 
 	public override void _Input(InputEvent @event)
