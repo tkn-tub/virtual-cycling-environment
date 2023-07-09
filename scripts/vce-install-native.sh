@@ -14,15 +14,21 @@ if [ -z ${__omnetpp_root_dir+x} ]; then
     echo "Variable __omnetpp_root_dir is not set."
     echo "This would typically be done by OMNeT++'s 'setenv' script."
     exit 1
-else
-    echo "OMNeT++ path: $__omnetpp_root_dir"
 fi
+echo "OMNeT++ path: $__omnetpp_root_dir"
 if [ -z ${VEINS_ROOT+x} ]; then
     echo "Variable VEINS_ROOT is not set."
     echo "The 'setenv' script of Veins does not provide this itself, so please set it manually before running this script."
     exit 1
-else
-    echo "Veins path: $VEINS_ROOT"
+fi
+echo "Veins path: $VEINS_ROOT"
+if [ -z ${GODOT+x} ]; then
+    if ! command -v godot &> /dev/null; then
+        echo "Could not find an installation of Godot."
+        echo "Export the variable GODOT to specify a path."
+        exit 1
+    fi
+    GODOT=godot
 fi
 if ! command -v poetry &> /dev/null; then
     echo "Could not find an installation of Poetry."
@@ -53,8 +59,8 @@ poetry install
 echo
 echo "Installing veins-evi/"
 echo
-cd $VCE_ROOT/veins-evi
-./configure --veins $VEINS_ROOT
+cd "$VCE_ROOT/veins-evi"
+./configure --veins "$VEINS_ROOT"
 make -j$(nproc)
 
 
@@ -62,10 +68,35 @@ make -j$(nproc)
 echo
 echo "Installing bike-interface/bicycle-model/bikeToEvi/"
 echo
-cd $VCE_ROOT/bike-interface/bicycle-model/bikeToEvi
+cd "$VCE_ROOT/bike-interface/bicycle-model/bikeToEvi"
 poetry install
 # For the Tacx ANT+ dongle to work, drivers will still have to
 # be installed manually with root privileges.
 # Please read the VCE documentation page on the Bicycle Interface for details.
+
+
+# --- 3denv ---
+echo
+echo "Installing 3denv/"
+echo
+mkdir -p "$HOME/.local/share/godot/templates"
+godot_version=$($GODOT --version | cut -d '.' -f 1-3)
+godot_stage=$($GODOT --version | cut -d '.' -f 4)  # e.g., "stable"
+godot_templates_tpz=$HOME/.local/share/godot/templates.tpz
+godot_templates_dir=$HOME/.local/share/godot/templates/${godot_version}.${godot_stage}.mono
+if [ -d "$godot_templates_dir" ]; then
+    echo "Skipping download of Godot export templates, directory already exists: $godot_templates_dir."
+else
+    echo "Downloading Godot export templates…"
+    wget "https://github.com/godotengine/godot/releases/download/${godot_version}-${godot_stage}/Godot_v${godot_version}-${godot_stage}_mono_export_templates.tpz" \
+        -O "$godot_templates_tpz"
+    unzip -u "$godot_templates_tpz" -d "$HOME/.local/share/godot/templates"
+    # templates/ subdir is included in archive, but doesn't have the required subdir with the correct name itself -> rename:
+    mv "$HOME/.local/share/godot/templates/templates" "$godot_templates_dir"
+    rm "$godot_templates_tpz"
+fi
+echo "Exporting 3DEnv to $VCE_ROOT/build/…"
+$GODOT --no-window --export "Linux/X11" "build/3denv.x86_64" "$VCE_ROOT/3denv/project.godot"
+
 
 # TODO: esp32 dependencies?

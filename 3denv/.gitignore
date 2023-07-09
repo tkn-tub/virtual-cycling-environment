@@ -10,3 +10,5 @@ mono_crash.*
 /logs/**
 !/logs/.gdignore
 /GodotPerformanceLog*
+
+/build/

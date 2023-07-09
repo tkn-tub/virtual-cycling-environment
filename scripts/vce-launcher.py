@@ -6,6 +6,7 @@ import pathlib
 import tomllib
 import asyncio
 import subprocess
+import shutil
 import sys
 
 
@@ -63,13 +64,6 @@ def main():
              "to run each component.",
     )
     parser.add_argument(
-        '--nv',
-        action='store_true',
-        help="Use the --nv option for all Apptainer commands. "
-             "This should provide basic access to Nvidia GPUs "
-             "from within the container (assuming --container).",
-    )
-    parser.add_argument(
         '--logs-dir',
         type=pathlib.Path,
         help="NOT IMPLEMENTED YET. "
@@ -81,36 +75,59 @@ def main():
     )
     args = parser.parse_args()
 
+    if not args.no_tmux and not shutil.which("tmux"):
+        sys.exit("Could not find an installation of `tmux`.")
+    if args.container and not shutil.which("apptainer"):
+        sys.exit("Could not find an installation of `apptainer`.")
+    if not args.container:
+        deps = [
+            "omnetpp",
+            "sumo",
+            "poetry",
+        ]
+        for program in deps:
+            if not shutil.which(program):
+                sys.exit(
+                    f"Could not find an installation of `{program}`. "
+                    "Did you forget the --container option?"
+                )
+
     with open(args.config, 'rb') as f:
-        cfg = tomllib.load(f)
+        full_cfg = tomllib.load(f)
 
     launch_vce(
-        cfg=cfg,
+        full_cfg=full_cfg,
         workdir=args.config.parent.absolute(),
         use_tmux=not args.no_tmux,
         prepare_only=args.prepare_only,
         logs_dir=args.logs_dir,
         use_container=args.container,
-        container_nvidia=args.nv,
+        # Use --nv for all apptainer commands:
+        container_nvidia=shutil.which("nvidia-settings") is not None,
     )
 
 
 class Component:
     _cfg_section = None
     _cfg_mandatory_args = dict()
-    _cfg_optional_args = dict()
+    _cfg_optional_args = dict(
+        wait_for_ports=(
+            "A list of ports. "
+            "Launch this component only when all ports are open."
+        )
+    )
 
     @classmethod
-    def check_config(cls, cfg: dict) -> bool:
-        if cls._cfg_section not in cfg:
+    def check_config(cls, full_cfg: dict) -> bool:
+        if cls._cfg_section not in full_cfg:
             print(
                 f"No configuration for [{cls._cfg_section}] "
                 "-> Not launching component"
             )
             return False
-        cfg = cfg[cls._cfg_section]
+        component_cfg = full_cfg[cls._cfg_section]
         for mandatory_arg, description in cls._cfg_mandatory_args.items():
-            if mandatory_arg not in cfg:
+            if mandatory_arg not in component_cfg:
                 sys.exit(
                     f"Launch configuration of '{cls._cfg_section}' is "
                     f"missing the mandatory '{mandatory_arg}' parameter.\n"
@@ -120,7 +137,7 @@ class Component:
 
     def __init__(
             self,
-            cfg: dict,
+            full_cfg: dict,
             env_cmd: 'Cmd',
             run_cmd: 'Cmd',
             full_cmd: 'Cmd | None' = None,
@@ -148,6 +165,15 @@ class Component:
         self.prompt = prompt
         """Override bash or Apptainer prompt"""
         self.greeting = greeting
+
+        if ports := full_cfg[self._cfg_section].get('wait_for_ports'):
+            self.run_cmd = Cmd(
+                QuotedCmd(VCE_ROOT / "scripts" / "wait-for-component.py"),
+                " --port-open "
+                + " ".join([str(port) for port in ports])
+                + " && ",
+                self.run_cmd,
+            )
 
         self.container_img = container_img
         self._container_enabled = False  # only enable once
@@ -270,7 +296,7 @@ class QuotedCmd(Cmd):
 
 
 def launch_vce(
-        cfg: dict,
+        full_cfg: dict,
         workdir: pathlib.Path,
         use_tmux: bool,
         use_container: bool,
@@ -282,7 +308,7 @@ def launch_vce(
     components: list[Component] = []
     for component_cls in COMPONENT_CLASSES:
         component = component_cls(
-            cfg=cfg,
+            full_cfg=full_cfg,
             workdir=workdir,
             container_img=container_img,
             container_nvidia=container_nvidia,
@@ -318,23 +344,25 @@ class EVIComponent(Component):
     _cfg_section = 'evi'
     _cfg_mandatory_args = dict(
         config_file="Path to an existing *.evi.ini file",
+        **Component._cfg_mandatory_args,
     )
     _cfg_optional_args = dict(
         args="Additional arguments for evi/scripts/evid.py",
+        **Component._cfg_optional_args,
     )
 
     def __init__(
             self,
-            cfg: dict,
+            full_cfg: dict,
             workdir: pathlib.Path,
             **kwargs,
     ):
-        self._enabled = self.check_config(cfg)
+        self._enabled = self.check_config(full_cfg)
         if not self._enabled:
             return
         evi_root = VCE_ROOT / "evi"
         super().__init__(
-            cfg=cfg,
+            full_cfg=full_cfg,
             env_cmd=Cmd(
                 "cd ",
                 QuotedCmd(f"{evi_root}"),
@@ -343,14 +371,13 @@ class EVIComponent(Component):
                 "poetry run ",
                 QuotedCmd("scripts/evid.py"),
                 " --config-file ",
-                QuotedCmd(f"{workdir / cfg['evi']['config_file']}"),
-                " " + cfg['evi'].get('args', ''),
+                QuotedCmd(f"{workdir / full_cfg['evi']['config_file']}"),
+                " " + full_cfg['evi'].get('args', ''),
             ),
             full_cmd=None,  # use default
             prompt="evi> ",
             greeting=(
                 "--- EGO VEHICLE INTERFACE ---\n"
-                "Launch this before starting the 3D environment."
                 "\n\n"
                 "Press enter to launch this component.\n"
             ),
@@ -362,37 +389,37 @@ class VeinsEVIComponent(Component):
     _cfg_section = 'veins-evi'
     _cfg_mandatory_args = dict(
         scenario="Path to the scenario folder (should contain a ./run script)",
+        **Component._cfg_mandatory_args,
     )
     _cfg_optional_args = dict(
         args="Additional arguments for ./run and opp_run",
+        **Component._cfg_optional_args,
     )
 
     def __init__(
         self,
-        cfg: dict,
+        full_cfg: dict,
         workdir: pathlib.Path,
         **kwargs,
     ):
-        self._enabled = self.check_config(cfg)
+        self._enabled = self.check_config(full_cfg)
         if not self._enabled:
             return
-        veins_evi_scenario_dir = workdir / cfg['veins-evi']['scenario']
+        veins_evi_scenario_dir = workdir / full_cfg['veins-evi']['scenario']
         super().__init__(
-            cfg=cfg,
+            full_cfg=full_cfg,
             env_cmd=Cmd(
                 "cd ",
                 QuotedCmd(f"{veins_evi_scenario_dir}"),
             ),
             run_cmd=Cmd(
-                f"./run {cfg['veins-evi'].get('args', '')}"
+                f"./run {full_cfg['veins-evi'].get('args', '')}"
             ),
             full_cmd=None,  # use default
             prompt="veins-evi> ",
             greeting=(
                 "--- VEINS-EVI ---\n"
                 "This component is responsible for V2X simulation. "
-                "EVI and Veins-EVI should be able to wait for each other. "
-                "Launch this before the 3D environment."
                 "\n\n"
                 "Press enter to launch this component.\n"
             ),
@@ -402,33 +429,34 @@ class VeinsEVIComponent(Component):
 
 class BikeInterfaceComponent(Component):
     _cfg_section = 'bike-interface'
-    _cfg_mandatory_args = dict()
+    _cfg_mandatory_args = dict(**Component._cfg_mandatory_args)
     _cfg_optional_args = dict(
         args="Additional arguments to pass to "
              "bike-interface/bicycle-model/bikeToEvi/main.py",
+        **Component._cfg_optional_args,
     )
 
     def __init__(
         self,
-        cfg: dict,
+        full_cfg: dict,
         workdir: pathlib.Path,
         **kwargs,
     ):
-        self._enabled = self.check_config(cfg)
+        self._enabled = self.check_config(full_cfg)
         if not self._enabled:
             return
         bike_interface_root = (
             VCE_ROOT / "bike-interface" / "bicycle-model" / "bikeToEvi"
         )
         super().__init__(
-            cfg=cfg,
+            full_cfg=full_cfg,
             env_cmd=Cmd(
                 "cd ",
                 QuotedCmd(f"{bike_interface_root}"),
             ),
             run_cmd=Cmd(
                 "poetry run python ./main.py "
-                f"{cfg['bike-interface'].get('args', '')}"
+                f"{full_cfg['bike-interface'].get('args', '')}"
             ),
             full_cmd=None,  # use default
             prompt="bike-interface> ",
@@ -455,22 +483,23 @@ class MultiplayerInterfaceComponent(Component):
         env3d_port="Port for the 3D Environment to connect to",
         evi_port="Port on which the EVI is listening",
         connections="Number of multiplayer connections",
+        **Component._cfg_mandatory_args,
     )
-    _cfg_optional_args = dict()
+    _cfg_optional_args = dict(**Component._cfg_optional_args)
 
     def __init__(
         self,
-        cfg: dict,
+        full_cfg: dict,
         workdir: pathlib.Path,
         **kwargs,
     ):
-        self._enabled = self.check_config(cfg)
+        self._enabled = self.check_config(full_cfg)
         if not self._enabled:
             return
-        cfg = cfg[self._cfg_section]
+        mp_cfg = full_cfg[self._cfg_section]
         evi_root = VCE_ROOT / "evi"
         super().__init__(
-            cfg=cfg,
+            full_cfg=full_cfg,
             env_cmd=Cmd(
                 "cd ",
                 QuotedCmd(f"{evi_root}"),
@@ -480,16 +509,14 @@ class MultiplayerInterfaceComponent(Component):
             run_cmd=Cmd(
                 "poetry run ",
                 QuotedCmd("scripts/multiplayer-interface/interface.py"),
-                f" --env3d-port {cfg['env3d_port']}",
-                f" --evi-port {cfg['evi_port']}",
-                f" --connections {cfg['connections']}",
+                f" --env3d-port {mp_cfg['env3d_port']}",
+                f" --evi-port {mp_cfg['evi_port']}",
+                f" --connections {mp_cfg['connections']}",
             ),
             full_cmd=None,  # use default
             prompt="multiplayer (evi)> ",
             greeting=(
                 "--- MULTIPLAYER INTERFACE ---\n"
-                "Start this when the EVI is already running, "
-                "but before launching any of the 3D Environments."
                 "\n\n"
                 "Press enter to launch this component.\n"
             ),
@@ -503,6 +530,7 @@ class Env3DComponent(Component):
         scenario="Path to a SUMO .net.xml",
         evi_address="Address to EVI or Multiplayer Interface",
         evi_port="Port for EVI or Multiplayer Interface",
+        **Component._cfg_mandatory_args,
     )
     _cfg_optional_args = dict(
         scenario_seed="Seed for procedural buildings etc.",
@@ -511,51 +539,53 @@ class Env3DComponent(Component):
         connect_on_launch="(true|false) If true, connect immediately",
         skip_menu="(true|false) If true, skip menu screen on launch",
         executable_path="Default: 3denv/build/3denv.x86_64",
+        **Component._cfg_optional_args,
     )
 
     def __init__(
         self,
-        cfg: dict,
+        full_cfg: dict,
         workdir: pathlib.Path,
         **kwargs,
     ):
-        self._enabled = self.check_config(cfg)
+        self._enabled = self.check_config(full_cfg)
         if not self._enabled:
             return
-        cfg = cfg[self._cfg_section]
+        env3d_cfg = full_cfg[self._cfg_section]
         # TODO: check if executable exists
         #  (although, this check should exist for all components…)
         super().__init__(
-            cfg=cfg,
+            full_cfg=full_cfg,
             env_cmd=Cmd(),
             run_cmd=Cmd(
-                QuotedCmd(cfg.get(
+                QuotedCmd(env3d_cfg.get(
                     'executable_path',
                     VCE_ROOT / "3denv" / "build" / "3denv.x86_64"
                 )),
                 " --scenario=",
-                QuotedCmd(workdir / cfg['scenario']),
-                f" --evi-address={cfg['evi_address']}",
-                f" --evi-port={cfg['evi_port']}",
+                QuotedCmd(workdir / env3d_cfg['scenario']),
+                f" --evi-address={env3d_cfg['evi_address']}",
+                f" --evi-port={env3d_cfg['evi_port']}",
                 (
-                    f" --scenario-seed={cfg['scenario_seed']}"
-                    if 'scenario_seed' in cfg else ""
+                    f" --scenario-seed={env3d_cfg['scenario_seed']}"
+                    if 'scenario_seed' in env3d_cfg else ""
                 ),
                 (
                     " --connect-on-launch=True"
-                    if cfg.get('connect_on_launch', False) else ""
+                    if env3d_cfg.get('connect_on_launch', False) else ""
                 ),
-                " --skip-menu=True" if cfg.get('skip_menu', False) else "",
+                " --skip-menu=True"
+                if env3d_cfg.get('skip_menu', False)
+                else "",
                 (
-                    " --vehicle-type={cfg['vehicle_type']}"
-                    if 'vehicle_type' in cfg else ""
+                    f" --vehicle-type={env3d_cfg['vehicle_type']}"
+                    if 'vehicle_type' in env3d_cfg else ""
                 ),
             ),
             full_cmd=None,  # use default
             prompt="3denv> ",
             greeting=(
                 "--- 3D ENVIRONMENT ---\n"
-                "In most cases you'll want to launch this last."
                 "\n\n"
                 "Press enter to launch this component.\n"
             ),
@@ -680,6 +710,7 @@ def launch_tmux(components: list[Component], prepare_only: bool):
     ]
     tmux_cmd.append(Cmd(
         # For showing a title above each tmux pane
+        "set pane-border-status top \\; "
         "set pane-border-format ",
         QuotedCmd("#{pane_index} #{@vce_pane_title}"),
         " \\; "
@@ -687,51 +718,47 @@ def launch_tmux(components: list[Component], prepare_only: bool):
     for i, component in enumerate(components):
         # Prefixing each cmd with `bash -c` for compatibility
         # in case fish is configured as the default shell in tmux.
-        if prepare_only:
-            container_info = Cmd(" && echo ", QuotedCmd(
-                "Running in container image ",
-                QuotedCmd(component.container_img)
-            )) if component.container_img else ""
-            tmux_cmd.extend([
-                "send-keys ",
-                QuotedCmd(
-                    "bash -c ",
-                    QuotedCmd(component.env_cmd),
-                ),
-                " C-m \\; send-keys ",
-                QuotedCmd(
-                    # Set bash prompt:
-                    "PS1=",
-                    QuotedCmd(component.prompt),
-                    # Hide previously entered commands from user:
-                    " && clear",
-                    # If we're in a container, print its path:
-                    container_info,
-                    # Print the current directory:
-                    " && echo -n ", QuotedCmd("CWD: "),
-                    " && pwd && echo ",
-                    # Print some info/greeting for this VCE component:
-                    QuotedCmd("\n" + component.greeting),
-                ),
-                " C-m \\; send-keys ",
-                QuotedCmd(component.run_cmd),
-                " \\; ",  # without `C-m`
-            ])
-            # does not work with `poetry shell`
-            #  b/c it discards everything typed while it is starting up…
-            #  -> use `poetry run` instead
-        else:
-            tmux_cmd.append("send-keys ")
-            tmux_cmd.append(QuotedCmd(
+        container_info = Cmd(" && echo ", QuotedCmd(
+            "Running in container image ",
+            QuotedCmd(component.container_img)
+        )) if component.container_img else ""
+        tmux_cmd.extend([
+            # Enter component environment:
+            "send-keys ",
+            QuotedCmd(
                 "bash -c ",
-                QuotedCmd(component.full_cmd),
-            ))
-            tmux_cmd.append(" C-m \\; ")
-        tmux_cmd.append(Cmd(
+                QuotedCmd(component.env_cmd),
+            ),
+            " C-m \\; ",
+            # Set Tmux pane title:
             "set -p @vce_pane_title ",
             QuotedCmd(component.prompt),
             " \\; "
-        ))
+            # Output some information about the component:
+            "send-keys ",
+            QuotedCmd(
+                # Set bash prompt:
+                "PS1=",
+                QuotedCmd(component.prompt),
+                # Hide previously entered commands from user:
+                " && clear",
+                # If we're in a container, print its path:
+                container_info,
+                # Print the current directory:
+                " && echo -n ", QuotedCmd("CWD: "),
+                " && pwd && echo ",
+                # Print some info/greeting for this VCE component:
+                QuotedCmd("\n" + component.greeting),
+            ),
+            # Run (or prepare) the component command:
+            " C-m \\; send-keys ",
+            QuotedCmd(component.run_cmd),
+            f" {'' if prepare_only else 'C-m'} \\; ",
+        ])
+        # does not work with `poetry shell`
+        #  b/c it discards everything typed while it is starting up…
+        #  -> use `poetry run` instead
+
         if i < len(components) - 1:
             tmux_cmd.append(" split-window -h \\; ")
 

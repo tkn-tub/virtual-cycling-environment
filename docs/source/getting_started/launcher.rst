@@ -26,6 +26,7 @@ To try this out with an example, go to the root folder of your VCE installation 
 Here, ``--container`` means that each component will be launched using the Apptainer image ``vce-container.sif`` that ``scripts/vce-install-container.sh`` downloads automatically.
 
 ``--prepare-only`` means that the launcher will only ``cd`` into the respective component subfolder and type out the respective command for each component, but you will still be required to hit the enter key for each.
+Leave this out to launch every component automatically as soon as they are ready.
 
 Once you run the launcher, a `Tmux <https://github.com/tmux/tmux/wiki>`_ session should open with one window for each component.
 
@@ -46,39 +47,10 @@ Launch Configurations
 VCE Launcher configurations are stored in TOML files.
 Let's look at an example to understand how you can write your own:
 
-.. code-block:: toml
-    :caption: scenarios/paderborn-north/with-minimap-and-bike-interface.launcher.toml
+.. literalinclude:: ../../../scenarios/paderborn-north/with-minimap-and-bike-interface.launcher.toml
+    :caption:
+    :language: toml
     :linenos:
-
-    [evi]
-    config_file="../../evi/networks/paderborn-north/paderborn-north.evi.ini"
-    args="--verbosity WARNING --sumo-binary sumo-gui"
-
-    [veins-evi]
-    scenario="../../veins-evi/examples/minimap"
-    args="-u Cmdenv -c LanradioDisabled"
-
-    [env3d]
-    # executable_path="../../3denv/build/3denv.x86_64"  # already the default
-    scenario="../../evi/networks/paderborn-north/paderborn-north.net.xml"
-    evi_address="localhost"
-    evi_port=12346
-    scenario_seed=42
-    connect_on_launch=true
-    skip_menu=true
-    vehicle_type="BICYCLE_WITH_MINIMAP"
-
-    [bike-interface]
-    args="""\
-        --unity-ip localhost \
-        --wheel-diameter 0.7 \
-        --num-spokes 18 \
-        --steering-sensor android \
-        --android-deadzone 0 \
-        --speed-sensor irspeed_esp32 \
-        --initial-orientation 0 \
-        --speed-factor 2\
-        """
 
 Each VCE component supported by VCE Launcher that you want to include in your simulation should have its own section in your ``launcher.toml``.
 You can get a list of all supported components and parameters by running ``scripts/vce-launcher.py --help``.

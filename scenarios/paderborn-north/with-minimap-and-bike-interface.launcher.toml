@@ -1,34 +1,36 @@
 [evi]
-config_file="../../evi/networks/paderborn-north/paderborn-north.evi.ini"
-args="""\
-    --verbosity WARNING \
-    --sumo-binary sumo-gui \
-    --veins-host localhost \
-    --veins-port 12347\
-    """
+config_file = "../../evi/networks/paderborn-north/paderborn-north.evi.ini"
+args = """\
+       --verbosity WARNING \
+       --sumo-binary sumo-gui \
+       --veins-host localhost \
+       --veins-port 12347\
+       """
+wait_for_ports = [12347]  # Wait for veins-evi
 
 [veins-evi]
-scenario="../../veins-evi/examples/minimap"
-args="-u Cmdenv -c LanradioDisabled"
+scenario = "../../veins-evi/examples/minimap"
+args = "-u Cmdenv -c LanradioDisabled"
 
 [env3d]
-# executable_path="../../3denv/build/3denv.x86_64"  # already the default
-scenario="../../evi/networks/paderborn-north/paderborn-north.net.xml"
-evi_address="localhost"
-evi_port=12346
-scenario_seed=42
-connect_on_launch=true
-skip_menu=true
-vehicle_type="BICYCLE_WITH_MINIMAP"
+# executable_path = "../../3denv/build/3denv.x86_64"  # already the default
+scenario = "../../evi/networks/paderborn-north/paderborn-north.net.xml"
+evi_address = "localhost"
+evi_port = 12346
+scenario_seed = 42
+connect_on_launch = true
+skip_menu = true
+vehicle_type = "BICYCLE_INTERFACE"
+wait_for_ports = [12346]  # Wait for evi
 
 [bike-interface]
-args="""\
-    --unity-ip localhost \
-    --wheel-diameter 0.7 \
-    --num-spokes 18 \
-    --steering-sensor android \
-    --android-deadzone 0 \
-    --speed-sensor irspeed_esp32 \
-    --initial-orientation 0 \
-    --speed-factor 2\
-    """
+args = """\
+       --unity-ip localhost \
+       --wheel-diameter 0.7 \
+       --num-spokes 18 \
+       --steering-sensor android \
+       --android-deadzone 0 \
+       --speed-sensor irspeed_esp32 \
+       --initial-orientation 0 \
+       --speed-factor 2\
+       """
