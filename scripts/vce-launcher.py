@@ -59,9 +59,15 @@ def main():
     parser.add_argument(
         '--container',
         action='store_true',
-        help=f"Use Apptainer with "
+        help="Use Apptainer with "
              f"\"{os.path.relpath(DEFAULT_CONTAINER, '.')}\" "
              "to run each component.",
+    )
+    parser.add_argument(
+        '--nv',
+        action='store_true',
+        help="Use --nv option with all Apptainer commands. "
+             "Note that this may cause issues of missing libraries.",
     )
     parser.add_argument(
         '--logs-dir',
@@ -102,8 +108,7 @@ def main():
         prepare_only=args.prepare_only,
         logs_dir=args.logs_dir,
         use_container=args.container,
-        # Use --nv for all apptainer commands:
-        container_nvidia=shutil.which("nvidia-settings") is not None,
+        container_nvidia=args.nv,
     )
 
 
@@ -378,7 +383,7 @@ class EVIComponent(Component):
             prompt="evi> ",
             greeting=(
                 "--- EGO VEHICLE INTERFACE ---\n"
-                "\n\n"
+                "\n"
                 "Press enter to launch this component.\n"
             ),
             **kwargs
@@ -536,9 +541,11 @@ class Env3DComponent(Component):
         scenario_seed="Seed for procedural buildings etc.",
         vehicle_type="(BICYCLE | BICYCLE_WITH_MINIMAP | "
                      "BICYCLE_INTERFACE | CAR)",
-        connect_on_launch="(true|false) If true, connect immediately",
+        evi_connect_on_launch="(true|false) If true, connect immediately",
         skip_menu="(true|false) If true, skip menu screen on launch",
         executable_path="Default: 3denv/build/3denv.x86_64",
+        allow_container="(true|false) If false, don't run in container "
+                        "even if the launcher is running with --container.",
         **Component._cfg_optional_args,
     )
 
@@ -552,6 +559,11 @@ class Env3DComponent(Component):
         if not self._enabled:
             return
         env3d_cfg = full_cfg[self._cfg_section]
+        kwargs['container_img'] = (
+            kwargs.get('container_img')
+            if env3d_cfg.get('allow_container')
+            else None
+        )
         # TODO: check if executable exists
         #  (although, this check should exist for all components…)
         super().__init__(
@@ -571,8 +583,8 @@ class Env3DComponent(Component):
                     if 'scenario_seed' in env3d_cfg else ""
                 ),
                 (
-                    " --connect-on-launch=True"
-                    if env3d_cfg.get('connect_on_launch', False) else ""
+                    " --evi-connect-on-launch=True"
+                    if env3d_cfg.get('evi_connect_on_launch', False) else ""
                 ),
                 " --skip-menu=True"
                 if env3d_cfg.get('skip_menu', False)
@@ -586,7 +598,7 @@ class Env3DComponent(Component):
             prompt="3denv> ",
             greeting=(
                 "--- 3D ENVIRONMENT ---\n"
-                "\n\n"
+                "\n"
                 "Press enter to launch this component.\n"
             ),
             **kwargs,
@@ -726,8 +738,15 @@ def launch_tmux(components: list[Component], prepare_only: bool):
             # Enter component environment:
             "send-keys ",
             QuotedCmd(
-                "bash -c ",
-                QuotedCmd(component.env_cmd),
+                "bash",
+                Cmd(
+                    " -c ",
+                    QuotedCmd(component.env_cmd),
+                ) if str(component.env_cmd).strip() != "" else ""
+                # Still enter a new bash shell even if there's
+                # no env command, because we'll need it for
+                # compatibility with `PS1=…` below, which doesn't work
+                # in fish shell, for example.
             ),
             " C-m \\; ",
             # Set Tmux pane title:
