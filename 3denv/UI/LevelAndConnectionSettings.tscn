@@ -54,6 +54,7 @@ grow_horizontal = 2
 hint_tooltip = "You won't normally need to change this"
 size_flags_horizontal = 3
 text = "ego-vehicle"
+editable = false
 expand_to_text_length = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Panel/LevelAndConnectionSettings"]
@@ -105,7 +106,7 @@ margin_top = 5.0
 margin_right = 248.0
 margin_bottom = 19.0
 size_flags_horizontal = 3
-text = "Evi Port"
+text = "Evi Port:"
 
 [node name="LineEditEVIPort" type="LineEdit" parent="Panel/LevelAndConnectionSettings/HBoxContainer5"]
 margin_left = 252.0
@@ -137,7 +138,6 @@ margin_bottom = 186.0
 margin_top = 3.0
 margin_right = 248.0
 margin_bottom = 17.0
-hint_tooltip = "Path to a SUMO .net.xml file with a correspondingly named .poly.xml file in the same folder."
 size_flags_horizontal = 3
 text = "Street Network File Location:"
 
@@ -148,6 +148,7 @@ margin_bottom = 20.0
 hint_tooltip = "Path to a SUMO .net.xml file with a correspondingly named .poly.xml file in the same folder."
 size_flags_horizontal = 3
 text = "Select Scenario"
+clip_text = true
 
 [node name="HBoxContainer7" type="HBoxContainer" parent="Panel/LevelAndConnectionSettings"]
 margin_top = 190.0
@@ -158,9 +159,8 @@ margin_bottom = 214.0
 margin_top = 5.0
 margin_right = 248.0
 margin_bottom = 19.0
-hint_tooltip = "Seed for procedural buildings, etc."
 size_flags_horizontal = 3
-text = "Seed"
+text = "Procedural Objects Seed:"
 
 [node name="LineEditSeed" type="LineEdit" parent="Panel/LevelAndConnectionSettings/HBoxContainer7"]
 margin_left = 252.0
@@ -168,7 +168,7 @@ margin_right = 500.0
 margin_bottom = 24.0
 hint_tooltip = "Seed for procedural buildings, etc."
 size_flags_horizontal = 3
-text = "5342289"
+text = "42"
 expand_to_text_length = true
 
 [node name="HBoxContainer8" type="HBoxContainer" parent="Panel/LevelAndConnectionSettings"]
@@ -178,15 +178,16 @@ margin_bottom = 242.0
 
 [node name="Label" type="Label" parent="Panel/LevelAndConnectionSettings/HBoxContainer8"]
 margin_top = 5.0
-margin_right = 472.0
+margin_right = 248.0
 margin_bottom = 19.0
 size_flags_horizontal = 3
-text = "Place Street Lights"
+text = "Place Street Lights:"
 
 [node name="CheckBoxStreetLights" type="CheckBox" parent="Panel/LevelAndConnectionSettings/HBoxContainer8"]
-margin_left = 476.0
+margin_left = 252.0
 margin_right = 500.0
 margin_bottom = 24.0
+size_flags_horizontal = 3
 
 [node name="BGenerateNetwork" type="Button" parent="Panel/LevelAndConnectionSettings"]
 margin_top = 246.0
@@ -203,41 +204,36 @@ margin_bottom = 274.0
 [node name="HBoxContainer4" type="HBoxContainer" parent="Panel/LevelAndConnectionSettings"]
 margin_top = 278.0
 margin_right = 500.0
-margin_bottom = 309.0
-
-[node name="Label" type="Label" parent="Panel/LevelAndConnectionSettings/HBoxContainer4"]
-margin_right = 455.0
-margin_bottom = 31.0
-size_flags_horizontal = 3
-text = "Record Performance
-"
+margin_bottom = 298.0
 
 [node name="BRecordPerformance" type="Button" parent="Panel/LevelAndConnectionSettings/HBoxContainer4"]
-margin_left = 459.0
 margin_right = 500.0
-margin_bottom = 31.0
-text = "Start"
+margin_bottom = 20.0
+size_flags_horizontal = 3
+text = "Start Performance Recording"
 
 [node name="HSeparator4" type="HSeparator" parent="Panel/LevelAndConnectionSettings"]
-margin_top = 313.0
+margin_top = 302.0
 margin_right = 500.0
-margin_bottom = 317.0
+margin_bottom = 306.0
 
 [node name="HFlowContainer" type="HFlowContainer" parent="Panel/LevelAndConnectionSettings"]
-margin_top = 321.0
+margin_top = 310.0
 margin_right = 500.0
-margin_bottom = 341.0
+margin_bottom = 340.0
 
 [node name="BCloseMenu" type="Button" parent="Panel/LevelAndConnectionSettings/HFlowContainer"]
 margin_right = 274.0
-margin_bottom = 20.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 0, 30 )
 size_flags_horizontal = 3
 text = "Close Menu"
 
 [node name="BExit" type="Button" parent="Panel/LevelAndConnectionSettings/HFlowContainer"]
 margin_left = 278.0
 margin_right = 500.0
-margin_bottom = 20.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 0, 30 )
 size_flags_horizontal = 3
 text = "Exit"
 
@@ -252,6 +248,7 @@ margin_right = 270.0
 margin_bottom = 153.0
 rect_min_size = Vector2( 400, 200 )
 window_title = "Open a File"
+resizable = true
 mode = 0
 access = 2
 filters = PoolStringArray( "*.net.xml" )
@@ -264,3 +261,4 @@ filters = PoolStringArray( "*.net.xml" )
 [connection signal="pressed" from="Panel/LevelAndConnectionSettings/HFlowContainer/BCloseMenu" to="." method="_on_BCloseMenu_pressed"]
 [connection signal="pressed" from="Panel/LevelAndConnectionSettings/HFlowContainer/BExit" to="." method="_on_BExit_pressed"]
 [connection signal="confirmed" from="SumoNetworkSelector" to="." method="_on_SumoNetworkSelector_confirmed"]
+[connection signal="file_selected" from="SumoNetworkSelector" to="." method="_on_SumoNetworkSelector_file_selected"]

@@ -51,6 +51,7 @@ public class VCEInstance : Spatial
 				settings.GetEVIPort(),
 				settings.GetSelectedVehicleType()
 			);
+			settings.SetEVIConnected();
 		} else { GD.Print("Not connecting to EVI on launch…"); }
 	}
 
@@ -100,7 +101,6 @@ public class VCEInstance : Spatial
 			networkListener.Init();
 			AddChild(networkListener);
 		}
-		
 	}
 
 	public void GenerateNetwork(string SumoNetFile, int Seed, bool GenerateStreetLights)

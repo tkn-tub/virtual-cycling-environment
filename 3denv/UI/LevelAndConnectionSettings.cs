@@ -11,6 +11,7 @@ public class LevelAndConnectionSettings : Control
 	private LineEdit EgoVehicleNameEdit;
 	private LineEdit EVIIPEdit;
 	private LineEdit EVIPortEdit;
+	private Button BConnectToEVI;
 	private LineEdit SeedEdit;
 	private CheckBox StreetLightsCheckbox;
 
@@ -72,6 +73,13 @@ public class LevelAndConnectionSettings : Control
 		return EgoVehicleNameEdit.Text;
 	}
 
+	public void SetEVIConnected()
+	{
+		BConnectToEVI.Disabled = true;
+		EVIIPEdit.Editable = false;
+		EVIPortEdit.Editable = false;
+	}
+
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
@@ -93,6 +101,10 @@ public class LevelAndConnectionSettings : Control
 		{
 			switch (child.Name)
 			{
+				case "BConnectToEVI":
+					BConnectToEVI = (Button)child;
+					break;
+
 				case "BSelectSumoScenario":
 					BSelectSumoScenario = (Button)child;
 					break;
@@ -158,6 +170,9 @@ public class LevelAndConnectionSettings : Control
 					break;
 			}
 		}
+
+		// Update file selector button text accordingly:
+		_on_SumoNetworkSelector_file_selected(SelectedSumoNetFile);
 	}
 
 	public Dictionary<String, String> ParseCmdLineArgs()
@@ -243,8 +258,14 @@ public class LevelAndConnectionSettings : Control
 
 	private void _on_SumoNetworkSelector_confirmed()
 	{
-		SelectedSumoNetFile = SumoNetworkFileDialog.CurrentPath + SumoNetworkFileDialog.Filename;
-		BSelectSumoScenario.Text = SumoNetworkFileDialog.CurrentFile.Replace(".net.xml", "");
+		// SelectedSumoNetFile = SumoNetworkFileDialog.CurrentPath + SumoNetworkFileDialog.Filename;
+		// BSelectSumoScenario.Text = SumoNetworkFileDialog.CurrentFile.Replace(".net.xml", "");
+	}
+
+	private void _on_SumoNetworkSelector_file_selected(String path)
+	{
+		SelectedSumoNetFile = path;
+		BSelectSumoScenario.Text = path.GetFile().Replace(".net.xml", "");
 	}
 
 	private void _on_BGenerateNetwork_pressed()
@@ -273,19 +294,20 @@ public class LevelAndConnectionSettings : Control
 			EgoVehicleNameEdit.Text,
 			EVIIPEdit.Text,
 			GetEVIPort(),
-			GetSelectedVehicleType() // TODO: use key, not description!
+			GetSelectedVehicleType()
 		);
+		SetEVIConnected();
 	}
 
 	private void _on_BRecordPerformance_pressed()
 	{
 		if(GameStatics.GameInstance.TooglePerformanceMeasurement())
 		{
-			BRecordPerformance.Text = "Stop";
+			BRecordPerformance.Text = "Stop Performance Recording";
 		}
 		else
 		{
-			BRecordPerformance.Text = "Start";
+			BRecordPerformance.Text = "Start Performance Recording";
 		}
 	}
 }
