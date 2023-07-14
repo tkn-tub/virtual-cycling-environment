@@ -26,6 +26,7 @@ public class CoordinateTransformation
 			NetOffsetY = double.Parse(pNetOffset.Split(',')[1], provider);
 			OriginOffsetX = pOriginOffsetX;
 			OriginOffsetY = pOriginOffsetY;
+
 			GD.Print($"projParameter=\"{pProjParameters}\", netOffset=\"{pNetOffset}\", originOffsetX={pOriginOffsetX}, originOffsetY={pOriginOffsetY}");
 			if (pProjParameters.Equals("!"))
 			{

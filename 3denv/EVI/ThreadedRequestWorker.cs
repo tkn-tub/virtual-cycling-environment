@@ -191,7 +191,13 @@ public class ThreadedRequestWorker : Node, IThreadedNetWorker
 			{
 				var vcmd = cmd.RegisterVehicleCommand;
 				result[vcmd.VehicleId] =
-					ExtractDataFromMsgState(vcmd.State, vcmd.VehicleId, vcmd.IsEgoVehicle, cmd.CommandOneofCase);
+					ExtractDataFromMsgState(
+						vcmd.State,
+						vcmd.VehicleId,
+						vcmd.IsEgoVehicle,
+						cmd.CommandOneofCase,
+						vcmd.VehType
+					);
 			}
 			else if (cmd.CommandOneofCase == Asmp.Vehicle.Command.CommandOneofOneofCase.UnregisterVehicleCommand)
 			{

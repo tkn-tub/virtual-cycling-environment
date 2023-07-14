@@ -47,7 +47,7 @@ public class SimpleVehicleController : KinematicBody
 
 			_miniMapSpeedLabel = GetNode<Label3D>("bike_full/Bicycle CCS Armature/Skeleton/HandleAttachment/MiniMapView/SpeedLabel");
 		}
-		MBicycleRig = GetNode<BicycleRig>("bike_full"); 
+		MBicycleRig = GetNode<BicycleRig>("bike_full");
 	}
 
 

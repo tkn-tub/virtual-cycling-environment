@@ -1,5 +1,6 @@
 using Godot;
 using extrapolation;
+using Asmp.Vehicle;
 public class ForeignVehicleController : KinematicBody
 {
 
@@ -27,6 +28,7 @@ public class ForeignVehicleController : KinematicBody
 	public NetFileLane lane;
 	
 	public bool isEgoVehicle;
+	public RegisterVehicleCommand.Types.VehicleType vehicleType;
 
 	public bool TurnLeftSignalOn;
 	public bool TurnRightSignalOn;
@@ -36,6 +38,19 @@ public class ForeignVehicleController : KinematicBody
 	public OmniLight signalRight;
 	public OmniLight signalStop;
 
+	private BicycleRig bicycleRig;
+
+	public override void _Ready()
+	{
+		((SkeletonIK)FindNode("LeftFootIK"))?.Start();
+		((SkeletonIK)FindNode("RightFootIK"))?.Start();
+		// Seems like we can't get the steering angle for fellow traffic?
+		// In that case, let's save on computing resources by not turning
+		// on IK for the hands:
+		// ((SkeletonIK)FindNode("LeftHandIK"))?.Start();
+		// ((SkeletonIK)FindNode("RightHandIK"))?.Start();
+		bicycleRig = GetNode<BicycleRig>("bike_full");
+	}
 
 	public override void _PhysicsProcess(float delta)
 	{
@@ -52,65 +67,83 @@ public class ForeignVehicleController : KinematicBody
 		this.Rotation = interpolatedRotation.GetEuler();
 		rotation = this.Rotation;
 
-
 		float deltaYaw = interpolatedRotation.GetEuler().y - currentRotation.GetEuler().y;
 		UpdateWheels(delta, deltaYaw);
 		updateSignals(delta);
 
-	}
-	public void updateSignalsBool(bool turnSignalLeftOn, bool turnSignalRightOn){
-		// GD.Print("blinkuje");
-		// OmniLight signalLeft = this.GetNode<OmniLight>("Car/TurnLeftSignal");
-		// signalLeft.Visible = turnSignalLeftOn;
-		// OmniLight signalRight = this.GetNode<OmniLight>("Car/TurnRightSignal");
-		// signalRight.Visible = turnSignalRightOn;
-		this.TurnLeftSignalOn = turnSignalLeftOn;
-		this.TurnRightSignalOn = turnSignalRightOn;
+		if (bicycleRig != null)
+		{
+			bicycleRig.SteeringAngle = deltaYaw;
+			bicycleRig.CurrentVelocity = (float)vehicleSpeed;
+		}
 	}
 
-	public void updateStopLight(bool signalStop){
-		this.signalStop.Visible = signalStop;
+	public void updateSignalsBool(bool turnSignalLeftOn, bool turnSignalRightOn)
+	{
+		if (this.vehicleType == RegisterVehicleCommand.Types.VehicleType.PassengerCar)
+		{
+			this.TurnLeftSignalOn = turnSignalLeftOn;
+			this.TurnRightSignalOn = turnSignalRightOn;
+		}
+	}
+
+	public void updateStopLight(bool signalStop)
+	{
+		if (this.vehicleType == RegisterVehicleCommand.Types.VehicleType.PassengerCar)
+		{
+			this.signalStop.Visible = signalStop;
+		}
 	}
 	
-	public void updateIsEgoVehicle(bool egoVehicle){
+	public void updateIsEgoVehicle(bool egoVehicle)
+	{
 		this.isEgoVehicle = egoVehicle;
 	}
 
-
-	private void updateSignals(float delta){
-
-		if (this.TurnLeftSignalOn == true)
+	private void updateSignals(float delta)
+	{
+		if (this.vehicleType == RegisterVehicleCommand.Types.VehicleType.Bicycle)
 		{
-			
-			if(this.passedDeltaTime > 0.5f)
+			// TODO
+		}
+		else 
+		{
+			// Assuming PassengerCar or similar
+
+			if (this.TurnLeftSignalOn == true)
 			{
-				this.signalLeft.Visible = !this.signalLeft.Visible;
-				this.passedDeltaTime = 0.0f;
+				
+				if(this.passedDeltaTime > 0.5f)
+				{
+					this.signalLeft.Visible = !this.signalLeft.Visible;
+					this.passedDeltaTime = 0.0f;
+				}
+				else
+				{
+					this.passedDeltaTime += delta;
+				}
 			}
 			else
 			{
-				this.passedDeltaTime += delta;
+				this.signalLeft.Visible = false; 
 			}
-		}
-		else{
-		   this.signalLeft.Visible = false; 
-		}
 
-		if (this.TurnRightSignalOn == true)
-		{
-			
-			if(this.passedDeltaTime > 0.5f)
+			if (this.TurnRightSignalOn == true)
 			{
-				this.signalRight.Visible = !this.signalRight.Visible;
-				this.passedDeltaTime = 0.0f;
+				
+				if(this.passedDeltaTime > 0.5f)
+				{
+					this.signalRight.Visible = !this.signalRight.Visible;
+					this.passedDeltaTime = 0.0f;
+				}
+				else
+				{
+					this.passedDeltaTime += delta;
+				}
 			}
-			else
-			{
-				this.passedDeltaTime += delta;
+			else{
+				this.signalRight.Visible = false;
 			}
-		}
-		else{
-			this.signalRight.Visible = false;
 		}
 	}
 
@@ -119,7 +152,21 @@ public class ForeignVehicleController : KinematicBody
 
 	public virtual void ChangeColor(Color color) { }
 
+	public Vector3 GetForwardVector()
+	{
+		return GetRotationVector(Rotation);
+	}
 
+	private static Vector3 GetRotationVector(Vector3 Rotator)
+	{
+		float Pitch = (Rotator.z);
+		float Yaw = (-Rotator.y);
 
+		float sinP = Mathf.Sin(Pitch);
+		float sinY = Mathf.Sin(Yaw);
+		float cosY = Mathf.Cos(Yaw);
+		float cosP = Mathf.Cos(Pitch);
 
+		return new Vector3(cosY * cosP, sinP, cosP * sinY);
+	}
 }

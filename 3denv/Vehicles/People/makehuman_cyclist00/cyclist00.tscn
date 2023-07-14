@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Vehicles/People/makehuman_cyclist00/cyclist00.gltf" type="PackedScene" id=1]
+
+[node name="cyclist00" instance=ExtResource( 1 )]

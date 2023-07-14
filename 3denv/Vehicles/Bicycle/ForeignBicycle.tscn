@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Vehicles/Bicycle/Mesh/bike_full.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Vehicles/ForeignVehicleController.cs" type="Script" id=2]
+[ext_resource path="res://Vehicles/People/makehuman_cyclist00/cyclist00.tscn" type="PackedScene" id=3]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 0.825986, 0.471991, 0.224741 )
@@ -16,3 +17,68 @@ shape = SubResource( 1 )
 
 [node name="bike_full" parent="." instance=ExtResource( 1 )]
 transform = Transform( -4.36557e-08, -7.72161e-10, -1, 4.07454e-10, 1, -6.82121e-12, 0.999999, -4.07454e-10, -4.44707e-08, 0, 0, 0 )
+
+[node name="Skeleton" parent="bike_full/Bicycle CCS Armature" index="0"]
+bones/4/bound_children = [ NodePath("HandleBarAttachment") ]
+bones/11/bound_children = [ NodePath("RightPedalAttachment") ]
+bones/12/bound_children = [ NodePath("LeftPedalAttachment") ]
+
+[node name="FrameAttachment" type="BoneAttachment" parent="bike_full/Bicycle CCS Armature/Skeleton" index="1"]
+
+[node name="cyclist01" parent="bike_full/Bicycle CCS Armature/Skeleton/FrameAttachment" instance=ExtResource( 3 )]
+transform = Transform( -1.043, 0, -9.1182e-08, 0, 1.043, 0, 9.1182e-08, 0, -1.043, 0, 0.105, 0.276 )
+
+[node name="LeftFootIK" type="SkeletonIK" parent="bike_full/Bicycle CCS Armature/Skeleton/FrameAttachment/cyclist01/cyclist00/Skeleton" index="5"]
+process_priority = 1
+root_bone = "thigh_l"
+tip_bone = "foot_l"
+use_magnet = true
+magnet = Vector3( 0.156, 1, 0 )
+target_node = NodePath("../../../../../LeftPedalAttachment/LeftPedalAnchor")
+
+[node name="RightFootIK" type="SkeletonIK" parent="bike_full/Bicycle CCS Armature/Skeleton/FrameAttachment/cyclist01/cyclist00/Skeleton" index="6"]
+process_priority = 1
+root_bone = "thigh_r"
+tip_bone = "foot_r"
+use_magnet = true
+magnet = Vector3( -0.156, 1, 0 )
+target_node = NodePath("../../../../../RightPedalAttachment/RightPedalAnchor")
+
+[node name="LeftHandIK" type="SkeletonIK" parent="bike_full/Bicycle CCS Armature/Skeleton/FrameAttachment/cyclist01/cyclist00/Skeleton" index="7"]
+process_priority = 1
+root_bone = "spine_03"
+tip_bone = "hand_l"
+target_node = NodePath("../../../../../HandleBarAttachment/LeftHandAnchor")
+
+[node name="RightHandIK" type="SkeletonIK" parent="bike_full/Bicycle CCS Armature/Skeleton/FrameAttachment/cyclist01/cyclist00/Skeleton" index="8"]
+process_priority = 1
+root_bone = "spine_03"
+tip_bone = "hand_r"
+target_node = NodePath("../../../../../HandleBarAttachment/RightHandAnchor")
+
+[node name="LeftPedalAttachment" type="BoneAttachment" parent="bike_full/Bicycle CCS Armature/Skeleton" index="2"]
+transform = Transform( 1.19209e-07, -1, -5.96046e-08, 1, 5.96046e-08, -3.17289e-07, 2.57685e-07, -1.19209e-07, 1, -0.0616922, 0.0986551, 0.100564 )
+bone_name = "LeftPedal"
+
+[node name="LeftPedalAnchor" type="Position3D" parent="bike_full/Bicycle CCS Armature/Skeleton/LeftPedalAttachment"]
+transform = Transform( 0.0017112, 0.999999, -8.28799e-06, 1, -0.0017112, -8.18633e-06, -8.08574e-06, -8.1589e-06, -1, -4.65512e-05, 0.0738564, 0.0885619 )
+
+[node name="RightPedalAttachment" type="BoneAttachment" parent="bike_full/Bicycle CCS Armature/Skeleton" index="3"]
+transform = Transform( -1.19209e-07, 1, -5.96046e-08, -1, -5.96046e-08, -1.25737e-23, 5.96046e-08, 1.19209e-07, 1, 0.0817266, 0.4377, 0.100564 )
+bone_name = "RightPedal"
+
+[node name="RightPedalAnchor" type="Position3D" parent="bike_full/Bicycle CCS Armature/Skeleton/RightPedalAttachment"]
+transform = Transform( -0.00171435, -0.999996, -0.00248336, -0.999998, 0.00170817, 0.00248752, -0.00248327, 0.0024876, -0.999996, -0.0798644, 0.0578706, 0.0883286 )
+
+[node name="HandleBarAttachment" type="BoneAttachment" parent="bike_full/Bicycle CCS Armature/Skeleton" index="4"]
+transform = Transform( 1, 2.15206e-14, 2.38419e-07, -5.942e-08, -0.968445, 0.249226, 2.30895e-07, -0.249226, -0.968445, -0.000719287, 0.693109, -0.363378 )
+bone_name = "Handle"
+
+[node name="LeftHandAnchor" type="Position3D" parent="bike_full/Bicycle CCS Armature/Skeleton/HandleBarAttachment"]
+transform = Transform( 0.347788, 0.437617, 0.829181, 0.0184341, -0.887413, 0.460616, 0.937393, -0.144911, -0.316697, -0.204396, -0.242589, 0.0205125 )
+
+[node name="RightHandAnchor" type="Position3D" parent="bike_full/Bicycle CCS Armature/Skeleton/HandleBarAttachment"]
+transform = Transform( 0.45909, -0.563848, -0.686529, -0.0847036, -0.79704, 0.597965, -0.884346, -0.216368, -0.413671, 0.204, -0.243001, 0.0210003 )
+
+[editable path="bike_full"]
+[editable path="bike_full/Bicycle CCS Armature/Skeleton/FrameAttachment/cyclist01"]

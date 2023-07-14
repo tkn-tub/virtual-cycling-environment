@@ -101,7 +101,6 @@ public partial class EviConnector : Spatial//, IObserver<Dictionary<uint, Vehicl
 		time = time + delta;
 		//frames++;
 		//stepsWithoutVehicleUpdate++;
-		bool gotVehicleCommands = false;
 
 		if (netWorker.registerCommands is { Count: > 0 })
 		{
@@ -119,15 +118,12 @@ public partial class EviConnector : Spatial//, IObserver<Dictionary<uint, Vehicl
 		//GD.Print("Evi Connector");
 		if (gotNewUpdates)
 		{
-			
-			
 			gotNewUpdates = false;
 			stepsWithoutVehicleUpdate = 0;
 			lastUpdate = time;
 
 			if ( newVehicleStates.Count > 0)
 			{
-				gotVehicleCommands = true;
 				waitSteps = waitSteps - 1;
 
 				if (waitSteps<=0)
@@ -143,12 +139,9 @@ public partial class EviConnector : Spatial//, IObserver<Dictionary<uint, Vehicl
 						{
 							_vehicleManager.UpdateFellowVehicles(newVehicleStates);
 							waitSteps = 0;
-
-
 						}
 
 						fellowVehicles = new Dictionary<uint, VehicleData>(newVehicleStates); // override for next step
-
 				}
 				else
 				{
@@ -212,11 +205,8 @@ public partial class EviConnector : Spatial//, IObserver<Dictionary<uint, Vehicl
 			_vehicleUpdateStep += 1;
 			netWorker.SaveNextFrame(_vehicleManager.SyncEgoVehicle());
 		}
-
-		
-		
-		
 	}
+
 	private void NewUpdateArrived(){
 		gotNewUpdates=true;
 	}

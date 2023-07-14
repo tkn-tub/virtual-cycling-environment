@@ -89,24 +89,31 @@ public class VehicleManager : Spatial
 			{
 				ForeignVehicleController vehicle;
 				PackedScene vehicleScene;
+				GD.Print($"Spawning a vehicle of type {veh.vehicleType}");
 				if (veh.vehicleType == RegisterVehicleCommand.Types.VehicleType.Bicycle)
 				{
 					vehicleScene = ResourceLoader.Load<PackedScene>("res://Vehicles/Bicycle/ForeignBicycle.tscn");
 					vehicle = vehicleScene.Instance<ForeignVehicleController>();
-					vehicle.vehicleId = veh.vehicleId;
 				}
 				else
 				{
+					if (veh.vehicleType != RegisterVehicleCommand.Types.VehicleType.PassengerCar)
+					{
+						GD.PushWarning($"Vehicle type {veh.vehicleType} is not supported yet. Spawning a passenger car.");
+					}
 					vehicleScene = ResourceLoader.Load<PackedScene>("res://Vehicles/DefaultCar/ForeignCar.tscn");
 					vehicle = vehicleScene.Instance<ForeignVehicleController>();
+					// TODO: this should be handled within the vehicle controller, no?
 					vehicle.signalLeft = vehicle.GetNode<OmniLight>("Car/TurnLeftSignal");
 					vehicle.signalRight = vehicle.GetNode<OmniLight>("Car/TurnRightSignal");
 					vehicle.signalStop = vehicle.GetNode<OmniLight>("Car/StopSignal");
 					vehicle.signalLeft.Visible = false;
 					vehicle.signalRight.Visible = false;
 					vehicle.signalStop.Visible = false;
-					vehicle.vehicleId = veh.vehicleId;
 				}
+
+				vehicle.vehicleId = veh.vehicleId;
+				vehicle.vehicleType = veh.vehicleType;
 				vehicle.lane = veh.lane;
 				// vehicle = vehicleScene.Instance<ForeignVehicleController>();
 				vehicle.ChangeColor(_eviCarColors[_random.Next(_eviCarColors.Count)]);
