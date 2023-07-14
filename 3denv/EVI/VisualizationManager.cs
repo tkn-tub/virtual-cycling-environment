@@ -11,10 +11,10 @@ public class VisualizationManager : Spatial
 	public override void _Ready()
 	{
 		Vector3 sumoOffset = GameStatics.SumoOffset;
-				// WGS84 to Cartesian projection
+		// WGS84 to Cartesian projection
 		_coordinateTransformation = new CoordinateTransformation(
 			GameStatics.NetOffset,
-			GameStatics.ProjParameters,
+			GameStatics.ProjParameters, // TODO: handle projParameters=="!" -> will return null
 			-sumoOffset.x,
 			sumoOffset.z
 		);
@@ -37,6 +37,7 @@ public class VisualizationManager : Spatial
 		}
 		else if (command.CommandOneofCase == Asmp.Visualization.Command.CommandOneofOneofCase.WirelessMessage)
 		{
+			// TODO: is it supposed to be possible to have multiple messages per entity id? because sometimes we seem to get errors here…
 			result.Add(command.EntityId,
 				new ReceivedWirelessMessage(command.EntityId, command.WirelessMessage.SenderId,
 					visualizationMsg.TimeS, command.WirelessMessage.Location.Px,

@@ -11,7 +11,7 @@ public class VehicleData
 	public string edgeId;
 	public NetFileLane lane;
 	public double speed;
-	public double yawRate;
+	public double angleDeg; // 0 is North
 	public RegisterVehicleCommand.Types.VehicleType vehicleType;
 
 	public bool brakeLightOn,
@@ -24,7 +24,7 @@ public class VehicleData
 
 	public Command.CommandOneofOneofCase stateOfExistence = Command.CommandOneofOneofCase.RegisterVehicleCommand;
 
-	public VehicleData(uint pVehicleId, double pXCoord, double pYCoord, uint pRoadId, uint pLaneId, string pEdgeId, NetFileLane pLane, double pSpeed, double pYawRate,
+	public VehicleData(uint pVehicleId, double pXCoord, double pYCoord, uint pRoadId, uint pLaneId, string pEdgeId, NetFileLane pLane, double pSpeed, double pAngleDeg,
 		Command.CommandOneofOneofCase pStateOfExistence, bool pBrakeLightOn, bool pTurnSignalLeftOn,
 		bool pTurnSignalRightOn, bool pEmergencyLightsOn, bool pDoorOpenLeft, bool pDoorOpenRight, bool pisEgoVehicle,
 		RegisterVehicleCommand.Types.VehicleType pVehicleType = RegisterVehicleCommand.Types.VehicleType.PassengerCar)    {
@@ -36,7 +36,7 @@ public class VehicleData
 		edgeId = pEdgeId;
 		lane = pLane;
 		speed = pSpeed;
-		yawRate = pYawRate;
+		angleDeg = pAngleDeg;
 		stateOfExistence = pStateOfExistence;
 		brakeLightOn = pBrakeLightOn;
 		turnSignalLeftOn = pTurnSignalLeftOn;
@@ -55,7 +55,7 @@ public class VehicleData
 		yCoord = pYCoord;
 		roadId = pRoadId;
 		speed = pSpeed;
-		yawRate = pYawRate;
+		angleDeg = pAngleDeg;
 		stateOfExistence = pStateOfExistence;
 		brakeLightOn = pBrakeLightOn;
 		turnSignalLeftOn = pTurnSignalLeftOn;
@@ -72,7 +72,7 @@ public class VehicleData
 		yCoord = pYCoord;
 		roadId = pRoadId;
 		speed = pSpeed;
-		yawRate = pYawRate;
+		angleDeg = pAngleDeg;
 		stateOfExistence = pStateOfExistence;
 		brakeLightOn = pBrakeLightOn;
 		turnSignalLeftOn = pTurnSignalLeftOn;
@@ -89,7 +89,7 @@ public class VehicleData
 		yCoord = pYCoord;
 		roadId = pRoadId;
 		speed = pSpeed;
-		yawRate = pYawRate;
+		angleDeg = pAngleDeg;
 		stateOfExistence = pStateOfExistence;
 		brakeLightOn = pBrakeLightOn;
 		turnSignalLeftOn = pTurnSignalLeftOn;
@@ -109,7 +109,7 @@ public class VehicleData
 		msg.Position.Py = yCoord;
 		msg.Position.RoadId = roadId;
 		msg.Position.LaneId = laneId;
-		msg.Position.Angle = yawRate;
+		msg.Position.Angle = angleDeg;
 		return msg;
 	}
 }

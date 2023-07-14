@@ -20,7 +20,7 @@ transform = Transform( 1, -5.38648e-10, -4.65661e-10, -4.21551e-10, 1, -1.16415e
 shape = SubResource( 1 )
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( -4.27244e-08, 0.238143, -0.97123, 1.14087e-08, 0.97123, 0.238143, 1, -9.05955e-10, -4.42121e-08, -0.24497, 1.28945, -0.0011337 )
+transform = Transform( -4.27244e-08, 0.238143, -0.97123, 1.14087e-08, 0.97123, 0.238143, 1, -9.05955e-10, -4.42121e-08, -0.166, 1.29, 0 )
 cull_mask = 3
 current = true
 fov = 60.0

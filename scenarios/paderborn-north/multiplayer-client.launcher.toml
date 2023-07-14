@@ -1,10 +1,10 @@
 [env3d]
-# executable_path="../../3denv/build/3denv.x86_64"  # already the default
-scenario="../../evi/networks/paderborn-north/paderborn-north.net.xml"
+# executable_path = "../../3denv/build/3denv.x86_64"  # already the default
+scenario = "../../evi/networks/paderborn-north/paderborn-north.net.xml"
 allow_container = false  # Makes it easier to use host's graphics drivers and executable should be portable anyway
-evi_address="<REPLACE ME>"
-evi_port=12346  # Same as defined in [multiplayer-interface] for env3d_port on the host!
-evi_connect_on_launch=false
-scenario_seed=42
-skip_menu=false
-vehicle_type="BICYCLE_WITH_MINIMAP"
+evi_address = "<REPLACE ME>"
+evi_port = 12346  # Same as defined in [multiplayer-interface] for env3d_port on the host!
+evi_connect_on_launch = false
+scenario_seed = 42
+skip_menu = false
+vehicle_type = "BICYCLE_WITH_MINIMAP"

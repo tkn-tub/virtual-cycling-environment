@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2023-07-14 11:54:50 by Eclipse SUMO netedit Version 1.17.0
+-->
+
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <!-- Shapes -->
+    <poly id="po_0" type="building" color="red" fill="1" layer="0.00" shape="62.666667,135.992016 61.325349,124.590818 75.632735,124.367265 75.409182,135.544910 62.666667,135.992016"/>
+    <poly id="po_1" type="building" color="red" fill="1" layer="0.00" shape="122.578842,139.121756 122.802395,125.261477 145.604790,125.261477 122.578842,139.121756"/>
+    <poly id="po_2" type="building" color="red" fill="1" layer="0.00" shape="74.738523,212.670659 75.185629,235.696607 82.339321,235.473054 90.610778,219.600798 91.504990,235.473054 98.882236,236.143713 97.764471,211.329341 87.481038,212.223553 81.445110,224.295409 80.998004,211.776447 74.738523,212.670659"/>
+    <poi id="EgoVehicleStart0" type="EgoVehicleStart" color="red" layer="202.00" x="101.60" y="83.96"/>
+</additional>

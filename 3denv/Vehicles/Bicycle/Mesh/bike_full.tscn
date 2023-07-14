@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Vehicles/Bicycle/Mesh/bike_full.glb" type="PackedScene" id=1]
+[ext_resource path="res://Vehicles/Bicycle/BicycleRig.cs" type="Script" id=2]
 
 [node name="bike_full" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
 
 [node name="Bicycle CCS" parent="Bicycle CCS Armature/Skeleton" index="0"]
 layers = 2

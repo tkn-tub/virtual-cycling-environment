@@ -117,7 +117,7 @@ public class VCEInstance : Spatial
 	{
 		VCESettings.Visible = visible;
 		Input.MouseMode = VCESettings.Visible ?
-			Input.MouseModeEnum.Visible : Input.MouseModeEnum.Captured;
+			Input.MouseModeEnum.Visible : Input.MouseModeEnum.Hidden;
 	}
 
 

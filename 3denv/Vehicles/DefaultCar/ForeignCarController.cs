@@ -23,7 +23,7 @@ public class ForeignCarController : ForeignVehicleController
 
     }
 
-    public override void UpdateWheels(float delta, float yawRate = 0)
+    public override void UpdateWheels(float delta, float angleRad = 0)
     {
 
         var rotationAngleDelta = (float)(delta * vehicleSpeed / wheelRadius);
@@ -36,7 +36,7 @@ public class ForeignCarController : ForeignVehicleController
 
         // Turning the wheels left and right using approximation of the steering angle, while preserving the rotation around the Z axis
         // Right wheel's initial angle is 180 degrees, so we need to subtract PI from the angle in rad
-        var turningAngle = yawRate * steeringAngleApproximationFactor;
+        var turningAngle = angleRad * steeringAngleApproximationFactor;
         var currentZFrontL = _wheelFrontLeft.Rotation.z;
         var currentZFrontR = _wheelFrontRight.Rotation.z;
 

@@ -10,8 +10,10 @@ config_version=4
 
 [application]
 
-config/name="3 Denv"
+config/name="Env3D"
 run/main_scene="res://World.tscn"
+boot_splash/image="res://icon.png"
+boot_splash/fullsize=false
 config/icon="res://icon.png"
 
 [display]
@@ -21,6 +23,7 @@ window/vsync/use_vsync=false
 [global]
 
 vsync=false
+icon=false
 
 [gui]
 
@@ -67,7 +70,7 @@ ToogleUI={
 
 [mono]
 
-project/assembly_name="3 Denv"
+project/assembly_name="Env3D"
 
 [physics]
 

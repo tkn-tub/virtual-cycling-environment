@@ -1,8 +1,7 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Vehicles/Bicycle/Mesh/bike_full.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Vehicles/Bicycle/InterfaceController/BicycleInterfaceController.cs" type="Script" id=2]
-[ext_resource path="res://Vehicles/Bicycle/InterfaceController/BicycleRig.cs" type="Script" id=3]
 [ext_resource path="res://Vehicles/Bicycle/SpeedLabelFont.tres" type="DynamicFontData" id=4]
 
 [sub_resource type="ViewportTexture" id=2]
@@ -58,17 +57,21 @@ far = 1000.0
 
 [node name="bike_full" parent="." instance=ExtResource( 1 )]
 transform = Transform( -0.0180267, -0.000406296, -0.999839, -0.00211588, 0.999998, -0.000368214, 0.999834, 0.0021089, -0.0180275, 0, 0, 0 )
-script = ExtResource( 3 )
 
-[node name="MiniMapView" type="Sprite3D" parent="bike_full"]
-transform = Transform( 0.008556, 6.22691e-06, -8.95878e-07, 7.08224e-06, 0.00653115, 0.00315329, -1.0309e-05, -0.0056759, 0.00362843, 0.00090948, 0.954837, -0.327534 )
+[node name="HandleAttachment" type="BoneAttachment" parent="bike_full/Bicycle CCS Armature/Skeleton" index="1"]
+transform = Transform( 1, 2.15206e-14, 2.38419e-07, -5.942e-08, -0.968445, 0.249226, 2.30895e-07, -0.249226, -0.968445, -0.000719287, 0.693109, -0.363378 )
+bone_name = "Handle"
+
+[node name="MiniMapView" type="Sprite3D" parent="bike_full/Bicycle CCS Armature/Skeleton/HandleAttachment"]
+transform = Transform( 0.008556, -1.22457e-05, 1.76175e-06, -4.28982e-06, -0.00491048, -0.00395809, 1.17494e-05, 0.00712452, -0.00272806, 0.00162876, -0.262403, 0.0305164 )
 layers = 2
 pixel_size = 0.0483
 texture = SubResource( 2 )
 
-[node name="SpeedLabel" type="Label3D" parent="bike_full/MiniMapView"]
-transform = Transform( 1, 1.16415e-10, 3.63798e-10, -2.32831e-10, 1, -1.81285e-07, 6.98492e-10, 1.76664e-07, 1, 5.83188, 3.6424, 2.23423 )
+[node name="SpeedLabel" type="Label3D" parent="bike_full/Bicycle CCS Armature/Skeleton/HandleAttachment/MiniMapView"]
+transform = Transform( 1, 0, 4.65661e-10, -9.31323e-10, 1, -1.72673e-07, -1.86265e-09, 1.34663e-07, 1, 5.83188, 3.6424, 2.23422 )
 layers = 2
+sorting_offset = 1.0
 pixel_size = 0.02
 no_depth_test = true
 alpha_cut = 1
@@ -77,7 +80,7 @@ outline_render_priority = 1
 text = "0 km/h"
 font = SubResource( 3 )
 
-[node name="TabletOutline" type="Sprite3D" parent="bike_full/MiniMapView"]
+[node name="TabletOutline" type="Sprite3D" parent="bike_full/Bicycle CCS Armature/Skeleton/HandleAttachment/MiniMapView"]
 transform = Transform( 4.91169, 2.32831e-10, 1.16415e-10, -3.72529e-09, 4.91169, -4.72332e-07, -4.65661e-10, -5.26672e-08, 4.91169, 0, 0, 0 )
 texture = SubResource( 5 )
 
@@ -86,8 +89,10 @@ transform = Transform( -0.997783, -0.00253162, 0.0664983, -0.00241792, 0.999995,
 shape = SubResource( 1 )
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( -4.27244e-08, 0.238143, -0.97123, 1.14087e-08, 0.97123, 0.238143, 1, -9.05955e-10, -4.42121e-08, -0.24497, 1.28945, -0.0011337 )
+transform = Transform( -4.27244e-08, 0.238143, -0.97123, 1.14087e-08, 0.97123, 0.238143, 1, -9.05955e-10, -4.42121e-08, -0.166, 1.29, 0 )
 cull_mask = 3
 current = true
 fov = 60.0
 far = 500.0
+
+[editable path="bike_full"]

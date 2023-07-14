@@ -128,11 +128,7 @@ public class ThreadedRequestWorker : Node, IThreadedNetWorker
 							 processMessage(msgReply);
 						 }
 						 EmitSignal("newUpdateArrived");
-						//GD.Print("Signal emitted");
-						 	//foreach (IObserver<Dictionary<uint, VehicleData>> o in observers)
-						//{
-							//	 o.OnNext(updateVehicleCommands);
-						//}
+						
 					 	}
 				}
 			}

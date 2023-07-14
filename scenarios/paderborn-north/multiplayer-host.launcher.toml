@@ -1,22 +1,24 @@
 [evi]
-config_file="../../evi/networks/paderborn-north/paderborn-north.evi.ini"
+config_file = "../../evi/networks/paderborn-north/paderborn-north.evi.ini"
 # Overriding 'evi_port' defined in '*.evi.ini':
-args="""
-    --verbosity WARNING \
-    --sumo-binary sumo-gui \
-    --veins-host localhost \
-    --veins-port 12347 \
-    --evi-port 12341\
-"""
+args = """
+       --verbosity WARNING \
+       --sumo-binary sumo-gui \
+       --veins-host localhost \
+       --veins-port 12347 \
+       --evi-port 12341\
+       """
+wait_for_ports = [12347]
 
 [veins-evi]
-scenario="../../veins-evi/examples/minimap"
-args="-u Cmdenv -c LanradioDisabled"
+scenario = "../../veins-evi/examples/minimap"
+args = "-u Cmdenv -c LanradioDisabled"
 
 [multiplayer-interface]
-env3d_port=12346  # Same as defined in [env3d]
-evi_port=12341  # Same as defined for [evi]
-connections=2
+env3d_port = 12346  # Same as defined in [env3d]
+evi_port = 12341  # Same as defined for [evi]
+connections = 2
+wait_for_ports = [12341]
 
 # [bike-interface]
 # Only using keyboard controls for this example.
@@ -24,12 +26,13 @@ connections=2
 # with bike-interface support.
 
 [env3d]
-# executable_path="../../3denv/build/3denv.x86_64"  # already the default
-scenario="../../evi/networks/paderborn-north/paderborn-north.net.xml"
+# executable_path = "../../3denv/build/3denv.x86_64"  # already the default
+scenario = "../../evi/networks/paderborn-north/paderborn-north.net.xml"
 allow_container = false  # Makes it easier to use host's graphics drivers and executable should be portable anyway
-evi_address="localhost"
-evi_port=12346  # Same as defined in [multiplayer-interface] for env3d_port!
-evi_connect_on_launch=true
-scenario_seed=42
-skip_menu=true
-vehicle_type="BICYCLE_WITH_MINIMAP"
+evi_address = "localhost"
+evi_port = 12346  # Same as defined in [multiplayer-interface] for env3d_port!
+evi_connect_on_launch = true
+scenario_seed = 42
+skip_menu = true
+vehicle_type = "BICYCLE_WITH_MINIMAP"
+wait_for_ports = [12346]

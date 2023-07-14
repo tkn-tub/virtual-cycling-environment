@@ -17,6 +17,7 @@ public class ForeignVehicleController : KinematicBody
 	public Quat targetRotation;
 	public Vector3 rotation;
 	public Vector3 translation;
+	public double angleDeg; // 0 is North
 	
 	public uint vehicleId;
 	public string edgeId;
@@ -45,11 +46,11 @@ public class ForeignVehicleController : KinematicBody
 		}
 		float interpolationWeight = 0.095f;
 		this.Translation = this.Translation.LinearInterpolate(targetTranslation, interpolationWeight);
-		translation = this.Translation.LinearInterpolate(targetTranslation, interpolationWeight);
+		translation = this.Translation;
 		Quat currentRotation = new Quat(this.Rotation).Normalized();
 		Quat interpolatedRotation = currentRotation.Slerp(targetRotation, interpolationWeight);
 		this.Rotation = interpolatedRotation.GetEuler();
-		rotation = interpolatedRotation.GetEuler();
+		rotation = this.Rotation;
 
 
 		float deltaYaw = interpolatedRotation.GetEuler().y - currentRotation.GetEuler().y;
@@ -114,7 +115,7 @@ public class ForeignVehicleController : KinematicBody
 	}
 
 
-	public virtual void UpdateWheels(float delta, float yawRate = 0) { }
+	public virtual void UpdateWheels(float delta, float angleRad = 0) { }
 
 	public virtual void ChangeColor(Color color) { }
 

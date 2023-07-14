@@ -20,6 +20,8 @@ public class SimpleVehicleController : KinematicBody
 	private float Speed = 0.0f;
 	private float SteeringAngle = 0.0f;
 
+	private BicycleRig MBicycleRig;
+
 	private Spatial _miniMapCamera;
 	private Label3D _miniMapSpeedLabel;
 	public float GetSpeed()
@@ -43,8 +45,9 @@ public class SimpleVehicleController : KinematicBody
 			arrow.SetIsPlayerArrow(true);
 			AddChild(arrow);
 
-			_miniMapSpeedLabel = GetNode<Label3D>("bike_full/MiniMapView/SpeedLabel");
+			_miniMapSpeedLabel = GetNode<Label3D>("bike_full/Bicycle CCS Armature/Skeleton/HandleAttachment/MiniMapView/SpeedLabel");
 		}
+		MBicycleRig = GetNode<BicycleRig>("bike_full"); 
 	}
 
 
@@ -54,8 +57,16 @@ public class SimpleVehicleController : KinematicBody
 		float turnAxis = Input.GetAxis("MoveRight", "MoveLeft");
 		if (bCanSteerInPlace || Speed > 0.0f)
 		{
-			SteeringAngle = Mathf.Lerp(SteeringAngle, SteeringRate * delta * turnAxis, turnAxis == 0 ? 0.5f : 0.1f);
-			Rotation += new Vector3(0, SteeringAngle, 0);
+			/*SteeringAngle = Mathf.Lerp(
+				SteeringAngle,
+				SteeringRate * turnAxis * delta,
+				turnAxis == 0 ? 0.5f : 0.1f
+			);*/
+			var adjustSteering = turnAxis * Mathf.Deg2Rad(15f) - SteeringAngle; // remaining different for SteeringAngle to reach
+			const float steeringSensitivity = 0.5f; // 0: no effect, -1: 50 %, 1: 200 %
+			SteeringAngle += adjustSteering * delta * 3.0f * Mathf.Pow(2, steeringSensitivity);
+			
+			Rotation += new Vector3(0, SteeringAngle * delta * 10f, 0);
 		}
 	}
 
@@ -68,6 +79,13 @@ public class SimpleVehicleController : KinematicBody
 		}
 
 		float forwardAxis = Input.GetAxis("MoveBack", "MoveForward");
+		float direction = 1.0f;
+		Vector3 forwardVector = GetForwardVector();
+		// Determine direction by checking if velocity is alligned with forward vector
+		if (Speed > 0)
+		{
+			direction = (Velocity / Speed).Dot(forwardVector);
+		}
 
 		// Hard stop vehicle if speed is too low and no acceleration is applied
 		if (Mathf.Abs(Speed) < 1.0f && forwardAxis == 0.0f)
@@ -76,14 +94,6 @@ public class SimpleVehicleController : KinematicBody
 		}
 		else
 		{
-			float direction = 1.0f;
-			Vector3 forwardVector = GetForwardVector();
-			// Determine direction by checking if velocity is alligned with forward vector
-			if (Speed > 0)
-			{
-				direction = (Velocity / Speed).Dot(forwardVector);
-			}
-
 			float targetSpeed = Speed * direction + GetSpeedChange(forwardAxis, Mathf.Sign(direction)) * delta;
 			Vector3 targetVelocity = forwardVector * targetSpeed;
 
@@ -93,9 +103,15 @@ public class SimpleVehicleController : KinematicBody
 			// Update minimap speed label if applicable
 			if (_miniMapSpeedLabel != null)
 			{
-				_miniMapSpeedLabel.Text = String.Format("{0} m/s", (int)(direction * Speed));
+				_miniMapSpeedLabel.Text = $"{(int)(3.6 * direction * Speed)} km/h";
 			}
 		}
+
+		if (MBicycleRig != null)
+		{
+			MBicycleRig.SteeringAngle = SteeringAngle;
+			MBicycleRig.CurrentVelocity = Speed * direction;
+		} // else car
 	}
 
 	private float GetSpeedChange(float axisValue, float direction)

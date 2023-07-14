@@ -1,4 +1,4 @@
-//TODO: handle yawRate
+//TODO: handle angle
 using System;
 using System.Globalization;
 using System.Xml.Serialization;
@@ -15,6 +15,7 @@ namespace extrapolation
 		public static Dictionary<string, NetFileLane> lanes;
 		public static Dictionary<string, NetFileEdge> edges;
 		static string sumoFilesPath;
+		public Vector3 _sumoOffset;
 
 		// ParseXMLFiles copied from the ImportAndGenerate.cs
 		public static void ParseXmlFiles(string pSumoFilesPath)
@@ -81,10 +82,14 @@ namespace extrapolation
 				}
 			}
 		}
-		public NetFileLane ComputeLane(Vector3 pos, string edgeId, uint laneNum, double xOffset, double yOffset)
+		
+		public static NetFileLane ComputeLane(VehicleData veh, string edgeId, uint laneNum, double xOffset, double yOffset)
 		{
 			string laneId = "";
-			
+			Vector3 vehicle = new Vector3(
+				(float)veh.xCoord,
+				(float)0,
+				(float)veh.yCoord);
 			//get all lanes of edge
 			List<NetFileLane> lanes = null;
 			bool onIntersection = false;
@@ -124,18 +129,23 @@ namespace extrapolation
 		}
 
 		// check if close to an intersection
-		public static Boolean CloseToIntersection(Vector3 pos, double speed, string edgeId, uint laneNum, double xOffset, double yOffset)
+		public static Boolean CloseToIntersection(VehicleData veh, string edgeId, uint laneNum, double xOffset, double yOffset)
 		{
 			//get all lanes of edge
 			List<NetFileLane> lanes = null;
+			Vector3 vehicle = new Vector3(
+				(float)veh.xCoord,
+				(float)0,
+				(float)veh.yCoord);
 			try
 			{
 				//GD.Print(edges[edgeId]);
 				lanes = Extrapolation.edges[edgeId].getLanes();
 			}
-			catch (ArgumentNullException)
+			catch (Exception ex)
 			{
-			   return true;
+			   if(ex is ArgumentNullException ||ex is KeyNotFoundException)
+					return true;
 			}
 			// get lane out of lanes based on lane number
 			foreach (var l in lanes)
@@ -155,9 +165,9 @@ namespace extrapolation
 						(float)0,
 						(float)(junction.y - yOffset));
 
-			float distance = DistanceIntersection(pos, vJunction);
+			float distance = DistanceIntersection(vehicle, vJunction);
 
-			return IsClose(distance, speed);
+			return IsClose(distance, veh.speed);
 		}
 
 		// get distance
@@ -176,79 +186,77 @@ namespace extrapolation
 		}
 		
 		// get turning lights value
-		public static int TurningLightValue(ForeignVehicleController vehicle)
+		public static int TurningLightValue(VehicleData vehicle)
 		{
 			//0 no lights, 1 left, 2 right
-			if (vehicle.TurnLeftSignalOn)
+			if (vehicle.turnSignalLeftOn)
 				return 1;
-			else if (vehicle.TurnRightSignalOn)
+			else if (vehicle.turnSignalLeftOn)
 				return 2;
 			else
 				return 0;
 		}
 
-		public static ForeignVehicleController KeepSpeedAndDirection(ForeignVehicleController veh, double time)
+		public static VehicleData KeepSpeedAndDirection(VehicleData veh, double time, double xOffset, double yOffset)
 		{
 			// get position
-			Vector3 position = veh.translation;
-			
-			//Quat currentRotation = new Quat(veh.rotation).Normalized();
-			GD.Print(veh.rotation);
-			
-			//GD.Print(currentRotation);
-			//Vector3 intermediate = rotation.GetEuler();
-			float yawRate = veh.rotation.y;
-			
-			Vector3 vspeed = GetSpeedVector(yawRate - 90, veh.vehicleSpeed);
+			Vector3 position = new Vector3(
+				(float)(veh.xCoord),
+				(float)0,
+				(float)(veh.yCoord));
+			// get speed
+			//GD.Print(position);
+			Vector3 vspeed = GetSpeedVector(veh.angleDeg - 90, veh.speed);
 			// compute position after time of last frame update
-			Vector3 result = position + vspeed * ((float)time); //Math.Abs(Node.GetProcessDeltaTime()));
-			veh.targetTranslation = result;
+			Vector3 result = position + vspeed * ((float)time);
+			//GD.Print(result);
+			veh.xCoord = result.x;
+			veh.yCoord = result.z;
 			return veh;
 		}
 
-		public static ForeignVehicleController KeepSpeedAndStayonStreet(double time, ForeignVehicleController veh, NetFileLane lane, double xOffset, double yOffset)
+		
+		public static VehicleData KeepSpeedAndStayonStreet(double time, VehicleData veh, NetFileLane lane, double xOffset, double yOffset)
 		{
 			Vector3 sumoVehPosition = new Vector3(
-				(float)(veh.translation.x+xOffset),
+				(float)(veh.xCoord),
 				(float)0,
-				(float)(veh.translation.z+yOffset));
-			Vector3 vehPosition = veh.translation;
-			//Quat currentRotation = new Quat(veh.rotation).Normalized();
+				(float)(veh.yCoord));
 
-			//float yawRate = rotation.GetEuler().y;
-			float yawRate = veh.rotation.y;
-			Vector3 vspeed = GetSpeedVector(yawRate - 90, veh.vehicleSpeed);
-			//Vector3 vspeed = veh.vehicleSpeed;
+			List<float[]> shape = new List<float[]>();
+			shape = ComputeLane(veh, veh.edgeId, veh.laneId, xOffset, yOffset).shape;
+			//GD.Print(shape.Count);
+			
+			Vector3 vspeed = GetSpeedVector(veh.angleDeg - 90, veh.speed);
 	
 			// get closest point
-			Vector3 closestPoint = ClosestPoint(sumoVehPosition, lane.shape, xOffset, yOffset);
-			int closestPointIndex = lane.shape.FindIndex(x => (x[0] == closestPoint.x && x[1] == closestPoint.z));
+			Vector3 closestPoint = ClosestPoint(sumoVehPosition, shape, xOffset, yOffset);
+			int closestPointIndex = shape.FindIndex(x => (x[0] == closestPoint.x && x[1] == closestPoint.z));
 
 			// get which point defines the current part of the street
 			// TODO: auskommentieren?
 			float distance = DistanceIntersection(sumoVehPosition, closestPoint);
 
-			int section = VehicleOnSection(lane.shape, sumoVehPosition, closestPointIndex);
+			int section = VehicleOnSection(shape, sumoVehPosition, closestPointIndex);
 
 			List<Vector3> sectionPoints = new List<Vector3>();
-			sectionPoints.Add(new Vector3((float)(lane.shape[section][0]-xOffset),0, (float)(lane.shape[section][1]-yOffset)));
-			sectionPoints.Add(new Vector3((float)(lane.shape[section+1][0]-xOffset), 0, (float)(lane.shape[section+1][1]-yOffset)));
+			sectionPoints.Add(new Vector3((float)(shape[section][0]),0, (float)(shape[section][1])));
+			sectionPoints.Add(new Vector3((float)(shape[section+1][0]), 0, (float)(shape[section+1][1])));
 
 			Vector3 streetSection = sectionPoints[1] - sectionPoints[0];
 
 			float angle = vspeed.SignedAngleTo(streetSection, Vector3.Up);
 			
 			
-			yawRate = (yawRate + angle + 360) % 360;
+			veh.angleDeg = (veh.angleDeg + angle + 360) % 360;
 			
-			vspeed = GetSpeedVector(yawRate - 90, veh.vehicleSpeed);
+			vspeed = GetSpeedVector(veh.angleDeg - 90, veh.speed);
 			
 			// compute position after time of last frame update
-			Vector3 result = vehPosition + vspeed * ((float)time); //(Math.Abs(Node.GetProcessDeltaTime()));
+			Vector3 result = sumoVehPosition + vspeed * ((float)time); //(Math.Abs(Node.GetProcessDeltaTime()));
 			
-			veh.targetTranslation = result;
-			
-			//TODO targetroatation
+			veh.xCoord = result.x;
+			veh.yCoord = result.z;
 
 			return veh;
 		}
@@ -297,9 +305,9 @@ namespace extrapolation
 			   (float)(s[0]),
 			   (float)0,
 			   (float)(s[1]));
-				//UnityEngine.Debug.Log(shapePos);
+				
 				distance = DistanceIntersection(position,shapePos);
-				//UnityEngine.Debug.Log(distance);
+				
 				if (distance < smallestDistance)
 				{
 					smallestDistance = distance;
@@ -311,20 +319,22 @@ namespace extrapolation
 			return result;
 		}
 
-		public static ForeignVehicleController StopAtIntersection(ForeignVehicleController veh)
+		public static VehicleData StopAtIntersection(VehicleData veh)
 		{
 
-			if(veh.vehicleSpeed > 0)
+			if(veh.speed > 0)
 			{
-				veh.vehicleSpeed = 0;
+				veh.speed = 0;
 			}
 			return veh;
 		}
+
 
 		private static Vector3 GetSpeedVector(double pYawRate, double pSpeed)
 		{
 			//MonoBehaviour.print ("YawRate: " + pYawRate + " Speed: " + pSpeed);
 			double yawRateRad = Math.PI * pYawRate / 180;
+			
 			float speedX = (float)(Math.Cos(yawRateRad) * pSpeed);
 			float speedZ = (float)(Math.Sin(yawRateRad) * pSpeed);
 

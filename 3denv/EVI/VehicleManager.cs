@@ -10,7 +10,7 @@ public class VehicleManager : Spatial
 
 	private uint _egoVehicleHashId;
 	private bool _egoVehicleRegistered;
-	private Vector3 _sumoOffset;
+	public Vector3 _sumoOffset;
 	// private SimpleVehicleController _egoVehicle;
 	private BicycleInterfaceController _egoInterfaceVehicle;
 	private SimpleVehicleController _egoSimpleVehicle;
@@ -43,40 +43,10 @@ public class VehicleManager : Spatial
 		}
 
 	}
-	private Vector3 GetSpeedVector(double pYawRate, double pSpeed)
-	{
-		//MonoBehaviour.print ("YawRate: " + pYawRate + " Speed: " + pSpeed);
-		double yawRateRad = Math.PI * pYawRate / 180;
-		float speedX = (float)(Math.Cos(yawRateRad) * pSpeed);
-		float speedZ = (float)(Math.Sin(yawRateRad) * pSpeed);
-
-		if (yawRateRad >= 0 && yawRateRad <= Math.PI)
-		{
-			speedZ = -1 * Math.Abs(speedZ);
-		}
-		else
-		{
-			speedZ = Math.Abs(speedZ);
-		}
-
-		if (yawRateRad >= (Math.PI / 2) && yawRateRad <= ((3 * Math.PI) / 2))
-		{
-			speedX = -1 * Math.Abs(speedX);
-		}
-		else
-		{
-			speedX = Math.Abs(speedX);
-		}
-
-		return new Vector3(
-			speedX,
-			0.0f,
-			speedZ
-		);
-	}
 
 
-	public void ConvergeFellowVehicles(Dictionary<uint, VehicleData> vehicleData, uint pStepsWithoutVehicleUpdate)
+	//Seems to work
+	public void ConvergeFellowVehicles(Dictionary<uint, VehicleData> vehicleData)
 	{
 		foreach (var veh in vehicleData.Values.ToList().Where(veh => veh.vehicleId != _egoVehicleHashId))
 		{
@@ -84,7 +54,7 @@ public class VehicleManager : Spatial
 			if (IsInstanceValid(vehicle) == false)
 					continue;
 			vehicle.targetTranslation = new Vector3((float)-veh.xCoord, 0f, (float)veh.yCoord);
-			vehicle.targetRotation = new Quat(new Vector3(0f, Mathf.Deg2Rad((float)-veh.yawRate - 90.0f), 0f)).Normalized();
+			vehicle.targetRotation = new Quat(new Vector3(0f, Mathf.Deg2Rad((float)-veh.angleDeg - 90.0f), 0f)).Normalized();
 			vehicle.vehicleSpeed = veh.speed; 
 			vehicle.updateSignalsBool(
 					
@@ -98,91 +68,7 @@ public class VehicleManager : Spatial
 			);
 			
 		}
-	}
-	
-	public void ExtrapolateFellowVehicles(uint pStepsWithoutVehicleUpdate, double timePassed)
-	{
-		//somehow need to handl
-		foreach (var veh in _vehicles3D.Values.ToList().Where(veh => veh.vehicleId != _egoVehicleHashId))
-		{
-			if (veh.isEgoVehicle == true)
-			{
-			   //UnityEngine.Debug.Log("egoVehcile");
-			   if(Extrapolation.CloseToIntersection(veh.targetTranslation, veh.vehicleSpeed, veh.edgeId, veh.laneId, _sumoOffset.x, _sumoOffset.z))
-				{
-					ExtrapolateStopping(veh);
-				}
-				else
-				{
-					ExtrapolateOneStep(veh, timePassed);
-					//extrapolateOneStepOnStreet(veh, veh.lane);
-				}
-				
-
-			}
-			else
-			{
-				//extrapolate
-				bool isClose = Extrapolation.CloseToIntersection(veh.targetTranslation, veh.vehicleSpeed, veh.edgeId, veh.laneId, _sumoOffset.x, _sumoOffset.z);
-				
-				// check if close to intersection
-				if (isClose)
-				{
-					//check for turning lights 
-					//0 no lights, 1 left, 2 right
-					int turningLight = Extrapolation.TurningLightValue(veh);
-					// Do motion accordinly
-					if (turningLight == 1) {
-						ExtrapolateStopping(veh);
-					}
-					else if (turningLight == 2) {
-						ExtrapolateStopping(veh);
-					}
-					else {
-						ExtrapolateOneStep(veh, timePassed);
-						//extrapolateOneStepOnStreet(veh, veh.lane);
-						//extrapolateStopping(veh);
-					}
-				}
-				else
-				{
-					ExtrapolateOneStepOnStreet(veh, veh.lane, timePassed);
-				}
-				
-			}
-		}
-		
-	}
-
-	private void ExtrapolateOneStep(ForeignVehicleController veh, double timePassed)
-	{
-		//make car drive straight ahead with same speed
-		ForeignVehicleController updated = Extrapolation.KeepSpeedAndDirection(veh, timePassed);
-		// update value in fellow Vehicles
-		_vehicles3D[veh.vehicleId].targetTranslation = updated.targetTranslation;
-		_vehicles3D[veh.vehicleId].targetRotation = updated.targetRotation;
-		_vehicles3D[veh.vehicleId].vehicleSpeed = updated.vehicleSpeed;
-	}
-
-	private void ExtrapolateOneStepOnStreet(ForeignVehicleController veh, NetFileLane lane, double timePassed)
-	{
-		//make car drive straight ahead with same speed, but stay on street
-		ForeignVehicleController updated = Extrapolation.KeepSpeedAndStayonStreet(timePassed, veh, lane, this._sumoOffset.x, this._sumoOffset.z);
-		// update value in fellow Vehicles
-		_vehicles3D[veh.vehicleId].targetTranslation = updated.targetTranslation;
-		_vehicles3D[veh.vehicleId].targetRotation = updated.targetRotation;
-		_vehicles3D[veh.vehicleId].vehicleSpeed = updated.vehicleSpeed;
-	}
-
-	private void ExtrapolateStopping(ForeignVehicleController veh)
-	{
-		ForeignVehicleController updated = Extrapolation.StopAtIntersection(veh);
-		// update value in fellow Vehicles
-		_vehicles3D[veh.vehicleId].targetTranslation = updated.targetTranslation;
-		_vehicles3D[veh.vehicleId].targetRotation = updated.targetRotation;
-		_vehicles3D[veh.vehicleId].vehicleSpeed = updated.vehicleSpeed;
-	}
-	
+	}	
 	
 	public void UpdateFellowVehicles(Dictionary<uint, VehicleData> vehicleData)
 	{
@@ -225,8 +111,9 @@ public class VehicleManager : Spatial
 				// vehicle = vehicleScene.Instance<ForeignVehicleController>();
 				vehicle.ChangeColor(_eviCarColors[_random.Next(_eviCarColors.Count)]);
 				vehicle.Translation = new Vector3((float)-veh.xCoord, 0f, (float)veh.yCoord);
-				vehicle.Rotation = new Vector3(0f, Mathf.Deg2Rad((float)-veh.yawRate - 90.0f), 0f);
+				vehicle.Rotation = new Vector3(0f, Mathf.Deg2Rad((float)-veh.angleDeg - 90.0f), 0f);
 				vehicle.Name = "Vehicle: " + veh.vehicleId.ToString();
+				vehicle.angleDeg = veh.angleDeg;
 				
 				AddChild(vehicle);
 				_vehicles3D.Add(veh.vehicleId, vehicle);
@@ -238,9 +125,10 @@ public class VehicleManager : Spatial
 				if (IsInstanceValid(vehicle) == false)
 					continue;
 				vehicle.targetTranslation = new Vector3((float)-veh.xCoord, 0f, (float)veh.yCoord);
-				vehicle.targetRotation = new Quat(new Vector3(0f, Mathf.Deg2Rad((float)-veh.yawRate - 90.0f), 0f)).Normalized();
+				vehicle.targetRotation = new Quat(new Vector3(0f, Mathf.Deg2Rad((float)-veh.angleDeg - 90.0f), 0f)).Normalized();
 				vehicle.vehicleSpeed = veh.speed; 
 				vehicle.lane = veh.lane;
+				vehicle.angleDeg = veh.angleDeg;
 				
 				vehicle.updateSignalsBool(
 					

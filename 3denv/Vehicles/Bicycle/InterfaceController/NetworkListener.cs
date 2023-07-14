@@ -30,9 +30,9 @@ public class NetworkListener : Spatial
 	private double _y;
 	private double _z;
 	private Vector3 _location;
-	private double _roll;
-	private double _pitch;
-	private double _yaw;
+	private float _roll;
+	private float _pitch;
+	private float _yaw;
 	private double _steeringAngle;
 	private double _speed;
 
@@ -92,10 +92,6 @@ public class NetworkListener : Spatial
 
 		// Get vehicle controller, update its skeleton and bicycle rig
 		egoVehicleController = (BicycleInterfaceController)GameStatics.GameInstance.PlayerVehicle;
-		BicycleRig bike = egoVehicleController.GetNode<BicycleRig>("bike_full"); 
-		Skeleton skeleton = bike.GetNode<Skeleton>("Bicycle CCS Armature/Skeleton");
-		egoVehicleController.bicycleRig = bike;
-		egoVehicleController.Skeleton = skeleton;
 
 		// Connection to speed sensors
 		readThread = new System.Threading.Thread(new ThreadStart(ReceiveData)) { IsBackground = true };
@@ -108,8 +104,13 @@ public class NetworkListener : Spatial
 	{
 		_pos += delta * _speed / 3.6f;
 
-		egoVehicleController.Update(_location, (float)_speed, (float)_acceleration, (float)_steeringAngle);
-	
+		egoVehicleController.Update(
+			_location,
+			(float)_yaw,
+			(float)_speed,
+			(float)_acceleration,
+			(float)_steeringAngle
+		);
 	}
 
 
@@ -153,9 +154,9 @@ public class NetworkListener : Spatial
 				_x = BitConverter.ToDouble(data, 8) * -1;
 				_z = BitConverter.ToDouble(data, 16);
 				_location = new Vector3((float)_x, (float)_y, (float)_z);
-				_roll = BitConverter.ToDouble(data, 24);
-				_pitch = BitConverter.ToDouble(data, 32);
-				_yaw = BitConverter.ToDouble(data, 40);
+				_roll = Mathf.Deg2Rad((float)BitConverter.ToDouble(data, 24));
+				_pitch = Mathf.Deg2Rad((float)BitConverter.ToDouble(data, 32));
+				_yaw = Mathf.Deg2Rad((float)BitConverter.ToDouble(data, 40));
 				_steeringAngle = BitConverter.ToDouble(data, 48);
 				_prevSpeed = _speed;
 				_speed = BitConverter.ToDouble(data, 56);

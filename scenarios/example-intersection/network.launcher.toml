@@ -1,0 +1,25 @@
+[evi]
+config_file = "network.evi.ini"
+args = """\
+       --verbosity WARNING \
+       --sumo-binary sumo-gui \
+       --veins-host localhost \
+       --veins-port 12347\
+       """
+wait_for_ports = [12347]  # Wait for veins-evi
+
+[veins-evi]
+scenario = "../../veins-evi/examples/minimap"
+args = "-u Cmdenv -c LanradioDisabled"
+
+# [env3d]
+# # executable_path = "../../3denv/build/3denv.x86_64"  # already the default
+# scenario = "../../evi/networks/paderborn-north/paderborn-north.net.xml"
+# allow_container = false  # Makes it easier to use host's graphics drivers and executable should be portable anyway
+# evi_address = "localhost"
+# evi_port = 12346
+# evi_connect_on_launch = true
+# scenario_seed = 42
+# skip_menu = true
+# vehicle_type = "BICYCLE_INTERFACE"
+# wait_for_ports = [12346]  # Wait for evi

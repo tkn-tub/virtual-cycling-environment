@@ -16,7 +16,7 @@ public class LevelAndConnectionSettings : Control
 	private CheckBox StreetLightsCheckbox;
 
 	// relative to VCE_ROOT:
-	private string SelectedSumoNetFile = @"scenarios/3denv-networks/paderborn-north.net.xml";
+	private string SelectedSumoNetFile = @"scenarios/example-intersection/network.net.xml";
 
 	private bool ConnectEVIOnLaunch = false;
 
