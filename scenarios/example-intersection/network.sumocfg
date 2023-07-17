@@ -1,11 +1,7 @@
 <configuration>
     <input>
         <net-file value="network.net.xml"/>
-<<<<<<< HEAD
         <route-files value="ego-vehicle-only.rou.xml,network_cars.rou.xml,network_bicycles.rou.xml"/>
-=======
-        <route-files value="ego-vehicle-only.rou.xml,network.rou.xml"/>
->>>>>>> origin/main
         <additional-files value="network.poly.xml"/>
     </input>
 
