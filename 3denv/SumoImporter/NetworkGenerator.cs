@@ -47,7 +47,7 @@ public class NetworkGenerator : Spatial
 
 	/// <summary>
 	/// Call to load and generate a new Environment form SUMO files
-	/// When calling this methode the old environment is removed and a new on is generated as childs of this object
+	/// When calling this methode the old environment is removed and a new one is generated as children of this object
 	/// </summary>
 	/// <param name="NetFilePath">Path to the sumo.net.xml file (net file) other files like the poly file are expected to in the same location</param>
 	/// <param name="Seed">Seed for random generation</param>
@@ -62,64 +62,62 @@ public class NetworkGenerator : Spatial
 			((Spatial)child).QueueFree();
 		}
 
-		if (System.IO.File.Exists(NetFilePath))
+        if (!System.IO.File.Exists(NetFilePath))
+        {
+            GD.PushWarning(
+				$"Selected file not found: {NetFilePath}"
+				+ "Make sure the scenario is on the same drive as the game."
+			);
+			return;
+        }
+
+		string baseFilePath = NetFilePath.Remove(NetFilePath.Length - ".net.xml".Length, ".net.xml".Length);
+		string shapesFilePath = baseFilePath + ".poly.xml";
+		string playerRoutePath = baseFilePath + ".path";
+
+
+		netType netFile = ImportHelpers.LoadXMLFile<netType>(NetFilePath);
+		// Get map boundaries
+		string[] boundaries = netFile.location.convBoundary.Split(',');
+		float xMax = -float.Parse(boundaries[0], GameStatics.Provider);
+		float yMin = float.Parse(boundaries[1], GameStatics.Provider);
+		float xMin = -float.Parse(boundaries[2], GameStatics.Provider);
+		float yMax = float.Parse(boundaries[3], GameStatics.Provider);
+
+		SumoOffset = new Vector3((xMax + xMin) / 2.0f, 0, (yMin + yMax) / 2.0f);
+
+		ProjParameters = netFile.location.projParameter;
+		NetOffset = netFile.location.netOffset;
+
+		Dictionary<string, List<connectionType>> connections;
+		Dictionary<string, NetFileJunction> junctions;
+		Dictionary<string, NetFileEdge> edges;
+		Dictionary<string, NetFileLane> lanes;
+		LoadNetFile(netFile, out connections, out junctions, out edges, out lanes);
+
+		AddLandscape(yMin, xMin, yMax, xMax);
+		AddJunctions(junctions);
+
+		foreach (NetFileEdge netFileEdge in edges.Values)
 		{
-			string baseFilePath = NetFilePath.Remove(NetFilePath.Length - ".net.xml".Length, ".net.xml".Length);
-			string shapesFilePath = baseFilePath + ".poly.xml";
-			string playerRoutePath = baseFilePath + ".path";
+			NetFileJunction junctionTo = junctions[netFileEdge.To];
+			NetFileJunction junctionFrom = junctions[netFileEdge.From];
+			AddTrafficLights(netFileEdge, junctionTo, lanes, connections);
 
-
-			netType netFile = ImportHelpers.LoadXMLFile<netType>(NetFilePath);
-			// Get map boundaries
-			string[] boundaries = netFile.location.convBoundary.Split(',');
-			float xMax = -float.Parse(boundaries[0], GameStatics.Provider);
-			float yMin = float.Parse(boundaries[1], GameStatics.Provider);
-			float xMin = -float.Parse(boundaries[2], GameStatics.Provider);
-			float yMax = float.Parse(boundaries[3], GameStatics.Provider);
-
-			SumoOffset = new Vector3((xMax + xMin) / 2.0f, 0, (yMin + yMax) / 2.0f);
-
-			ProjParameters = netFile.location.projParameter;
-			NetOffset = netFile.location.netOffset;
-
-
-			Dictionary<string, List<connectionType>> connections;
-			Dictionary<string, NetFileJunction> junctions;
-			Dictionary<string, NetFileEdge> edges;
-			Dictionary<string, NetFileLane> lanes;
-			LoadNetFile(netFile, out connections, out junctions, out edges, out lanes);
-
-
-			AddLandscape(yMin, xMin, yMax, xMax);
-			AddJunctions(junctions);
-
-			foreach (NetFileEdge netFileEdge in edges.Values)
+			foreach (string sLane in netFileEdge.Lanes)
 			{
-				NetFileJunction junctionTo = junctions[netFileEdge.To];
-				NetFileJunction junctionFrom = junctions[netFileEdge.From];
-				AddTrafficLights(netFileEdge, junctionTo, lanes, connections);
-
-				foreach (string sLane in netFileEdge.Lanes)
-				{
-					AddLane(lanes[sLane], junctionTo, junctionFrom);
-				}
-
-				if(GenerateStreetLights)
-				{
-					NetFileLane netFileLane = lanes[netFileEdge.Lanes[0]];
-					AddStreetLights(netFileLane);
-				}
+				AddLane(lanes[sLane], junctionTo, junctionFrom);
 			}
 
+			if (GenerateStreetLights)
+			{
+				NetFileLane netFileLane = lanes[netFileEdge.Lanes[0]];
+				AddStreetLights(netFileLane);
+			}
+		}
 
-			LoadAndGenerateEnvironment(shapesFilePath);
-		}
-		else
-		{
-			GD.Print("Selected file not found: " + NetFilePath);
-			GD.Print("Make sure the scenario is on the same drive as the game.");
-		}
-	}
+		LoadAndGenerateEnvironment(shapesFilePath);
+    }
 
 	private void AddStreetLights(NetFileLane netFileLane)
 	{
@@ -171,11 +169,13 @@ public class NetworkGenerator : Spatial
 		AddChild(mmi);
 	}
 
-	private void LoadNetFile(netType netFile, out Dictionary<string, List<connectionType>> connections, 
-												out Dictionary<string, NetFileJunction> junctions, 
-												out Dictionary<string, NetFileEdge> edges, 
-												out Dictionary<string, NetFileLane> lanes)
-	{
+	private void LoadNetFile(
+		netType netFile,
+		out Dictionary<string, List<connectionType>> connections, 
+		out Dictionary<string, NetFileJunction> junctions, 
+		out Dictionary<string, NetFileEdge> edges, 
+		out Dictionary<string, NetFileLane> lanes
+	){
 		connections = new Dictionary<string, List<connectionType>>();
 		junctions = new Dictionary<string, NetFileJunction>();
 		edges = new Dictionary<string, NetFileEdge>();

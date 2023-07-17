@@ -3,38 +3,17 @@
 3D Environment
 ==============
 
+The main entry point of the 3D Environment is the ``VCEInstance`` class in ``3denv/VCEInstance.cs``.
+Here, either a default scenario is loaded or a scenario that has been specified via the command line interface.
+To read these initial settings, an instance of ``LevelAndConnectionSettings`` (``3denv/UI/LevelAndConnectionSettings.cs``) is first obtained from the scene tree and then queried.
+Afterwards, again depending on the settings at launch time, the main menu will be activated and the connection to the Ego Vehicle Interface (EVI) may or may not be established immediately.
+
 Street Network Generation
 -------------------------
 
-The implemenation of the Street Network Generator comprises two main components:
-The graphical user interface in ``3denv/3denv/Assets/Editor/StreetnetworkGenerator/Generator3DCourse.cs`` and the actual generation of a new Unity scene in ``3denv/3denv/Assets/Editor/StreetnetworkGenerator/SUMOImporter/ImportAndGenerate.cs``.
+Scenario generation from SUMO files is managed by the ``NetworkGenerator`` class (``3denv/SumoImporter/NetworkGenerator.cs``) via the ``LoadNetwork`` method.
 
-The heart of the ``Generator3DCourse`` class is the ``OnGUI()`` method, which populates all relevant configuration variables using the outputs of Editor GUI elements before handing them over to the ``ImportAndGenerate`` class once the Start button is pressed.
-
-The first important call on ``ImportAndGenerate`` is the static method ``ParseXmlFiles()``.
-Based on the ``.net.xml`` and ``.poly.xml`` SUMO configuration files selected in the GUI, this method will mainly store lists or hash maps of street network elements like street segments, junctions, and buildings in static variables for later use.
-
-``DrawStreetNetwork()`` places all static objects in the scene, i.e., everything except for vehicles and pedestrians, which are spawned at runtime.
-For this, it calls the following methods:
-
-:``GenerateStreetMeshes()``:
-   For each lane segment contained in each street segment of the SUMO street network (``.net.xml``), draw a quad and move the corner vertices to the intersection points of the imaginary infinitely long left and right sides of neighboring segments. :footcite:p:`vaaraniemi2011high`
-:``DrawJunctions()``:
-   Create a planar polygon for each junction as defined in the ``.net.xml``.
-:``DrawTrafficLights()``:
-   Place traffic lights as required.
-
-Further important calls in the ``Generator3DCourse`` ``OnGUI()`` method on ``ImportAndGenerate`` include:
-
-:``GeneratePolyBuildings()``:
-   Based on the 2D polygons provided by the SUMO ``.poly.xml``, create a building for each using the ``CreateBuildingMesh()`` method.
-:``InsertEgoVehicle()``:
-   Insert an empty GameObject into the scene where the ego vehicle is supposed to spawn.
-   The ego vehicle itself will be spawned when the simulation starts.
-   This makes it possible to select the desired kind of vehicle in the main menu as configured in ``EVIConnector``.
-:``OpenSumoFilesAndSaveToTextFile()``:
-   Create an ``EVIConnector`` instance and add it to the StreetNetwork GameObject.
-   Apply settings from the GUI to member variables of the ``EVIConnector`` instance.
+Based on the selected ``.net.xml`` and ``.poly.xml`` SUMO configuration files, this method uses ``LoadNetFile()`` and ``LoadAndGenerateEnvironment()`` to read the respective XML file and to populate the scene.
 
 
 Communication with the EVI
@@ -65,15 +44,11 @@ These are roughly the steps that happen when a simulation is launched:
 Communication with the Bicycle Interface
 ----------------------------------------
 
-Position and rotation updates from the bicycle interface are handled by the ``NetworkListener``, which is attached to all ego vehicle prefabs with ``_UDP`` in their name.
-(Other prefabs like the keyboard-controlled bicycle have their own scripts for controlling the movement of the vehicle.)
+Position and rotation updates from the bicycle interface (i.e., the physical bicycle with steering and speed sensor) are handled by the ``NetworkListener``.
 
-In ``Start()``, the member variable ``egoVehicle`` is assigned to the corresponding game object and a thread is started for listening to incoming UDP messages.
+In ``_Ready()``, a thread is started for listening to incoming UDP messages.
 This thread runs the ``ReceiveData()`` method.
 If a message is received, ``ReceiveData()`` will update member variables of the ``NetworkListener`` to the current position, rotation, and speed of the vehicle.
 
-These values are then applied in every Unity time step in the ``Update()`` method.
-In case of a bicycle ego vehicle, the ``NetworkListener`` uses the class ``BicycleRig`` for taking care of applying the correct wheel and pedal rotations.
-
-
-.. footbibliography::
+These values are then applied in every game engine time step in the ``_PhysicsProcess()`` method.
+In case of a bicycle ego vehicle, the ``PlayerVehicle`` of the ``VCEInstance`` will be a ``BicycleInterfaceController`` instance, which makes use of the class ``BicycleRig`` for taking care of applying the correct handle bar, wheel, and pedal rotations.

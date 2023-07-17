@@ -210,9 +210,9 @@ public class LevelAndConnectionSettings : Control
 				Usage: 3denv [Godot options] -- [3DEnv options]
 
 				3DEnv options:
-				  --scenario=<scenario>	       A SUMO .net.xml scenario to load on startup.
+				  --scenario=<scenario>	       A SUMO .net.xml scenario to load on startup
 				  --scenario-seed=<seed>       An integer seed for the procedural generation of buildings, etc.
-				  --vehicle-type=<vtype>       {"Bicycle", "Bicycle with minimap"}
+				  --vehicle-type=<vtype>       {"BICYCLE", "BICYCLE_WITH_MINIMAP", "BICYCLE_INTERFACE", "CAR"}
 				  --evi-address=<address>      Address (usually IP) of the Ego Vehicle Interface
 				  --evi-port=<port>            EVI Port
 				  --evi-connect-on-launch=True Connect to EVI immediately
@@ -221,8 +221,10 @@ public class LevelAndConnectionSettings : Control
 			);
 			GetTree().Quit();
 		}
-		SkipMenu = args.ContainsKey("skip-menu");
-		ConnectEVIOnLaunch = args.ContainsKey("evi-connect-on-launch");
+		SkipMenu = args.ContainsKey("skip-menu")
+			&& args["skip-menu"].ToLower().Equals("true");
+		ConnectEVIOnLaunch = args.ContainsKey("evi-connect-on-launch")
+			&& args["evi-connect-on-launch"].ToLower().Equals("true");
 		if (args.ContainsKey("scenario")) SelectedSumoNetFile = args["scenario"];
 		return args;
 	}

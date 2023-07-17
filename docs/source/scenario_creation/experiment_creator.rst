@@ -3,6 +3,11 @@
 Creating a New Experiment With the Experiment Creator
 =====================================================
 
+.. warning::
+
+   This feature relies on the discontinued Unity implemenation of the 3D Environment, which is currently not part of our public VCE repository.
+   Contact the developers if you need this feature.
+
 The Experiment Creator consists of two main tools:
 
 :The Scenario Composition Editor:

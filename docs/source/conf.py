@@ -34,6 +34,7 @@ extensions = [
     # 'sphinx_rtd_theme',
     'sphinxcontrib.bibtex',
     'sphinxext.opengraph',  # custom config not needed if hosting on rtd
+    'sphinx.ext.todo',
     'sphinx_copybutton',
 ]
 
@@ -52,6 +53,8 @@ templates_path = ['_templates']
 exclude_patterns = []
 
 numfig = True
+
+todo_include_todos = True
 
 
 # -- Options for HTML output -------------------------------------------------
