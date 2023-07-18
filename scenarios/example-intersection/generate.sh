@@ -3,6 +3,7 @@
 netgenerate --spider \
     --spider.arm-number 4 \
     --spider.circle-number 1 \
+    --tls.set A1 \
     -o network.net.xml
 
 $SUMO_HOME/tools/randomTrips.py \

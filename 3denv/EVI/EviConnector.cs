@@ -175,12 +175,12 @@ public partial class EviConnector : Spatial//, IObserver<Dictionary<uint, Vehicl
 			{
 				case Asmp.Message.MessageOneofOneofCase.Trafficlight:
 				{
-					//GameStatics.GameInstance.TrafficLightsManager.ExtractTrafficLightUpdate(msgReply.Trafficlight);
+					GameStatics.GameInstance.TrafficLightsManager.ExtractTrafficLightUpdate(msgReply.Trafficlight);
 					break;
 				}
 				case Asmp.Message.MessageOneofOneofCase.Visualization:
 				{
-						_visualizationManager.ExtractVisualizationUpdate(msgReply.Visualization);
+					_visualizationManager.ExtractVisualizationUpdate(msgReply.Visualization);
 					break;
 				}
 				case Asmp.Message.MessageOneofOneofCase.Hapticsignals:
