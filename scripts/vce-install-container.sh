@@ -24,9 +24,9 @@ fi
 # --- vce-container ---
 # Avoid dependency hell by using a pre-built container with
 # OMNeT++, Veins, and SUMO pre-installed to the /opt directory.
-# File URL from the VCE project on OSF (https://osf.io/turp3/):
-VCE_CONTAINER_URL="https://osf.io/turp3/download"
-VCE_CONTAINER_FULL_NAME="vce_container_2023-07-08_omnet-6.0.1_veins5.2_sumo1.18.0_godot3.5.sif"
+# File URL from the VCE project on OSF (https://osf.io/2pdsc/):
+VCE_CONTAINER_URL="https://osf.io/2pdsc/download"
+VCE_CONTAINER_FULL_NAME="vce_container_2023-07-12_omnet-6.0.1_veins5.2_sumo1.18.0_godot3.6.sif"
 if [[ ! -f "$VCE_ROOT/$VCE_CONTAINER_FULL_NAME" ]]; then
     echo "Downloading vce-container ($VCE_CONTAINER_FULL_NAME)…"
     wget "$VCE_CONTAINER_URL" -O "$VCE_ROOT/$VCE_CONTAINER_FULL_NAME"

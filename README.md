@@ -1,8 +1,8 @@
 # Virtual Cycling Environment (VCE)
 
-Virtual Environment for realistic Cycling Behavior
+Virtual Cycling Environment for interactive bicycling experiments with vehicle-to-anything (V2X) communication.
 
-See our [website](https://www.ccs-labs.org/software/vce/) for more information.
+See our [website](https://www.tkn.tu-berlin.de/software/vce/) for more information.
 
 ## Summary
 
@@ -16,8 +16,15 @@ Thanks to the coupling to Veins, even future assistance systems relying on commu
 
 ## Installation Instructions and Documentation
 
-Please find the up-to-date documenation in the `docs/` subfolder.
-Refer to `docs/README.md` on how to build the documentation.
+You can find detailed information instructions in our [documentation](https://vce.readthedocs.io).
+Refer to [`docs/README.md`](docs/README.md) if you want to build the documentation yourself.
+
+### Quick Start
+
+```bash
+scripts/vce-install-container.sh
+scripts/vce-launcher.py --container scenarios/example-intersection/network.launcher.toml
+```
 
 ## Components
 
@@ -26,7 +33,6 @@ You can find all components of the Virtual Cycling Environment within the follow
 ```
 bike-android-app  # android app for measuring the angle of the steering handle
 bike-interface  # scripts for the hardware interfacing with the physical bicycle
-car-interface  # scripts for the hardware interfacing with the physical steering wheel
 3denv  # tools for visualizing the environment with Unity
 evi  # the Ego-Vehicle Interface (EVI)
 evi-asm-protocol  # the Google Protobuf definitions for the Ego-Vehicle Interface (EVI)
@@ -35,7 +41,8 @@ veins-evi  # the Veins subproject for the Ego-Vehicle Interface (EVI)
 
 ## License
 
-This project is lincensed under GNU GPLv3. See the [LICENSE](LICENSE) file for the full license text.
+This project is licensed under GNU GPLv3.
+See the [LICENSE](LICENSE) file for the full license text.
 
 ## Reference
 
@@ -54,5 +61,5 @@ Julian Heinovski, Lukas Stratmann, Dominik S. Buse, Florian Klingler, Mario Fran
     publisher = {IEEE},
     title = {{Modeling Cycling Behavior to Improve Bicyclists' Safety at Intersections -- A Networking Perspective}},
     year = {2019},
-   }
+}
 ```
