@@ -27,7 +27,6 @@ def main():
             "Unless --no-tmux is used, "
             "tmux must be installed on the host system."
         ),
-        # TODO: show list of components and parameters
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog=(
             "Configuration file (.launcher.toml) parameters:\n\n"

@@ -5,6 +5,7 @@ TKN Staff:
     Dominik S. Buse <buse@ccs-labs.org>
     Julian Heinovski <heinovski@ccs-labs.org>
     Marie-Christin H. Oczko <oczko@ccs-labs.org>
+    Max Schettler <schettler@ccs-labs.org>
     Lukas Stratmann <stratmann@ccs-labs.org>
 
 Theses:

@@ -2,13 +2,10 @@ using Godot;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml.Serialization;
 using static Godot.GeometryInstance;
 
-namespace Denv.SumoImporter
+namespace Env3d.SumoImporter
 {
 	public static class ImportHelpers
 	{
@@ -21,9 +18,11 @@ namespace Denv.SumoImporter
 		public static Vector3 VStringXYToVector(string VectorString)
 		{
 			string[] xzString = VectorString.Split(',');
-			Vector3 outVector = new Vector3(-float.Parse(xzString[0], GameStatics.Provider),
-								0,
-								float.Parse(xzString[1], GameStatics.Provider));
+			Vector3 outVector = new Vector3(
+				-float.Parse(xzString[0], GameStatics.Provider),
+				0,
+				float.Parse(xzString[1], GameStatics.Provider)
+			);
 
 			return outVector - GameStatics.SumoOffset;
 		}
@@ -36,7 +35,7 @@ namespace Denv.SumoImporter
 			Vector3[] tan1 = new Vector3[vertices.Length];
 			Vector3[] tan2 = new Vector3[vertices.Length];
 
-			//Callculate Normals and Tangents for all Sections
+			// Calculate Normals and Tangents for all Sections
 			for (int i = 0; i < triangles.Length; i += 3)
 			{
 				int ia = triangles[i];
@@ -46,14 +45,13 @@ namespace Denv.SumoImporter
 				Vector3 e1 = vertices[ia] - vertices[ib];
 				Vector3 e2 = vertices[ic] - vertices[ib];
 
-				//Sum up normals
+				// Sum up normals
 				Vector3 crossP = e1.Cross(e2);
 				OutNormals[ia] += crossP;
 				OutNormals[ib] += crossP;
 				OutNormals[ic] += crossP;
 
-
-				//Sum up tangents
+				// Sum up tangents
 				Vector2 w1 = uvs[ia];
 				Vector2 w2 = uvs[ib];
 				Vector2 w3 = uvs[ic];
@@ -131,7 +129,7 @@ namespace Denv.SumoImporter
 				return false;
 			}
 
-			// closest point is within the start and end point
+			// Closest point is within the start and end point
 			hitPoint = StartPoint + Segment * (Dot1 / Dot2);
 			return true;
 		}
@@ -152,7 +150,6 @@ namespace Denv.SumoImporter
 			arrays[(int)ArrayMesh.ArrayType.Index] = triangles;
 			arrays[(int)ArrayMesh.ArrayType.TexUv] = uvs;
 			arrays[(int)ArrayMesh.ArrayType.Tangent] = tangents;
-
 
 			array_mesh.AddSurfaceFromArrays(Mesh.PrimitiveType.Triangles, arrays);
 			array_mesh.SurfaceSetMaterial(0, material);

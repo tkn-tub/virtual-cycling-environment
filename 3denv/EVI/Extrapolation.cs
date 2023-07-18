@@ -1,13 +1,12 @@
 //TODO: handle angle
 using System;
-using System.Globalization;
 using System.Xml.Serialization;
 using System.IO;
 using Godot;
 using System.Collections.Generic;
-using System.Diagnostics;
+using Env3d.SumoImporter.NetFileComponents;
 
-namespace extrapolation
+namespace Env3d.SumoImporter
 {
 	public class Extrapolation
 	{
@@ -40,9 +39,7 @@ namespace extrapolation
 				if (junction.type != junctionTypeType.@internal)
 				{
 					// Only non-internal edges
-					NetFileJunction j = new NetFileJunction(junction.id, junction.type, junction.x, junction.y, junction.z,
-						junction.incLanes, junction.intLanes, junction.shape);
-						//GD.Print(j);
+					NetFileJunction j = new NetFileJunction(junction, ref lanes);
 
 					// Add to global list
 					if (!junctions.ContainsKey(junction.id))
@@ -56,57 +53,46 @@ namespace extrapolation
 				if (!edge.functionSpecified)
 				{
 					// Only non-internal edges
-					string edge_id = edge.id;
-					NetFileEdge e = new NetFileEdge(edge_id, edge.from, edge.to, edge.priority, edge.shape);
+					NetFileEdge e = new NetFileEdge(edge, ref junctions);
 					//GD.Print(e);
 
 					// Add to global list
-					if (!edges.ContainsKey(edge_id))
-						edges.Add(edge_id, e);
-
+					if (!edges.ContainsKey(edge.id))
+						edges.Add(edge.id, e);
 	   
 					foreach (laneType l in edge.Items)
 					{
 						// Add all lanes which belong to this edge
-						e.addLane(
-							l.id,
-							l.index,
-							l.speed,
-							l.length,
-							l.width > .1f ? l.width : 3.2f,
-							l.shape,
-							l.allow,
-							l.disallow
-						);
+						e.AddLane(l, ref lanes);
 					}
 				}
 			}
 		}
 		
-		public static NetFileLane ComputeLane(VehicleData veh, string edgeId, uint laneNum, double xOffset, double yOffset)
+		public static NetFileLane ComputeLane(VehicleData veh, double xOffset, double yOffset)
 		{
 			string laneId = "";
 			Vector3 vehicle = new Vector3(
 				(float)veh.xCoord,
 				(float)0,
-				(float)veh.yCoord);
+				(float)veh.yCoord
+			);
 			//get all lanes of edge
 			List<NetFileLane> lanes = null;
 			bool onIntersection = false;
 			try
 			{
-				lanes = Extrapolation.edges[edgeId].getLanes();
+				lanes = Extrapolation.edges[veh.edgeId].Lanes;
 			}
 			catch (KeyNotFoundException)
 			{
 				foreach (var j in junctions)
 				{
-					lanes = junctions[j.Key].incLanes;
+					lanes = junctions[j.Key].IncomingLanes;
 					foreach (var jl in lanes)
 					{
-						if (jl.Equals(edgeId))
+						if (jl.Equals(veh.edgeId))
 							return jl;
-			   
 					}
 				}
 
@@ -116,13 +102,12 @@ namespace extrapolation
 			{
 				foreach (var l in lanes)
 				{
-					string id = l.id;
-					if (int.Parse(id[id.Length - 1].ToString()) == laneNum)
+					string id = l.ID;
+					if (int.Parse(id[id.Length - 1].ToString()) == veh.laneId)
 					{
 						laneId = id;
 						return l;
 					}
-
 				}
 			}
 			return null;
@@ -136,21 +121,22 @@ namespace extrapolation
 			Vector3 vehicle = new Vector3(
 				(float)veh.xCoord,
 				(float)0,
-				(float)veh.yCoord);
+				(float)veh.yCoord
+			);
 			try
 			{
 				//GD.Print(edges[edgeId]);
-				lanes = Extrapolation.edges[edgeId].getLanes();
+				lanes = Extrapolation.edges[edgeId].Lanes;
 			}
 			catch (Exception ex)
 			{
-			   if(ex is ArgumentNullException ||ex is KeyNotFoundException)
+			   if(ex is ArgumentNullException || ex is KeyNotFoundException)
 					return true;
 			}
 			// get lane out of lanes based on lane number
 			foreach (var l in lanes)
 			{
-				string id = l.id;
+				string id = l.ID;
 				if (int.Parse(id[id.Length - 1].ToString()) == laneNum)
 				{
 					//veh.lane = l;
@@ -158,12 +144,13 @@ namespace extrapolation
 					
 			}
 			// check which intersections road ends in
-			NetFileJunction junction = Extrapolation.edges[edgeId].getTo();
+			NetFileJunction junction = Extrapolation.edges[edgeId].To;
 				
 			Vector3 vJunction = new Vector3(
-						(float)(junction.x - xOffset),
-						(float)0,
-						(float)(junction.y - yOffset));
+				(float)(junction.Location.x - xOffset),
+				0f,
+				(float)(junction.Location.y - yOffset)
+			);
 
 			float distance = DistanceIntersection(vehicle, vJunction);
 
@@ -191,7 +178,7 @@ namespace extrapolation
 			//0 no lights, 1 left, 2 right
 			if (vehicle.turnSignalLeftOn)
 				return 1;
-			else if (vehicle.turnSignalLeftOn)
+			else if (vehicle.turnSignalRightOn)
 				return 2;
 			else
 				return 0;
@@ -199,17 +186,13 @@ namespace extrapolation
 
 		public static VehicleData KeepSpeedAndDirection(VehicleData veh, double time, double xOffset, double yOffset)
 		{
-			// get position
 			Vector3 position = new Vector3(
 				(float)(veh.xCoord),
 				(float)0,
 				(float)(veh.yCoord));
-			// get speed
-			//GD.Print(position);
 			Vector3 vspeed = GetSpeedVector(veh.angleDeg - 90, veh.speed);
-			// compute position after time of last frame update
+			// Compute position after time of last frame update
 			Vector3 result = position + vspeed * ((float)time);
-			//GD.Print(result);
 			veh.xCoord = result.x;
 			veh.yCoord = result.z;
 			return veh;
@@ -221,32 +204,33 @@ namespace extrapolation
 			Vector3 sumoVehPosition = new Vector3(
 				(float)(veh.xCoord),
 				(float)0,
-				(float)(veh.yCoord));
+				(float)(veh.yCoord)
+			);
 
-			List<float[]> shape = new List<float[]>();
-			shape = ComputeLane(veh, veh.edgeId, veh.laneId, xOffset, yOffset).shape;
-			//GD.Print(shape.Count);
+			Vector3[] shape = ComputeLane(
+				veh,
+				xOffset,
+				yOffset
+			).Shape;
 			
 			Vector3 vspeed = GetSpeedVector(veh.angleDeg - 90, veh.speed);
 	
 			// get closest point
-			Vector3 closestPoint = ClosestPoint(sumoVehPosition, shape, xOffset, yOffset);
-			int closestPointIndex = shape.FindIndex(x => (x[0] == closestPoint.x && x[1] == closestPoint.z));
+			var (closestPoint, closestPointIndex) = ClosestPoint(sumoVehPosition, shape, xOffset, yOffset);
 
 			// get which point defines the current part of the street
-			// TODO: auskommentieren?
+			// TODO: comment out?
 			float distance = DistanceIntersection(sumoVehPosition, closestPoint);
 
 			int section = VehicleOnSection(shape, sumoVehPosition, closestPointIndex);
 
 			List<Vector3> sectionPoints = new List<Vector3>();
-			sectionPoints.Add(new Vector3((float)(shape[section][0]),0, (float)(shape[section][1])));
-			sectionPoints.Add(new Vector3((float)(shape[section+1][0]), 0, (float)(shape[section+1][1])));
+			sectionPoints.Add(new Vector3((float)(-shape[section].x),0, (float)(shape[section].z)));
+			sectionPoints.Add(new Vector3((float)(-shape[section+1].x), 0, (float)(shape[section+1].z)));
 
 			Vector3 streetSection = sectionPoints[1] - sectionPoints[0];
 
 			float angle = vspeed.SignedAngleTo(streetSection, Vector3.Up);
-			
 			
 			veh.angleDeg = (veh.angleDeg + angle + 360) % 360;
 			
@@ -261,22 +245,23 @@ namespace extrapolation
 			return veh;
 		}
 
-		private static int VehicleOnSection(List<float[]> shape, Vector3 sumoVehPosition, int closestPointIndex)
+		private static int VehicleOnSection(Vector3[] shape, Vector3 sumoVehPosition, int closestPointIndex)
 		{
-			if(closestPointIndex == 0)
+			if (closestPointIndex == 0)
 			{
 				return 0;
 			}
-			else if(closestPointIndex == shape.Count - 1)
+			else if (closestPointIndex == shape.Length - 1)
 			{
-				return shape.Count - 2;
+				return shape.Length - 2;
 			}
 			else
 			{
-				if(sumoVehPosition.x <= Math.Max(shape[closestPointIndex-1][0],shape[closestPointIndex][0])
-					&& sumoVehPosition.x >= Math.Min(shape[closestPointIndex - 1][0], shape[closestPointIndex][0])
-					&& sumoVehPosition.z <= Math.Max(shape[closestPointIndex - 1][1], shape[closestPointIndex][1])
-					&& sumoVehPosition.z >= Math.Min(shape[closestPointIndex - 1][1], shape[closestPointIndex][1]))
+				if (
+					sumoVehPosition.x <= Math.Max(-shape[closestPointIndex - 1].x, -shape[closestPointIndex].x)
+					&& sumoVehPosition.x >= Math.Min(-shape[closestPointIndex - 1].x, -shape[closestPointIndex].x)
+					&& sumoVehPosition.z <= Math.Max(shape[closestPointIndex - 1].z, shape[closestPointIndex].z)
+					&& sumoVehPosition.z >= Math.Min(shape[closestPointIndex - 1].z, shape[closestPointIndex].z))
 				{
 					return closestPointIndex - 1;
 				}
@@ -288,57 +273,49 @@ namespace extrapolation
 		   
 		}
 	
-		public static Vector3 ClosestPoint(Vector3 position, List<float[]> shape, double xOffset, double yOffset)
+		public static (Vector3, int) ClosestPoint(Vector3 position, Vector3[] shape, double xOffset, double yOffset)
 		{
 			float smallestDistance=float.PositiveInfinity;
 			float distance;
-			Vector3 result = new Vector3(
-				(float)0,
-				(float)0,
-				(float)0);
+			Vector3 result = new Vector3(0, 0, 0);
+			int index = -1;
+			int i = 0;
 		   
-			foreach(var s in shape)
+			foreach (Vector3 s in shape)
 			{
 				//compute Distance
-				
-				Vector3 shapePos = new Vector3(
-			   (float)(s[0]),
-			   (float)0,
-			   (float)(s[1]));
-				
-				distance = DistanceIntersection(position,shapePos);
+				distance = DistanceIntersection(position, s);
 				
 				if (distance < smallestDistance)
 				{
 					smallestDistance = distance;
+					index = i;
 					//set result Vector
-					result.x =(float)(s[0]);
-					result.z =(float)(s[1]);
+					result.x = -s.x;
+					result.z = s.z;
 				}
+				i++;
 			}
-			return result;
+			return (result, index);
 		}
 
 		public static VehicleData StopAtIntersection(VehicleData veh)
 		{
-
-			if(veh.speed > 0)
+			if (veh.speed > 0)
 			{
 				veh.speed = 0;
 			}
 			return veh;
 		}
 
-
-		private static Vector3 GetSpeedVector(double pYawRate, double pSpeed)
+		private static Vector3 GetSpeedVector(double pAngleDeg, double pSpeed)
 		{
-			//MonoBehaviour.print ("YawRate: " + pYawRate + " Speed: " + pSpeed);
-			double yawRateRad = Math.PI * pYawRate / 180;
+			double angleRad = Math.PI * pAngleDeg / 180;
 			
-			float speedX = (float)(Math.Cos(yawRateRad) * pSpeed);
-			float speedZ = (float)(Math.Sin(yawRateRad) * pSpeed);
+			float speedX = (float)(Math.Cos(angleRad) * pSpeed);
+			float speedZ = (float)(Math.Sin(angleRad) * pSpeed);
 
-			if (yawRateRad >= 0 && yawRateRad <= Math.PI)
+			if (angleRad >= 0 && angleRad <= Math.PI)
 			{
 				speedZ = -1 * Math.Abs(speedZ);
 			}
@@ -347,7 +324,7 @@ namespace extrapolation
 				speedZ = Math.Abs(speedZ);
 			}
 
-			if (yawRateRad >= (Math.PI / 2) && yawRateRad <= ((3 * Math.PI) / 2))
+			if (angleRad >= (Math.PI / 2) && angleRad <= ((3 * Math.PI) / 2))
 			{
 				speedX = -1 * Math.Abs(speedX);
 			}
@@ -362,7 +339,5 @@ namespace extrapolation
 				speedZ
 			);
 		}
-		
 	}
 }
-

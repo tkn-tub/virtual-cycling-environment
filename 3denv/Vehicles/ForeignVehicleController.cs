@@ -1,6 +1,8 @@
 using Godot;
-using extrapolation;
+using Env3d.SumoImporter;
 using Asmp.Vehicle;
+using Env3d.SumoImporter.NetFileComponents;
+
 public class ForeignVehicleController : KinematicBody
 {
 

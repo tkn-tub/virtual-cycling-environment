@@ -6,10 +6,8 @@ using System.Diagnostics;
 using System.Xml.Serialization;
 using System.IO;
 using System.Linq;
-using extrapolation;
-
-
-
+using Env3d.SumoImporter;
+using Env3d.SumoImporter.NetFileComponents;
 
 public partial class EviConnector : Spatial//, IObserver<Dictionary<uint, VehicleData>>
 {
@@ -211,7 +209,7 @@ public partial class EviConnector : Spatial//, IObserver<Dictionary<uint, Vehicl
 		gotNewUpdates=true;
 	}
 
-	 private void extrapolateFellowVehicles(Dictionary<uint, VehicleData> vehicleData, uint pStepsWithoutVehicleUpdate, double time)
+	private void extrapolateFellowVehicles(Dictionary<uint, VehicleData> vehicleData, uint pStepsWithoutVehicleUpdate, double time)
 	{
 		foreach (var veh in vehicleData.Values.ToList())
 		{
@@ -226,8 +224,6 @@ public partial class EviConnector : Spatial//, IObserver<Dictionary<uint, Vehicl
 					extrapolateOneStep(veh,time);
 					//extrapolateOneStepOnStreet(veh, veh.lane);
 				}
-				
-
 			}
 			else
 			{
@@ -255,14 +251,10 @@ public partial class EviConnector : Spatial//, IObserver<Dictionary<uint, Vehicl
 				}
 				else
 				{
-					
-					extrapolateOneStepOnStreet(veh, veh.lane,time);
+					extrapolateOneStepOnStreet(veh, veh.lane, time);
 					//extrapolateOneStep(veh,time);
-					
 				}
-				
-		}
-		
+			}
 		}
 		_vehicleManager.UpdateFellowVehicles(fellowVehicles);	
 	}
@@ -270,7 +262,12 @@ public partial class EviConnector : Spatial//, IObserver<Dictionary<uint, Vehicl
 	private void extrapolateOneStep(VehicleData veh, double time)
 	{
 		//make car drive straight ahead with same speed
-		VehicleData updated = Extrapolation.KeepSpeedAndDirection(veh,time,_sumoOffset.x, _sumoOffset.y);
+		VehicleData updated = Extrapolation.KeepSpeedAndDirection(
+			veh,
+			time,
+			_sumoOffset.x,
+			_sumoOffset.y
+		);
 		// update value in fellow Vehicles
 		fellowVehicles[veh.vehicleId] = updated;
 	}
@@ -278,7 +275,13 @@ public partial class EviConnector : Spatial//, IObserver<Dictionary<uint, Vehicl
 	private void extrapolateOneStepOnStreet(VehicleData veh, NetFileLane lane, double time)
 	{
 		
-		VehicleData updated = Extrapolation.KeepSpeedAndStayonStreet(time, veh, lane, _sumoOffset.x, _sumoOffset.y);
+		VehicleData updated = Extrapolation.KeepSpeedAndStayonStreet(
+			time,
+			veh,
+			lane,
+			_sumoOffset.x,
+			_sumoOffset.y
+		);
 		// update value in fellow Vehicles
 		fellowVehicles[veh.vehicleId] = updated;
 	}
@@ -289,11 +292,4 @@ public partial class EviConnector : Spatial//, IObserver<Dictionary<uint, Vehicl
 		// update value in fellow Vehicles
 		fellowVehicles[veh.vehicleId] = updated;
 	}
-
-	
-
-
-
-
 }
-

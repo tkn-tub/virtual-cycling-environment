@@ -1,57 +1,9 @@
-﻿using Denv.SumoImporter;
-using Godot;
-using Source.SUMOImporter.NetFileComponents;
-using System;
+﻿using Godot;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Source.SUMOImporter.NetFileComponents
+namespace Env3d.SumoImporter.NetFileComponents
 {
-    public struct NetFileJunction
-    {
-        public string ID { get; }
-        public junctionTypeType JunctionType { get; }
-        public Vector3 Location { get; }
-        public string[] IncLanes { get; }
-        public Vector3[] Shape { get; }
-
-        public NetFileJunction(junctionType Junction)
-        {
-            ID = Junction.id;
-            JunctionType = Junction.type;
-            Location = new Vector3(Junction.x, Junction.y, Junction.z);
-            IncLanes = Junction.incLanes.Split(" ");
-            Shape = ImportHelpers.ConvertShapeString(Junction.shape);
-        }
-    }
-
-    public struct NetFileLane
-    {
-        public string ID { get; }
-        public string Allow { get; }
-        public string Disallow { get; }
-        public int Index { get; }
-        public float Speed { get; }
-        public float Length { get; }
-        public float Width { get; }
-        public Vector3[] Shape { get; }
-
-        public NetFileLane(laneType Lane)
-        {
-            ID = Lane.id;
-            Allow = Lane.allow;
-            Disallow = Lane.disallow;
-            Index = Convert.ToInt32(Lane.index);
-            Speed = Lane.speed;
-            Length = Lane.length;
-            Width = Lane.width > 0.1f ? Lane.width : 3.2f;
-            Shape = ImportHelpers.ConvertShapeString(Lane.shape);        
-        }
-    }
-
-    public struct NetFileEdge
+    /*public struct NetFileEdge
     {
         public readonly string ID;
         public string From { get; }
@@ -72,7 +24,7 @@ namespace Source.SUMOImporter.NetFileComponents
         {
             Lanes.Add(Lane);
         }
-    }
+    }*/
 
     public struct PolygonBaseShape
     {

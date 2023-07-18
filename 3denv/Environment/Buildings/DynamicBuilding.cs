@@ -1,6 +1,6 @@
-using Denv.SumoImporter;
+using Env3d.SumoImporter;
 using Godot;
-using Source.SUMOImporter.NetFileComponents;
+using Env3d.SumoImporter.NetFileComponents;
 using System;
 using System.Collections.Generic;
 
@@ -117,8 +117,10 @@ public class DynamicBuilding : Spatial
 				Vector3 tangent = (nextPoint - lastPoint);
 				Vector3 normal = tangent.Cross(Vector3.Up).Normalized();
 
-				orderedVs[i] = currentPoint - normal * p.lineWidth;
-				orderedVs[2 * shapePoints.Length - 1 - i] = currentPoint + normal * p.lineWidth;
+				orderedVs[i] = currentPoint - normal
+					* float.Parse(p.lineWidth, GameStatics.Provider);
+				orderedVs[2 * shapePoints.Length - 1 - i] = currentPoint
+					+ normal * float.Parse(p.lineWidth, GameStatics.Provider);
 			}
 
 			orderedVs[orderedVs.Length -1] = orderedVs[0];

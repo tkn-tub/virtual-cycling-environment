@@ -1,8 +1,6 @@
 using Godot;
 public class ForeignCarController : ForeignVehicleController
 {
-
-
     private Spatial _wheelFrontLeft;
     private Spatial _wheelFrontRight;
     private Spatial _wheelRearLeft;
@@ -36,13 +34,13 @@ public class ForeignCarController : ForeignVehicleController
 
         // Turning the wheels left and right using approximation of the steering angle, while preserving the rotation around the Z axis
         // Right wheel's initial angle is 180 degrees, so we need to subtract PI from the angle in rad
+        // TODO: Why not use an armature/skeleton?
         var turningAngle = angleRad * steeringAngleApproximationFactor;
         var currentZFrontL = _wheelFrontLeft.Rotation.z;
         var currentZFrontR = _wheelFrontRight.Rotation.z;
 
         _wheelFrontLeft.Rotation = new Vector3(0.0f, turningAngle, currentZFrontL);
-        _wheelFrontRight.Rotation = new Vector3(0.0f, turningAngle - 3.14159f, currentZFrontR);
-
+        _wheelFrontRight.Rotation = new Vector3(0.0f, turningAngle - Mathf.Pi, currentZFrontR);
     }
 
     public override void ChangeColor(Color color)

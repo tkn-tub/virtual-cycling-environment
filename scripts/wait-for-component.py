@@ -27,7 +27,7 @@ def main():
     parser.add_argument(
         '--wait-message',
         help="Text to show while waiting.",
-        default="Waiting…",
+        default="Waiting for ports {ports}…",
     )
     args = parser.parse_args()
 
@@ -36,7 +36,9 @@ def main():
     if not shutil.which("grep"):
         sys.exit("Could not find an installation of `grep`.")
 
-    print(args.wait_message)
+    print(
+        args.wait_message.format(ports=args.port_open)
+    )
     while True:
         ok = True
         for port in (args.port_open if args.port_open else ()):
@@ -44,12 +46,11 @@ def main():
         if ok:
             break
         time.sleep(args.poll_interval)
-    print("Done")
 
 
 def check_port_in_use(port: int) -> bool:
     proc = subprocess.run(
-        f"netstat -tulpn | grep -E ':{port}\s'",
+        f"netstat -tulpn | grep -E ':{port}\\s'",
         capture_output=True,
         shell=True,
         check=False,

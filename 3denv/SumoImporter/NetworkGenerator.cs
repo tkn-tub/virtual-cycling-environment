@@ -1,8 +1,8 @@
 using Godot;
 using System;
-using Source.SUMOImporter.NetFileComponents;
+using Env3d.SumoImporter.NetFileComponents;
 using System.Collections.Generic;
-using Denv.SumoImporter;
+using Env3d.SumoImporter;
 using static Godot.GeometryInstance;
 
 /// <summary>
@@ -62,14 +62,14 @@ public class NetworkGenerator : Spatial
 			((Spatial)child).QueueFree();
 		}
 
-        if (!System.IO.File.Exists(NetFilePath))
-        {
-            GD.PushWarning(
+		if (!System.IO.File.Exists(NetFilePath))
+		{
+			GD.PushWarning(
 				$"Selected file not found: {NetFilePath}"
 				+ "Make sure the scenario is on the same drive as the game."
 			);
 			return;
-        }
+		}
 
 		string baseFilePath = NetFilePath.Remove(NetFilePath.Length - ".net.xml".Length, ".net.xml".Length);
 		string shapesFilePath = baseFilePath + ".poly.xml";
@@ -100,24 +100,24 @@ public class NetworkGenerator : Spatial
 
 		foreach (NetFileEdge netFileEdge in edges.Values)
 		{
-			NetFileJunction junctionTo = junctions[netFileEdge.To];
-			NetFileJunction junctionFrom = junctions[netFileEdge.From];
+			NetFileJunction junctionTo = netFileEdge.To;
+			NetFileJunction junctionFrom = netFileEdge.From;
 			AddTrafficLights(netFileEdge, junctionTo, lanes, connections);
 
-			foreach (string sLane in netFileEdge.Lanes)
+			foreach (NetFileLane lane in netFileEdge.Lanes)
 			{
-				AddLane(lanes[sLane], junctionTo, junctionFrom);
+				AddLane(lane, junctionTo, junctionFrom);
 			}
 
 			if (GenerateStreetLights)
 			{
-				NetFileLane netFileLane = lanes[netFileEdge.Lanes[0]];
+				NetFileLane netFileLane = netFileEdge.Lanes[0];
 				AddStreetLights(netFileLane);
 			}
 		}
 
 		LoadAndGenerateEnvironment(shapesFilePath);
-    }
+	}
 
 	private void AddStreetLights(NetFileLane netFileLane)
 	{
@@ -187,7 +187,7 @@ public class NetworkGenerator : Spatial
 			//only generate junctions which are connected to lanes and are not internal
 			if (junction.type != junctionTypeType.@internal && junction.incLanes != "")
 			{	
-				NetFileJunction newJunction = new NetFileJunction(junction);
+				NetFileJunction newJunction = new NetFileJunction(junction, ref lanes);
 				junctions.Add(junction.id, newJunction);
 			}
 		}
@@ -201,13 +201,13 @@ public class NetworkGenerator : Spatial
 				continue;
 			}
 
-			NetFileEdge newEdge = new NetFileEdge(edge);
+			NetFileEdge newEdge = new NetFileEdge(edge, ref junctions);
 
 			foreach (laneType lane in edge.Items)
 			{
 				// Add all lanes which belong to this edge
-				lanes.Add(lane.id, new NetFileLane(lane));
-				newEdge.AddLane(lane.id);
+				// lanes.Add(lane.id, new NetFileLane(lane));
+				newEdge.AddLane(lane, ref lanes);
 			}
 
 			// Add to global list
@@ -229,7 +229,7 @@ public class NetworkGenerator : Spatial
 				continue;
 			}
 
-			string fromLane = fromEdge.Lanes[int.Parse(ct.fromLane)];
+			string fromLane = fromEdge.Lanes[int.Parse(ct.fromLane)].ID;
 			if (connections.ContainsKey(fromLane))
 			{
 				connections[fromLane].Add(ct);
@@ -341,8 +341,7 @@ public class NetworkGenerator : Spatial
 		//Spawn traffic lights
 		for (int i = 0; i < edgeLaneCount; i++)
 		{
-			string sLane = netFileEdge.Lanes[i];
-			NetFileLane lane = lanes[sLane];
+			NetFileLane lane = netFileEdge.Lanes[i];
 			edgeLanes.Add(lane);
 
 			// Calculate the position (in line with the lane) coordinates of last two street vertices
@@ -379,17 +378,17 @@ public class NetworkGenerator : Spatial
 		{
 			NetFileLane lane = edgeLanes[i];
 			int laneIndexInJunction = 0;
-			for (int laneCount = 0; laneCount < junction.IncLanes.Length; laneCount++)
+			for (int laneCount = 0; laneCount < junction.IncomingLanes.Count; laneCount++)
 			{
-				string incLane = junction.IncLanes[laneCount];
-				if (lane.ID == incLane)
+				NetFileLane incLane = junction.IncomingLanes[laneCount];
+				if (lane.ID == incLane.ID)
 				{
 					break;
 				}
 				else
 				{
 					List<connectionType> incLanesConnections;
-					if (connections.TryGetValue(incLane, out incLanesConnections))
+					if (connections.TryGetValue(incLane.ID, out incLanesConnections))
 					{
 						laneIndexInJunction += incLanesConnections.Count;
 					}
@@ -427,6 +426,7 @@ public class NetworkGenerator : Spatial
 		Vector3[] laneShape = lane.Shape;
 		if (laneShape.Length < 2)
 		{
+			GD.PushWarning($"Lane {lane.ID} has less than 2 vertices.");
 			return;
 		}
 
@@ -463,7 +463,7 @@ public class NetworkGenerator : Spatial
 
 			float lastFactor = 1, nextFactor = 1;
 
-			if(nextLength > lastLength)
+			if (nextLength > lastLength)
 			{
 				nextFactor = lastLength / nextLength;
 			}
@@ -638,11 +638,24 @@ public class NetworkGenerator : Spatial
 		}
 		else if (string.Compare(poi.type, "tree", StringComparison.OrdinalIgnoreCase) == 0)
 		{
-			SpawnTree(new Vector3(-poi.x, 0.0f, poi.y) - SumoOffset);
+			SpawnTree(
+				new Vector3(
+					-float.Parse(poi.x, GameStatics.Provider),
+					0.0f,
+					float.Parse(poi.y, GameStatics.Provider)
+				) - SumoOffset
+			);
 		}
 		else if (string.Compare(poi.type, "EgoVehicleStart", StringComparison.OrdinalIgnoreCase) == 0)
 		{
-			Transform egoStartTransform = new Transform(new Quat(Vector3.Up, Mathf.Deg2Rad(poi.angle)), new Vector3(-poi.x, 0, poi.y) - SumoOffset);
+			Transform egoStartTransform = new Transform(
+				new Quat(Vector3.Up, Mathf.Deg2Rad(float.Parse(poi.angle ?? "0", GameStatics.Provider))),
+				new Vector3(
+					-float.Parse(poi.x, GameStatics.Provider),
+					0,
+					float.Parse(poi.y, GameStatics.Provider)
+				) - SumoOffset
+			);
 			GameStatics.GameInstance.UpdatePlayerStartPosition(egoStartTransform);
 		}
 		else if (string.Compare(poi.type, "EndOfLevel", StringComparison.OrdinalIgnoreCase) == 0)
@@ -724,7 +737,17 @@ public class NetworkGenerator : Spatial
 		}
 		
 
-		signObj.Transform = new Transform(new Quat(Vector3.Up, Mathf.Deg2Rad(-poi.angle - 90.0f)), new Vector3(-poi.x, 0, poi.y) - SumoOffset);
+		signObj.Transform = new Transform(
+			new Quat(
+				Vector3.Up,
+				Mathf.Deg2Rad(-float.Parse(poi.angle, GameStatics.Provider) - 90.0f)
+			),
+			new Vector3(
+				-float.Parse(poi.x, GameStatics.Provider),
+				0,
+				float.Parse(poi.y, GameStatics.Provider)
+			) - SumoOffset
+		);
 		signObj.Name = poi.id;
 		AddChild(signObj);
 
