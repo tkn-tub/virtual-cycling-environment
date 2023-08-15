@@ -76,7 +76,12 @@ echo "Installing veins-evi/"
 echo
 cd "$VCE_ROOT/veins-evi"
 ./configure --veins "$VEINS_ROOT"
-make -j$(nproc)
+if command -v bear &> /dev/null; then
+    # Use bear to generate a compile_commands.json, which some editors or IDEs can use for better error checking
+    bear -- make -j$(nproc)
+else
+    make -j$(nproc)
+fi
 
 
 # --- bike-interface ---

@@ -8,6 +8,9 @@ src/protobuf
 
 /run
 /out
+/compile_commands.json
+/.cache
+/**/*.plist
 
 examples/**/results
 examples/**/.tkenvrc
