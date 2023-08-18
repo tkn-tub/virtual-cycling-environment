@@ -1,0 +1,139 @@
+BootStrap: docker
+From: archlinux:latest
+
+%post
+    # run after base OS is installed
+    omnetpp_version="6.0.1"
+    veins_version="5.2"
+    sumo_version="v1_18_0"
+
+    # Convenience (`alias` in %environment doesn't seem to work):
+    echo "#!/usr/bin/env bash" > /usr/bin/ll
+    echo "ls -lah \$@" >> /usr/bin/ll
+    chmod +x /usr/bin/ll
+
+    pacman --noconfirm -Syuv
+    pacman --noconfirm -S \
+        bash-completion \
+        bear \
+        bison \
+        ccache \
+        clang \
+        cmake \
+        dotnet-sdk \
+        doxygen \
+        flex \
+        fox \
+        gcc \
+        gdal \
+        gdb \
+        git \
+        gl2ps \
+        gmock \
+        graphviz \
+        gtest \
+        gvim \
+        help2man \
+        jdk-openjdk \
+        libpcap \
+        libxml2 \
+        lldb \
+        make \
+        neovim \
+        net-tools \
+        openmpi \
+        openscenegraph \
+        proj \
+        protobuf \
+        python \
+        python-cookiecutter \
+        python-matplotlib \
+        python-pandas \
+        python-pip \
+        python-poetry \
+        python-scipy \
+        qt5-base \
+        qt5-svg \
+        sh \
+        swig \
+        tcl \
+        tmux \
+        perl \
+        unzip \
+        wget \
+        which \
+        xerces-c \
+        zeromq
+    # Clear cache:
+    # (--noconfirm will not work here because 'N' is the default.)
+    yes | pacman -Scc
+
+    # May raise `error: externally-managed-environment` if `--break-system-packages`
+    #  is not provided.
+    #  Avoid using pip for packages that are indeed available as system packages.
+    pip install --break-system-packages \
+        posix_ipc \
+        snakemake
+
+    # Install Godot to /opt/godot:
+    # Note: Godot 3.x depends on mono-msbuild, but 4.x allegedly doesn't.
+    #  -> TODO: remove mono-msbuild when we eventually switch to 4.x
+    cd /opt
+    wget "https://downloads.tuxfamily.org/godotengine/3.6/beta2/mono/Godot_v3.6-beta2_mono_linux_headless_64.zip" \
+        -O godot.zip
+    unzip godot.zip
+    rm godot.zip
+
+    # Install OMNeT++ to /opt/omnetpp:
+    cd /opt
+    omnetpp_tgz="omnetpp-${omnetpp_version}-linux-x86_64.tgz"
+    wget "https://github.com/omnetpp/omnetpp/releases/download/omnetpp-${omnetpp_version}/omnetpp-${omnetpp_version}-linux-x86_64.tgz"
+    tar xf $omnetpp_tgz
+    mv omnetpp-${omnetpp_version} omnetpp
+    cd /opt/omnetpp
+    ls -lah
+    cp configure.user.dist configure.user
+    sed -i 's/#CXXFLAGS=.*/CXXFLAGS=-std=c++17/g' configure.user
+    bash -c "source setenv && ./configure && make -j$(nproc)"
+    rm ../$omnetpp_tgz
+    # Users must be able to write to ide/error.log.
+    # As a workaround for now, we'll patch bin/opp_ide to write to ide/log/error.log instead,
+    # symlink ide/log to /log, and assume a bind mount of /log to some writable host directory.
+    sed -i 's|error.log|log/error.log|g' /opt/omnetpp/bin/opp_ide
+    ln -s /log /opt/omnetpp/ide/log
+
+    # Install Veins to /opt/veins:
+    mkdir /opt/veins
+    cd /opt/veins
+    wget http://veins.car2x.org/download/veins-$veins_version.zip
+    unzip veins-$veins_version.zip
+    rm veins-$veins_version.zip
+    bash -c "cd /opt/omnetpp && source setenv && cd /opt/veins/veins-veins-$veins_version && source setenv && ./configure && make -j$(nproc)"
+
+    # Install SUMO to /opt/sumo:
+    git clone https://github.com/eclipse/sumo.git --depth 1 -b $sumo_version /opt/sumo/
+    export SUMO_HOME="/opt/sumo/"
+    mkdir /opt/sumo/build/cmake-build/
+    cd /opt/sumo/build/cmake-build
+    # cmake ../../
+    # Workaround for "C++ versions less than 14 are not supported" https://github.com/google/googletest/issues/3934
+    cmake -DCMAKE_CXX_STANDARD=14 ../../
+    make -j$(nproc)
+    rm -rf /opt/sumo/tests /opt/sumo/.git
+
+%environment
+    export LC_ALL=C
+    export PATH=/opt/sumo/bin:$PATH
+    export SUMO_HOME=/opt/sumo/
+    # Tell OMNeT++ not to try to create /run/user/1000/ runtime directory:
+    export XDG_RUNTIME_DIR=/tmp/xdg-runtime-root
+    cd /opt/omnetpp && source /opt/omnetpp/setenv
+    cd /opt/veins/veins-veins-5.2 && source setenv
+    alias ll="ls -lah"  # not working :/
+
+%runscript
+    echo "This is the VCE container speaking. Please use 'apptainer shell' with me."
+
+%labels
+    Author Lukas Stratmann <stratmann@ccs-labs.org>
+    Version 0.1.0
