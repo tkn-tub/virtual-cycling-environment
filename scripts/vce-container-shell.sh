@@ -7,7 +7,7 @@ SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 # We need some writable directory outside the container for the OMNeT++ IDE to store its error.log file:
 OMNETPP_IDE_LOG=$HOME/omnetpp/log
-mkdir -p $OMNETPP_IDE_LOG
+mkdir -p "$OMNETPP_IDE_LOG"
 
 CONTAINER=$SCRIPT_DIR/../vce-container.sif
 if [[ ! -f "$CONTAINER" ]]; then
@@ -16,4 +16,4 @@ if [[ ! -f "$CONTAINER" ]]; then
     exit 1
 fi
 
-apptainer shell --bind $OMNETPP_IDE_LOG:/log $CONTAINER
+apptainer shell --bind "$OMNETPP_IDE_LOG":/log "$CONTAINER"

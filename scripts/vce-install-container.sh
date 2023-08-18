@@ -36,4 +36,7 @@ else
 fi
 
 # --- install subprojects using vce-container ---
-apptainer exec "$VCE_ROOT/vce-container.sif" bash -O extglob -c 'export VEINS_ROOT=$(echo /opt/veins/veins-veins*) && export GODOT=$(echo /opt/Godot*/Godot_*.64) && '"$VCE_ROOT/scripts/vce-install-native.sh"
+# The single quotes are on purpose:
+# shellcheck disable=SC2016
+apptainer exec "$VCE_ROOT/vce-container.sif" bash -O extglob -c \
+    'export VEINS_ROOT=$(echo /opt/veins/veins-veins*) && export GODOT=$(echo /opt/Godot*/Godot_*.64) && '"$VCE_ROOT/scripts/vce-install-native.sh"

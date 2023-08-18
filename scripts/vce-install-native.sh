@@ -132,7 +132,7 @@ mkdir -p "$VCE_ROOT/3denv/build"
 
 # Exporting with msbuild currently does not work for unknown reasons -> override editor setting
 godot_editor_settings="$HOME/.config/godot/editor_settings-3.tres"
-if [ -f $"godot_editor_settings"]; then
+if [ -f "$godot_editor_settings" ]; then
     cp "$godot_editor_settings" "$godot_editor_settings.bak"
 fi
 # Write our own config:
