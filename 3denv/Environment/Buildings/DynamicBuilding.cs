@@ -104,7 +104,7 @@ public class DynamicBuilding : Spatial
 			shapePoints[i] -= buildingCenter;
 		}
 
-		if (p.fill == boolType.Item0)
+		if (p.fill == boolType.Item0 && p.lineWidth != null)
 		{
 			Vector3[] orderedVs = new Vector3[shapePoints.Length * 2 + 1];
 
@@ -126,10 +126,15 @@ public class DynamicBuilding : Spatial
 			orderedVs[orderedVs.Length -1] = orderedVs[0];
 			shape = new PolygonBaseShape(p.id, p.type, new List<Vector3>(orderedVs));
 		}
-		else
+		else if (p.fill != boolType.Item0)
 		{
 			shape = new PolygonBaseShape(p.id, p.type, new List<Vector3>(shapePoints));
 			shape.FixOrder();
+		}
+		else
+		{
+			GD.PushWarning($"Polygon with ID {p.id} has neither fill nor lineWidth");
+			return;
 		}
 
 

@@ -16,7 +16,7 @@ namespace Env3d.SumoImporter.NetFileComponents
 
 		public NetFileJunction(junctionType Junction, ref Dictionary<string, NetFileLane> existingLanes)
 		{
-			GD.Print($"Junction.xyz = \"{Junction.x}\", \"{Junction.y}\", \"{Junction.z}\"");
+			//GD.Print($"Junction.xyz = \"{Junction.x}\", \"{Junction.y}\", \"{Junction.z}\"");
 			this.ID = Junction.id;
 			this.JunctionType = Junction.type;
 			this.Location = new Vector3(
